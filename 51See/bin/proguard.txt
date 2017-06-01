@@ -1,0 +1,397 @@
+# view res/layout/abs__screen_action_bar.xml #generated:44
+# view res/layout/abs__screen_action_bar_overlay.xml #generated:27
+# view res/layout/abs__screen_simple.xml #generated:32
+# view res/layout/abs__screen_simple_overlay_action_mode.xml #generated:27
+# view xlarge-v4\res/layout-xlarge-v4/abs__screen_action_bar.xml #generated:44
+# view xlarge-v4\res/layout-xlarge-v4/abs__screen_action_bar_overlay.xml #generated:25
+-keep class com.actionbarsherlock.internal.nineoldandroids.widget.NineFrameLayout { <init>(...); }
+
+# view large-v4\res/layout-large-v4/abs__action_mode_close_item.xml #generated:17
+# view res/layout/abs__action_mode_close_item.xml #generated:17
+-keep class com.actionbarsherlock.internal.nineoldandroids.widget.NineLinearLayout { <init>(...); }
+
+# view res/layout/abs__action_menu_item_layout.xml #generated:17
+-keep class com.actionbarsherlock.internal.view.menu.ActionMenuItemView { <init>(...); }
+
+# view res/layout/abs__action_menu_layout.xml #generated:17
+-keep class com.actionbarsherlock.internal.view.menu.ActionMenuView { <init>(...); }
+
+# view res/layout/abs__popup_menu_item_layout.xml #generated:17
+-keep class com.actionbarsherlock.internal.view.menu.ListMenuItemView { <init>(...); }
+
+# view res/layout/abs__screen_action_bar.xml #generated:27
+# view res/layout/abs__screen_action_bar.xml #generated:51
+# view res/layout/abs__screen_action_bar_overlay.xml #generated:30
+# view res/layout/abs__screen_action_bar_overlay.xml #generated:53
+# view xlarge-v4\res/layout-xlarge-v4/abs__screen_action_bar.xml #generated:27
+# view xlarge-v4\res/layout-xlarge-v4/abs__screen_action_bar_overlay.xml #generated:28
+-keep class com.actionbarsherlock.internal.widget.ActionBarContainer { <init>(...); }
+
+# view res/layout/abs__action_mode_bar.xml #generated:19
+# view res/layout/abs__screen_action_bar.xml #generated:37
+# view res/layout/abs__screen_action_bar_overlay.xml #generated:41
+# view xlarge-v4\res/layout-xlarge-v4/abs__screen_action_bar.xml #generated:37
+# view xlarge-v4\res/layout-xlarge-v4/abs__screen_action_bar_overlay.xml #generated:38
+-keep class com.actionbarsherlock.internal.widget.ActionBarContextView { <init>(...); }
+
+# view res/layout/abs__screen_action_bar.xml #generated:32
+# view res/layout/abs__screen_action_bar_overlay.xml #generated:36
+# view xlarge-v4\res/layout-xlarge-v4/abs__screen_action_bar.xml #generated:32
+# view xlarge-v4\res/layout-xlarge-v4/abs__screen_action_bar_overlay.xml #generated:33
+-keep class com.actionbarsherlock.internal.widget.ActionBarView { <init>(...); }
+
+# view res/layout/abs__action_bar_home.xml #generated:17
+-keep class com.actionbarsherlock.internal.widget.ActionBarView$HomeView { <init>(...); }
+
+# view res/layout/abs__action_menu_item_layout.xml #generated:40
+-keep class com.actionbarsherlock.internal.widget.CapitalizingButton { <init>(...); }
+
+# view res/layout/abs__activity_chooser_view.xml #generated:19
+-keep class com.actionbarsherlock.internal.widget.IcsLinearLayout { <init>(...); }
+
+# view res/layout/abs__action_bar_tab.xml #generated:3
+-keep class com.actionbarsherlock.internal.widget.ScrollingTabContainerView$TabView { <init>(...); }
+
+# view res/layout/abs__action_bar_tab_bar_view.xml #generated:3
+-keep class com.actionbarsherlock.internal.widget.TabsLinearLayout { <init>(...); }
+
+# view res/layout/abs__search_view.xml #generated:84
+-keep class com.actionbarsherlock.widget.SearchView$SearchAutoComplete { <init>(...); }
+
+# view AndroidManifest.xml #generated:305
+-keep class com.baidu.location.f { <init>(...); }
+
+# view res/layout/text_bubble.xml #generated:10
+-keep class com.baidu.mapapi.clusterutil.ui.RotationLayout { <init>(...); }
+
+# view res/layout/activity_cameralocation.xml #generated:43
+# view res/layout/maplist_fragment.xml #generated:6
+-keep class com.baidu.mapapi.map.MapView { <init>(...); }
+
+# view res/layout/slidingmenumain.xml #generated:2
+-keep class com.jeremyfeinstein.slidingmenu.lib.SlidingMenu { <init>(...); }
+
+# view AndroidManifest.xml #generated:337
+-keep class com.mob.tools.MobUIShell { <init>(...); }
+
+# view AndroidManifest.xml #generated:237
+-keep class com.my51c.see51.GeneratedChartDemo { <init>(...); }
+
+# view res/layout/dimentional.xml #generated:27
+-keep class com.my51c.see51.Zxing.view.ViewfinderView { <init>(...); }
+
+# view AndroidManifest.xml #generated:175
+-keep class com.my51c.see51.guide.CustWifiDialog { <init>(...); }
+
+# view AndroidManifest.xml #generated:125
+-keep class com.my51c.see51.guide.DeviceIdActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:139
+-keep class com.my51c.see51.guide.DimensionActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:293
+-keep class com.my51c.see51.guide.GlassListActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:87
+-keep class com.my51c.see51.guide.GuidAddByWifi { <init>(...); }
+
+# view AndroidManifest.xml #generated:82
+-keep class com.my51c.see51.guide.GuidSmartId { <init>(...); }
+
+# view AndroidManifest.xml #generated:109
+-keep class com.my51c.see51.guide.Guide { <init>(...); }
+
+# view AndroidManifest.xml #generated:166
+-keep class com.my51c.see51.guide.GuideNetTypeActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:170
+-keep class com.my51c.see51.guide.GuidePrepareActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:132
+-keep class com.my51c.see51.guide.GuideSetActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:288
+-keep class com.my51c.see51.guide.GuideSetWifi { <init>(...); }
+
+# view AndroidManifest.xml #generated:185
+-keep class com.my51c.see51.guide.GuideSmartSound { <init>(...); }
+
+# view AndroidManifest.xml #generated:180
+-keep class com.my51c.see51.guide.GuideSmartWifi { <init>(...); }
+
+# view AndroidManifest.xml #generated:114
+-keep class com.my51c.see51.guide.Login { <init>(...); }
+
+# view AndroidManifest.xml #generated:119
+-keep class com.my51c.see51.guide.PlatformActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:384
+-keep class com.my51c.see51.guide.ScanCodeActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:315
+-keep class com.my51c.see51.map.CameraLocation { <init>(...); }
+
+# view AndroidManifest.xml #generated:320
+-keep class com.my51c.see51.map.MapAcy { <init>(...); }
+
+# view AndroidManifest.xml #generated:44
+-keep class com.my51c.see51.service.AppData { <init>(...); }
+
+# view AndroidManifest.xml #generated:278
+-keep class com.my51c.see51.ui.AVSettingAcy { <init>(...); }
+
+# view AndroidManifest.xml #generated:216
+-keep class com.my51c.see51.ui.AboutActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:96
+-keep class com.my51c.see51.ui.ActionAlarmActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:368
+-keep class com.my51c.see51.ui.AlamCloudRecordActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:283
+-keep class com.my51c.see51.ui.AlarmCloudRecordAcy { <init>(...); }
+
+# view AndroidManifest.xml #generated:374
+-keep class com.my51c.see51.ui.AlarmSdCloudRecordActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:222
+-keep class com.my51c.see51.ui.BLPDetailActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:156
+-keep class com.my51c.see51.ui.BLPDeviceInfoActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:205
+-keep class com.my51c.see51.ui.CloudRecordActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:146
+-keep class com.my51c.see51.ui.DeviceInfoActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:258
+-keep class com.my51c.see51.ui.GeneralInfoAcy { <init>(...); }
+
+# view AndroidManifest.xml #generated:101
+-keep class com.my51c.see51.ui.HumitureAlarmActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:248
+-keep class com.my51c.see51.ui.LocalDevListAcy { <init>(...); }
+
+# view AndroidManifest.xml #generated:238
+-keep class com.my51c.see51.ui.LocalFileAcy { <init>(...); }
+
+# view AndroidManifest.xml #generated:243
+-keep class com.my51c.see51.ui.LocalPicVideoAcy { <init>(...); }
+
+# view AndroidManifest.xml #generated:91
+-keep class com.my51c.see51.ui.LocalSettingActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:67
+-keep class com.my51c.see51.ui.MainActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:273
+-keep class com.my51c.see51.ui.Net3GSettingAcy { <init>(...); }
+
+# view AndroidManifest.xml #generated:332
+-keep class com.my51c.see51.ui.NewPlanOfRecordActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:327
+-keep class com.my51c.see51.ui.PlanOfRecordActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:298
+-keep class com.my51c.see51.ui.PlayAcy { <init>(...); }
+
+# view AndroidManifest.xml #generated:74
+-keep class com.my51c.see51.ui.PlayerActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:161
+-keep class com.my51c.see51.ui.RFDeviceInfoActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:253
+-keep class com.my51c.see51.ui.RfCurtainSwitchActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:210
+-keep class com.my51c.see51.ui.RfDeviceAddActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:151
+-keep class com.my51c.see51.ui.RfDeviceListActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:380
+-keep class com.my51c.see51.ui.RtmpSettingActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:200
+-keep class com.my51c.see51.ui.SDCalendarActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:195
+-keep class com.my51c.see51.ui.SDRecordFileActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:190
+-keep class com.my51c.see51.ui.SDRecordFolderActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:322
+-keep class com.my51c.see51.ui.SDRecordNVRActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:105
+-keep class com.my51c.see51.ui.SetFragment { <init>(...); }
+
+# view AndroidManifest.xml #generated:54
+-keep class com.my51c.see51.ui.WelcomeAcy { <init>(...); }
+
+# view AndroidManifest.xml #generated:263
+-keep class com.my51c.see51.ui.WiredSettingAcy { <init>(...); }
+
+# view AndroidManifest.xml #generated:268
+-keep class com.my51c.see51.ui.WirelessSettingAcy { <init>(...); }
+
+# view res/layout/alarm_list.xml #generated:43
+# view res/layout/cloudrecord_activity.xml #generated:60
+# view res/layout/layout_device_list.xml #generated:20
+# view res/layout/player_view.xml #generated:157
+# view res/layout/sdrecord_activity.xml #generated:62
+# view res/layout/sdrecord_nvr_activity.xml #generated:53
+-keep class com.my51c.see51.widget.DeviceListView { <init>(...); }
+
+# view res/layout/corner_list_item.xml #generated:28
+-keep class com.my51c.see51.widget.MySwitch { <init>(...); }
+
+# view res/layout/main.xml #generated:22
+-keep class com.my51c.see51.widget.MyTabHost { <init>(...); }
+
+# view res/layout/videoplayer.xml #generated:7
+-keep class com.my51c.see51.widget.MyVideoView { <init>(...); }
+
+# view res/layout/alarmrecordacy.xml #generated:102
+# view res/layout/alarmrecordacy.xml #generated:135
+# view res/layout/alarmrecordacy.xml #generated:168
+# view res/layout/alarmrecordacy.xml #generated:251
+# view res/layout/alarmrecordacy.xml #generated:349
+# view res/layout/alarmrecordacy.xml #generated:447
+# view res/layout/alarmrecordacy.xml #generated:479
+# view res/layout/alarmrecordacy.xml #generated:512
+# view res/layout/alarmrecordacy.xml #generated:651
+# view res/layout/alarmrecordacy.xml #generated:690
+# view res/layout/alarmrecordacy.xml #generated:743
+# view res/layout/alarmrecordacy.xml #generated:797
+# view res/layout/avparameteracy.xml #generated:117
+# view res/layout/avparameteracy.xml #generated:153
+# view res/layout/avparameteracy.xml #generated:191
+# view res/layout/curtain_info_dialog.xml #generated:28
+# view res/layout/dialog_switch.xml #generated:103
+# view res/layout/dialog_switch.xml #generated:29
+# view res/layout/dialog_switch.xml #generated:66
+# view res/layout/ip_setting_module_layout.xml #generated:49
+# view res/layout/rf_curtain_activity.xml #generated:147
+# view res/layout/rf_curtain_activity.xml #generated:185
+# view res/layout/rf_curtain_activity.xml #generated:223
+# view res/layout/rfdevice_list_item.xml #generated:67
+# view res/layout/rfinfoeditdialog.xml #generated:54
+# view res/layout/rfinfoeditdialog.xml #generated:65
+# view res/layout/rfinfoeditdialog.xml #generated:77
+# view res/layout/set_frame.xml #generated:208
+# view res/layout/wirelesssettingacy.xml #generated:81
+# view v14\res/layout-v14/alarm_recorde_parameter_layout.xml #generated:149
+# view v14\res/layout-v14/alarm_recorde_parameter_layout.xml #generated:53
+# view v14\res/layout-v14/alarm_recorde_parameter_layout.xml #generated:89
+# view v14\res/layout-v14/av_parameter_layout.xml #generated:265
+# view v14\res/layout-v14/av_parameter_layout.xml #generated:305
+# view v14\res/layout-v14/av_parameter_layout.xml #generated:347
+# view v14\res/layout-v14/ip_setting_module_layout.xml #generated:54
+# view v14\res/layout-v14/wireless_parameter_layout.xml #generated:49
+-keep class com.my51c.see51.widget.NewSwitch { <init>(...); }
+
+# view res/layout/sdrecord_download_item.xml #generated:104
+-keep class com.my51c.see51.widget.NumberProgressBar { <init>(...); }
+
+# view res/layout/rf_fragment.xml #generated:13
+-keep class com.my51c.see51.widget.PageControlView { <init>(...); }
+
+# view res/layout/dialog_plan.xml #generated:110
+# view res/layout/dialog_plan.xml #generated:44
+# view res/layout/dialog_plan.xml #generated:66
+# view res/layout/dialog_plan.xml #generated:88
+# view res/layout/dialog_snap.xml #generated:44
+# view res/layout/dialog_snap.xml #generated:66
+# view res/layout/dialog_snap.xml #generated:88
+-keep class com.my51c.see51.widget.PickerView { <init>(...); }
+
+# view res/layout/activity_new_plan.xml #generated:36
+# view res/layout/alarmrecordacy.xml #generated:56
+# view res/layout/avparameteracy.xml #generated:55
+# view res/layout/generalsettingacy.xml #generated:57
+# view res/layout/set_frame.xml #generated:97
+-keep class com.my51c.see51.widget.ReboundScrollView { <init>(...); }
+
+# view res/layout/activity_alarm_sd_cloud_record.xml #generated:70
+# view res/layout/activity_alarm_sd_cloud_record.xml #generated:90
+-keep class com.my51c.see51.widget.ScollListView { <init>(...); }
+
+# view res/layout/player_view.xml #generated:105
+# view res/layout/rf_fragment.xml #generated:6
+-keep class com.my51c.see51.widget.ScrollLayout { <init>(...); }
+
+# view res/layout/activity_new_plan.xml #generated:132
+# view res/layout/alarmrecordacy.xml #generated:201
+# view res/layout/alarmrecordacy.xml #generated:285
+# view res/layout/alarmrecordacy.xml #generated:547
+# view res/layout/avparameteracy.xml #generated:240
+# view res/layout/avparameteracy.xml #generated:314
+# view res/layout/avparameteracy.xml #generated:397
+# view res/layout/avparameteracy.xml #generated:473
+-keep class com.my51c.see51.widget.SegmentedGroup { <init>(...); }
+
+# view res/layout/localvideo_item.xml #generated:2
+# view res/layout/record_plan_list_item.xml #generated:2
+# view res/layout/rf_list_item.xml #generated:2
+-keep class com.my51c.see51.widget.SweepLayout { <init>(...); }
+
+# view res/layout/activity_record_plan.xml #generated:45
+# view res/layout/pic_video_acy.xml #generated:68
+# view res/layout/rfdevice_list.xml #generated:55
+-keep class com.my51c.see51.widget.SweepListView { <init>(...); }
+
+# view AndroidManifest.xml #generated:362
+-keep class com.sdview.view.PlayMp4Activity { <init>(...); }
+
+# view AndroidManifest.xml #generated:357
+-keep class com.tencent.connect.common.AssistActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:343
+-keep class com.tencent.tauth.AuthActivity { <init>(...); }
+
+# view res/layout/add_devid_acy.xml #generated:67
+# view res/layout/guid_addbywifi.xml #generated:109
+# view res/layout/guide_deviceid.xml #generated:68
+# view res/layout/guide_set_wifi.xml #generated:87
+# view res/layout/guide_smartwifi.xml #generated:124
+# view res/layout/local_setting_change_pwd.xml #generated:35
+# view res/layout/local_setting_change_pwd.xml #generated:62
+# view res/layout/local_setting_change_pwd.xml #generated:91
+# view res/layout/login.xml #generated:229
+# view res/layout/login.xml #generated:263
+# view res/layout/login.xml #generated:303
+# view res/layout/login.xml #generated:47
+# view res/layout/login.xml #generated:83
+# view res/layout/player_view.xml #generated:143
+# view res/layout/regester_acy.xml #generated:115
+# view res/layout/regester_acy.xml #generated:43
+# view res/layout/regester_acy.xml #generated:76
+# view res/layout/rfdevice_guide.xml #generated:68
+-keep class com.xqe.method.DelEditText { <init>(...); }
+
+# view AndroidManifest.xml #generated:48
+-keep class io.vov.vitamio.activity.InitActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:236
+-keep class org.achartengine.GraphicalActivity { <init>(...); }
+
+# view res/layout/guide_smartsound.xml #generated:70
+-keep class org.simple.ripple.RippleLayout { <init>(...); }
+
+# onClick res/layout/map_acy.xml #generated:8
+-keepclassmembers class * { *** goMap(...); }
+
+# onClick res/layout/rtmpsettingacy.xml #generated:95
+-keepclassmembers class * { *** noBtn(...); }
+
+# onClick res/layout/rtmpsettingacy.xml #generated:86
+-keepclassmembers class * { *** yesBtn(...); }
+

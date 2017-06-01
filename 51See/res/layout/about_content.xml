@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/qianhui" >
+    
+    <RelativeLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/title_bac">
+        <LinearLayout
+            android:id="@+id/backLayout" 
+            android:layout_width="60dp"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+        	android:orientation="horizontal"
+        	android:layout_alignParentLeft="true"
+        	android:background="@drawable/shap_linearlayout">
+            <ImageView 
+                android:layout_width="30dp"
+            	android:layout_height="30dp"
+            	android:layout_marginLeft="10dp"
+            	android:layout_gravity="center_vertical"
+                android:background="@drawable/back_img_shap"/>
+        	
+        </LinearLayout>
+        <TextView 
+            android:layout_width="wrap_content"
+           	android:layout_height="wrap_content"
+          	android:textColor="@color/qianhei"
+           	android:textSize="18sp"
+           	android:textStyle="bold"
+           	android:layout_centerInParent="true"
+           	android:text="@string/about"/>
+    </RelativeLayout>
+    
+    
+    <ImageView 
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/progress_buffering"/>
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="104dp"
+        android:layout_height="100dp"
+        android:scaleType="fitXY"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:src="@drawable/login_logo" />
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="15dp"
+        android:text="@string/app_name"/>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:id="@+id/stringversiontitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:textColor="@color/black"
+            android:text="@string/softwareversion" />
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/stringversiontitle"
+            android:id="@+id/stringversion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/black"
+            android:text="@string/app_version" />
+        <ImageView 
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/arrow"/>
+    </RelativeLayout>
+    <TextView 
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/hui"/>
+    
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:visibility="invisible"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:id="@+id/strnettv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:textColor="@color/black"
+            android:text="@string/netaddr"/>
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/strnettv"
+            android:id="@+id/strnetaddr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/black"
+            android:text="http://www.xjgzinfo.com/" />
+        <ImageView 
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/arrow"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/stremailtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:textColor="@color/black"
+            android:text="@string/email" />
+
+        <TextView
+            android:id="@+id/strmailtv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/black"
+            android:text="xxxxxx@xxx.com" />
+    </LinearLayout>
+
+</LinearLayout>

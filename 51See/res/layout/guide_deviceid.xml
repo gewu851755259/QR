@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LayoutSelector"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@color/qianhui">
+    <RelativeLayout 
+        android:id="@+id/topLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/title_bac">
+        <LinearLayout
+            android:id="@+id/id_backLayout" 
+            android:layout_width="60dp"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+        	android:orientation="horizontal"
+        	android:layout_alignParentLeft="true"
+        	android:background="@drawable/shap_linearlayout">
+            <ImageView 
+                android:layout_width="35dp"
+            	android:layout_height="35dp"
+            	android:layout_marginLeft="10dp"
+            	android:layout_gravity="center_vertical"
+                android:background="@drawable/back_img_shap"/>
+        	
+        </LinearLayout>
+        <TextView 
+            android:id="@+id/guid_device_id_title"
+            android:layout_width="wrap_content"
+           	android:layout_height="wrap_content"
+          	android:textColor="@color/qianhei"
+           	android:textSize="18sp"
+           	android:layout_centerInParent="true"
+           	android:text="@string/guideSimleInstall"/>
+    </RelativeLayout>
+    
+    
+    <ImageView 
+        android:id="@+id/divide_img"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/progress_buffering"/>
+
+    <TextView
+        style="@style/textFont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/scaningdimensioncode" />
+    
+    <LinearLayout
+            android:background="@drawable/shap_trans_stork"
+            android:orientation="horizontal" 
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+        	android:layout_height="50dp"
+        	android:gravity="center_vertical">
+			 <ImageView
+		         android:id="@+id/imageViewWifi"
+		         android:layout_width="wrap_content"
+		         android:layout_height="wrap_content"
+		         android:layout_marginLeft="5dp"
+		         android:background="@drawable/x_adddev_img" />
+	      	  <com.xqe.method.DelEditText
+	          	 android:id="@+id/edtDeviceId"
+	        	 android:layout_height="40dp"
+	             android:layout_width="0dp"
+	             android:layout_weight="1"
+	             android:drawableRight="@drawable/icon_clear"
+	             android:background="@color/white"
+	       		 android:singleLine="true"
+	        	 android:textSize="14sp"
+	        	 android:textColor="@color/qianhei"
+	        	 android:layout_marginLeft="10dp"
+	             />
+	      	  <ImageButton 
+	      	      android:id="@+id/imgBtnDimension"
+	      	      android:layout_width="30dp"
+		          android:layout_height="30dp"
+		          android:background="@drawable/dimentional_code"
+		         />
+		 </LinearLayout>
+		 <LinearLayout 
+		     android:id="@+id/devListLayout"
+		     android:layout_width="fill_parent"
+		     android:layout_height="wrap_content"
+		     android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/reLayoutdeviceId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/txtDeviceId"
+            style="@style/textFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_centerInParent="true"
+            android:text="@string/orSelectDeviceId" />
+        <ImageButton
+            android:id="@+id/btnRefresh"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/btn_refresh_style" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp">
+        <ProgressBar
+            android:id="@+id/proDeviceId"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:visibility="visible" />
+
+        <ListView
+            android:id="@+id/devList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_bg_listview"
+            android:cacheColorHint="@null"
+            android:divider="@drawable/progress_buffering"
+            android:dividerHeight="2dp"
+            android:footerDividersEnabled="true"
+            android:headerDividersEnabled="true" />
+    </RelativeLayout>
+    </LinearLayout>
+	
+    <Button
+        android:id="@+id/btnNextDeviceId"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:layout_gravity="center"
+        android:background="@drawable/button_shap"
+        android:text="@string/next"
+        android:textColor="@color/white"
+        android:visibility="gone"/>
+    <Button
+        android:id="@+id/btnRestoreDeviceId"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/button_shap"
+        android:text="@string/defaultSetting"
+        android:textColor="@color/white"
+        android:visibility="gone" />
+
+</LinearLayout>

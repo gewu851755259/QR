@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.my51c.see51.widget.SweepLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:myapp="http://schemas.android.com/apk/res/com.sdview.view" 
+    android:id="@+id/sweeplayout"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="@color/white"
+    myapp:holderwidth="90dp"
+    android:orientation="horizontal" >
+    
+	<include layout="@layout/record_plan_item"/>
+    
+    
+    <LinearLayout 
+        android:id="@+id/deleteL"
+        android:layout_width="90dp"
+        android:layout_height="80dp"
+        android:background="@color/orange"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="18sp"
+            android:text="@string/delete_str"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+    
+</com.my51c.see51.widget.SweepLayout>

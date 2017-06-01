@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:orientation="vertical" 
+    android:alpha="0.9"
+    android:background="@color/white">
+    <HorizontalScrollView 
+        android:id="@+id/hScrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:scrollbars="none"
+        android:layout_gravity="center_vertical|left">
+        <LinearLayout 
+            android:id="@+id/contentL"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:padding="2dp"
+            android:orientation="horizontal"></LinearLayout>
+    </HorizontalScrollView>
+    
+
+</LinearLayout>

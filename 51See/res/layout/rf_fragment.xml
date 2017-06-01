@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/rf_fragmentL"
+    android:layout_height="wrap_content">
+	<com.my51c.see51.widget.ScrollLayout
+  		android:id="@+id/ScrollLayoutTest"
+  		android:layout_width="fill_parent"
+  		android:layout_height="fill_parent"  
+  		android:background="@color/qianhui" >
+	</com.my51c.see51.widget.ScrollLayout>
+
+	<com.my51c.see51.widget.PageControlView 
+		android:id="@+id/pageControl"
+		android:layout_width="fill_parent" 
+		android:layout_height="40px"
+		android:background="@color/qianhui" 
+		android:layout_alignParentBottom="true"
+		android:gravity="center"/>			
+</RelativeLayout>

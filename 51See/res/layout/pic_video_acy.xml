@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/qianhui" >
+    
+    <RelativeLayout 
+        android:id="@+id/local_titleLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/title_bac">
+        <LinearLayout
+            android:id="@+id/backLayout" 
+            android:layout_width="60dp"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+        	android:orientation="horizontal"
+        	android:layout_alignParentLeft="true"
+        	android:background="@drawable/shap_linearlayout">
+            <ImageView 
+                android:layout_width="30dp"
+            	android:layout_height="30dp"
+            	android:layout_marginLeft="10dp"
+            	android:layout_gravity="center_vertical"
+                android:background="@drawable/back_img_shap"/>
+        	
+        </LinearLayout>
+        <TextView 
+            android:id="@+id/local_title"
+            android:layout_width="wrap_content"
+           	android:layout_height="wrap_content"
+          	android:textColor="@color/qianhei"
+           	android:textSize="18sp"
+           	android:layout_centerInParent="true"
+           	android:text="@string/picvideo"/>
+        <TextView 
+            android:id="@+id/edit"
+            android:layout_width="wrap_content"
+           	android:layout_height="wrap_content"
+          	android:textColor="@color/qianhei"
+           	android:textSize="18sp"
+           	android:layout_alignParentRight="true"
+           	android:layout_centerVertical="true"
+           	android:layout_marginRight="10dp"
+           	android:text="@string/edit_str"/>
+        <TextView 
+            android:visibility="gone"
+            android:id="@+id/selectAll"
+            android:layout_width="wrap_content"
+           	android:layout_height="wrap_content"
+          	android:textColor="@color/qianhei"
+           	android:textSize="18sp"
+           	android:layout_alignParentRight="true"
+           	android:layout_centerVertical="true"
+           	android:layout_marginRight="10dp"
+           	android:text="@string/select_all"/>
+    </RelativeLayout>
+    
+    <ImageView 
+        android:layout_below="@id/local_titleLayout"
+        android:id="@+id/divider"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/progress_buffering"/>
+    
+    <com.my51c.see51.widget.SweepListView 
+        android:layout_below="@id/divider"
+        android:id="@+id/pic_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:divider="@drawable/progress_buffering"
+        android:dividerHeight="1px"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"></com.my51c.see51.widget.SweepListView>
+    
+    <RelativeLayout 
+        android:visibility="gone"
+         android:id="@+id/bottomL"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:alpha="0.9"
+        android:orientation="horizontal">
+        <TextView 
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/hui"/>
+        <TextView 
+            android:id="@+id/centerTx"
+            android:layout_width="1dp"
+            android:layout_centerInParent="true"
+            android:layout_height="fill_parent"
+            android:background="@color/hui"/>
+        <Button 
+            android:layout_toLeftOf="@id/centerTx"
+        	android:id="@+id/cancelBtn"
+        	android:layout_width="fill_parent"
+        	android:layout_height="fill_parent"
+        	android:layout_gravity="left"
+        	android:gravity="center"
+        	android:textSize="16sp"
+        	android:textStyle="bold"
+        	android:textColor="@color/light_blue"
+        	android:background="@drawable/shap_del_btn"
+        	android:text="@string/Cancel"/>
+        <Button 
+        	android:id="@+id/okBtn"
+        	android:layout_toRightOf="@id/centerTx"
+        	android:gravity="center"
+        	android:layout_width="fill_parent"
+        	android:layout_height="fill_parent"
+        	android:layout_gravity="right"
+        	android:textSize="16sp"
+        	android:textStyle="bold"
+        	android:textColor="@color/light_blue"
+        	android:background="@drawable/shap_del_btn"
+        	android:text="@string/file_delete"/>
+    </RelativeLayout>
+
+    
+
+</RelativeLayout>

@@ -1,0 +1,2828 @@
+cn.sharesdk.facebook.Facebook
+cn.sharesdk.facebook.Facebook$ShareParams
+cn.sharesdk.facebook.a
+cn.sharesdk.facebook.b
+cn.sharesdk.facebook.c
+cn.sharesdk.facebook.d
+cn.sharesdk.facebook.e
+cn.sharesdk.facebook.f
+cn.sharesdk.facebook.g
+cn.sharesdk.facebook.h
+cn.sharesdk.facebook.i
+cn.sharesdk.facebook.j
+cn.sharesdk.facebook.k
+cn.sharesdk.facebook.l
+cn.sharesdk.framework.CustomPlatform:
+    public CustomPlatform(android.content.Context)
+    protected final void initDevInfo(java.lang.String)
+    public abstract java.lang.String getName()
+    public int getVersion()
+    protected final int getPlatformId()
+    protected int getCustomPlatformId()
+    protected final void setNetworkDevinfo()
+    protected void doAuthorize(java.lang.String[])
+    protected abstract boolean checkAuthorize(int,java.lang.Object)
+    protected void doShare(cn.sharesdk.framework.Platform$ShareParams)
+    protected void follow(java.lang.String)
+    protected void timeline(int,int,java.lang.String)
+    protected void userInfor(java.lang.String)
+    protected void doCustomerProtocol(java.lang.String,java.lang.String,int,java.util.HashMap,java.util.HashMap)
+    protected final cn.sharesdk.framework.b.b.f$a filterShareContent(cn.sharesdk.framework.Platform$ShareParams,java.util.HashMap)
+    protected void getFriendList(int,int,java.lang.String)
+    protected java.util.HashMap getFollowings(int,int,java.lang.String)
+    protected java.util.HashMap getFollowers(int,int,java.lang.String)
+    protected java.util.HashMap getBilaterals(int,int,java.lang.String)
+    protected java.util.HashMap filterFriendshipInfo(int,java.util.HashMap)
+    public boolean hasShareCallback()
+cn.sharesdk.framework.Platform:
+    public static final int ACTION_AUTHORIZING
+    public static final int ACTION_GETTING_FRIEND_LIST
+    public static final int ACTION_SENDING_DIRECT_MESSAGE
+    public static final int ACTION_FOLLOWING_USER
+    public static final int ACTION_TIMELINE
+    public static final int ACTION_USER_INFOR
+    public static final int ACTION_SHARE
+    protected static final int ACTION_GETTING_BILATERAL_LIST
+    protected static final int ACTION_GETTING_FOLLOWER_LIST
+    protected static final int ACTION_CUSTOMER
+    public static final int CUSTOMER_ACTION_MASK
+    public static final int SHARE_TEXT
+    public static final int SHARE_IMAGE
+    public static final int SHARE_WEBPAGE
+    public static final int SHARE_MUSIC
+    public static final int SHARE_VIDEO
+    public static final int SHARE_APPS
+    public static final int SHARE_FILE
+    public static final int SHARE_EMOJI
+    public Platform(android.content.Context)
+    public abstract int getVersion()
+    public int getId()
+    public cn.sharesdk.framework.PlatformActionListener getPlatformActionListener()
+    public boolean isClientValid()
+    public boolean isValid()
+    public void SSOSetting(boolean)
+    public void authorize()
+    public void authorize(java.lang.String[])
+    public void followFriend(java.lang.String)
+    public void getTimeLine(java.lang.String,int,int)
+    public void listFriend(int,int,java.lang.String)
+    protected abstract java.util.HashMap getFollowings(int,int,java.lang.String)
+    protected abstract java.util.HashMap getFollowers(int,int,java.lang.String)
+    protected abstract java.util.HashMap getBilaterals(int,int,java.lang.String)
+    protected abstract java.util.HashMap filterFriendshipInfo(int,java.util.HashMap)
+    public void customerProtocol(java.lang.String,java.lang.String,short,java.util.HashMap,java.util.HashMap)
+    public void removeAccount()
+    public void removeAccount(boolean)
+    protected java.lang.String uploadImageToFileServer(android.graphics.Bitmap)
+    public abstract boolean hasShareCallback()
+cn.sharesdk.framework.Platform$ShareParams:
+    public java.lang.String text
+    public java.lang.String imagePath
+    public Platform$ShareParams(java.util.HashMap)
+    public Platform$ShareParams(java.lang.String)
+cn.sharesdk.framework.PlatformDb:
+    private static final java.lang.String DB_NAME
+    private java.lang.String platformNname
+    private int platformVersion
+    public PlatformDb(android.content.Context,java.lang.String,int)
+    public java.lang.String getTokenSecret()
+    public int getPlatformVersion()
+    public java.lang.String getPlatformNname()
+    public java.lang.String getUserIcon()
+    public void removeAccount()
+    public java.lang.String exportData()
+    public void importData(java.lang.String)
+cn.sharesdk.framework.ReflectablePlatformActionListener
+cn.sharesdk.framework.Service:
+    private android.content.Context a
+    private java.lang.String b
+    void a(android.content.Context)
+    public android.content.Context getContext()
+    void a(java.lang.String)
+    public java.lang.String getAppKey()
+    public java.lang.String getDeviceKey()
+    protected abstract int getServiceVersionInt()
+    public abstract java.lang.String getServiceVersionName()
+    public void onBind()
+    static synthetic android.content.Context a(cn.sharesdk.framework.Service)
+cn.sharesdk.framework.Service$ServiceEvent
+cn.sharesdk.framework.ShareSDK:
+    public static final java.lang.String SDK_TAG
+    public ShareSDK()
+    public static void initSDK(android.content.Context,boolean)
+    public static void initSDK(android.content.Context,java.lang.String)
+    public static void registerService(java.lang.Class)
+    public static void unregisterService(java.lang.Class)
+    public static cn.sharesdk.framework.Service getService(java.lang.Class)
+    public static void registerPlatform(java.lang.Class)
+    public static void unregisterPlatform(java.lang.Class)
+    public static java.lang.String getSDKVersionName()
+    public static void setConnTimeout(int)
+    public static void setReadTimeout(int)
+    public static void removeCookieOnAuthorize(boolean)
+    public static void deleteCache()
+    public static synchronized cn.sharesdk.framework.Platform[] getPlatformList(android.content.Context)
+    public static synchronized cn.sharesdk.framework.Platform[] getPlatformList()
+    public static void logDemoEvent(int,cn.sharesdk.framework.Platform)
+    public static void setPlatformDevInfo(java.lang.String,java.util.HashMap)
+    public static java.lang.String platformIdToName(int)
+    public static int platformNameToId(java.lang.String)
+    public static void closeDebug()
+    public static boolean isDebug()
+    static java.lang.String a(android.graphics.Bitmap)
+cn.sharesdk.framework.TitleLayout:
+    public TitleLayout(android.content.Context,android.util.AttributeSet)
+cn.sharesdk.framework.a:
+    cn.sharesdk.framework.PlatformActionListener a()
+cn.sharesdk.framework.a.a:
+    public java.lang.String b(java.lang.String,java.util.ArrayList,com.mob.tools.network.KVPair,java.util.ArrayList,com.mob.tools.network.NetworkHelper$NetworkTimeOut,java.lang.String,int)
+    public void a(java.lang.String,java.util.ArrayList,com.mob.tools.network.HTTPPart,com.mob.tools.network.RawNetworkCallback,java.lang.String,int)
+    public java.lang.String b(java.lang.String,java.util.ArrayList,java.util.ArrayList,com.mob.tools.network.NetworkHelper$NetworkTimeOut,java.lang.String,int)
+cn.sharesdk.framework.authorize.AuthorizeAdapter:
+    public android.app.Activity getActivity()
+    public cn.sharesdk.framework.TitleLayout getTitleLayout()
+    public android.webkit.WebView getWebBody()
+    void setNotitle(boolean)
+    public java.lang.String getPlatformName()
+    public android.widget.RelativeLayout getBodyView()
+    protected void disablePopUpAnimation()
+    public void hideShareSDKLogo()
+cn.sharesdk.framework.authorize.RegisterView:
+    public RegisterView(android.content.Context,android.util.AttributeSet)
+cn.sharesdk.framework.authorize.ResizeLayout:
+    public ResizeLayout(android.content.Context,android.util.AttributeSet)
+cn.sharesdk.framework.b.a:
+    public java.lang.String a(android.graphics.Bitmap)
+cn.sharesdk.framework.b.b.d
+cn.sharesdk.framework.d:
+    protected static final java.lang.String TEXT
+    protected static final java.lang.String IMAGE_PATH
+    protected static final java.lang.String FILE_PATH
+    protected static final java.lang.String TITLE
+    protected static final java.lang.String NOTEBOOK
+    protected static final java.lang.String STACK
+    protected static final java.lang.String TAGS
+    protected static final java.lang.String IS_PUBLIC
+    protected static final java.lang.String IS_FRIEND
+    protected static final java.lang.String IS_FAMILY
+    protected static final java.lang.String SAFETY_LEVEL
+    protected static final java.lang.String CONTENT_TYPE
+    protected static final java.lang.String HIDDEN
+    protected static final java.lang.String VENUE_NAME
+    protected static final java.lang.String VENUE_DESCRIPTION
+    protected static final java.lang.String LATITUDE
+    protected static final java.lang.String LONGITUDE
+    protected static final java.lang.String IMAGE_URL
+    protected static final java.lang.String COMMENT
+    protected static final java.lang.String TITLE_URL
+    protected static final java.lang.String URL
+    protected static final java.lang.String ADDRESS
+    protected static final java.lang.String SITE
+    protected static final java.lang.String SITE_URL
+    protected static final java.lang.String GROPU_ID
+    protected static final java.lang.String EXT_INFO
+    protected static final java.lang.String SHARE_TYPE
+    protected static final java.lang.String MUSIC_URL
+    protected static final java.lang.String IMAGE_DATA
+    protected static final java.lang.String AUTHOR
+    protected static final java.lang.String SCENCE
+    protected static final java.lang.String CUSTOM_FLAG
+    protected static final java.lang.String EXECUTE_URL
+    protected static final java.lang.String INSTALL_URL
+    protected static final java.lang.String IS_SHARE_TENCENT_WEIBO
+    protected static final java.lang.String IMAGE_ARRAY
+    public d(java.util.HashMap)
+    public d(java.lang.String)
+    public void setImageUrl(java.lang.String)
+    public void setFilePath(java.lang.String)
+    public java.lang.String getFilePath()
+    public java.lang.String getNotebook()
+    public void setNotebook(java.lang.String)
+    public java.lang.String getStack()
+    public void setStack(java.lang.String)
+    public java.lang.String[] getTags()
+    public void setTags(java.lang.String[])
+    public boolean isPublic()
+    public void setPublic(boolean)
+    public boolean isFriend()
+    public void setFriend(boolean)
+    public boolean isFamily()
+    public void setFamily(boolean)
+    public int getSafetyLevel()
+    public void setSafetyLevel(int)
+    public int getContentType()
+    public void setContentType(int)
+    public void setHidden(int)
+    public void setVenueName(java.lang.String)
+    public java.lang.String getVenueName()
+    public java.lang.String getVenueDescription()
+    public void setVenueDescription(java.lang.String)
+    public float getLatitude()
+    public void setLatitude(float)
+    public float getLongitude()
+    public void setLongitude(float)
+    public java.lang.String getComment()
+    public void setComment(java.lang.String)
+    public java.lang.String getUrl()
+    public void setUrl(java.lang.String)
+    public java.lang.String getAddress()
+    public void setAddress(java.lang.String)
+    public void setMusicUrl(java.lang.String)
+    public java.lang.String getSite()
+    public java.lang.String getSiteUrl()
+    public java.lang.String getGroupId()
+    public void setGroupId(java.lang.String)
+    public java.lang.String getAuthor()
+    public void setAuthor(java.lang.String)
+    public android.graphics.Bitmap getImageData()
+    public void setImageData(android.graphics.Bitmap)
+    public int getShareType()
+    public void setShareType(int)
+    public int getScence()
+    public void setScence(int)
+    public java.lang.String getExtInfo()
+    public void setExtInfo(java.lang.String)
+    public void setCustomFlag(java.lang.String[])
+    public java.lang.String getExecuteUrl()
+    public void setExecuteUrl()
+    public java.lang.String getInstallUrl()
+    public void setInstallUrl()
+    public void setShareTencentWeibo(boolean)
+    public java.lang.String[] getImageArray()
+    public void setImageArray(java.lang.String[])
+cn.sharesdk.framework.f:
+    private android.content.Context b
+    public f(cn.sharesdk.framework.Platform,android.content.Context)
+    public int a()
+    public cn.sharesdk.framework.PlatformActionListener c()
+    public void a(java.lang.String[])
+    public void b(java.lang.String)
+    public void a(java.lang.String,int,int)
+    public void a(int,int,java.lang.String)
+    public void a(java.lang.String,java.lang.String,short,java.util.HashMap,java.util.HashMap)
+    public void h()
+    protected cn.sharesdk.framework.PlatformActionListener i()
+    public java.lang.String a(android.graphics.Bitmap)
+cn.sharesdk.framework.h
+cn.sharesdk.framework.i:
+    public static final int ERROR_UNKNOWN
+    public static final int ERROR_HOST_LOOKUP
+    public static final int ERROR_UNSUPPORTED_AUTH_SCHEME
+    public static final int ERROR_AUTHENTICATION
+    public static final int ERROR_PROXY_AUTHENTICATION
+    public static final int ERROR_CONNECT
+    public static final int ERROR_IO
+    public static final int ERROR_TIMEOUT
+    public static final int ERROR_REDIRECT_LOOP
+    public static final int ERROR_UNSUPPORTED_SCHEME
+    public static final int ERROR_FAILED_SSL_HANDSHAKE
+    public static final int ERROR_BAD_URL
+    public static final int ERROR_FILE
+    public static final int ERROR_FILE_NOT_FOUND
+    public static final int ERROR_TOO_MANY_REQUESTS
+cn.sharesdk.framework.l:
+    public void a(int,cn.sharesdk.framework.Platform)
+    public java.lang.String a(android.graphics.Bitmap)
+    public java.lang.String c()
+cn.sharesdk.framework.n:
+    public void a(java.lang.Class)
+    public void b(java.lang.Class)
+    public cn.sharesdk.framework.Service c(java.lang.Class)
+    public void d(java.lang.Class)
+    public void e(java.lang.Class)
+    public java.lang.String b()
+    public void a(int)
+    public void b(int)
+    public void b(boolean)
+    public void a(int,cn.sharesdk.framework.Platform)
+    public void a(java.lang.String,java.util.HashMap)
+    public java.lang.String c(int)
+    public int b(java.lang.String)
+    public java.lang.String a(android.graphics.Bitmap)
+cn.sharesdk.framework.utils.Escaper
+cn.sharesdk.framework.utils.ShareSDKR
+cn.sharesdk.framework.utils.a
+cn.sharesdk.framework.utils.a$a
+cn.sharesdk.framework.utils.a$b
+cn.sharesdk.framework.utils.b
+cn.sharesdk.framework.utils.c
+cn.sharesdk.framework.utils.d
+cn.sharesdk.framework.utils.g
+cn.sharesdk.framework.utils.h
+cn.sharesdk.framework.utils.i
+cn.sharesdk.framework.utils.j
+cn.sharesdk.framework.utils.j$a
+cn.sharesdk.sina.weibo.SinaWeibo
+cn.sharesdk.sina.weibo.SinaWeibo$ShareParams
+cn.sharesdk.sina.weibo.a
+cn.sharesdk.sina.weibo.b
+cn.sharesdk.sina.weibo.c
+cn.sharesdk.sina.weibo.d
+cn.sharesdk.sina.weibo.e
+cn.sharesdk.sina.weibo.f
+cn.sharesdk.sina.weibo.g
+cn.sharesdk.sina.weibo.h
+cn.sharesdk.sina.weibo.i
+cn.sharesdk.sina.weibo.j
+cn.sharesdk.sina.weibo.j$a
+cn.sharesdk.system.email.ActionListener
+cn.sharesdk.system.email.Email
+cn.sharesdk.system.email.Email$ShareParams
+cn.sharesdk.system.email.a
+cn.sharesdk.system.email.b
+cn.sharesdk.system.email.c
+cn.sharesdk.system.text.ActionListener
+cn.sharesdk.system.text.ShortMessage
+cn.sharesdk.system.text.ShortMessage$ShareParams
+cn.sharesdk.system.text.a
+cn.sharesdk.system.text.b
+cn.sharesdk.system.text.c
+cn.sharesdk.tencent.qq.QQ:
+    private boolean c
+    public QQ(android.content.Context)
+    public int getVersion()
+    public boolean isClientValid()
+    protected java.util.HashMap getFollowings(int,int,java.lang.String)
+    protected java.util.HashMap getFollowers(int,int,java.lang.String)
+    protected java.util.HashMap getBilaterals(int,int,java.lang.String)
+    protected java.util.HashMap filterFriendshipInfo(int,java.util.HashMap)
+    public boolean hasShareCallback()
+cn.sharesdk.tencent.qq.QQ$ShareParams:
+    public java.lang.String title
+    public java.lang.String titleUrl
+    public java.lang.String imageUrl
+    public java.lang.String musicUrl
+cn.sharesdk.tencent.qq.QQClientNotExistException
+cn.sharesdk.tencent.qq.QQWebShareAdapter:
+    private boolean noTitle
+    public android.app.Activity getActivity()
+    public cn.sharesdk.framework.TitleLayout getTitleLayout()
+    public android.webkit.WebView getWebBody()
+    void setNotitle(boolean)
+    boolean isNotitle()
+    public android.widget.RelativeLayout getBodyView()
+cn.sharesdk.tencent.qq.TencentSSOClientNotInstalledException:
+    private static final long serialVersionUID
+cn.sharesdk.tencent.qzone.QQClientNotExistException
+cn.sharesdk.tencent.qzone.QZone
+cn.sharesdk.tencent.qzone.QZone$ShareParams
+cn.sharesdk.tencent.qzone.QZoneWebShareAdapter
+cn.sharesdk.tencent.qzone.TencentSSOClientNotInstalledException
+cn.sharesdk.tencent.qzone.a
+cn.sharesdk.tencent.qzone.b
+cn.sharesdk.tencent.qzone.c
+cn.sharesdk.tencent.qzone.d
+cn.sharesdk.tencent.qzone.e
+cn.sharesdk.tencent.qzone.f
+cn.sharesdk.tencent.qzone.g
+cn.sharesdk.tencent.qzone.h
+cn.sharesdk.tencent.qzone.i
+cn.sharesdk.tencent.qzone.j
+cn.sharesdk.tencent.qzone.k
+cn.sharesdk.tencent.qzone.l
+cn.sharesdk.twitter.Twitter
+cn.sharesdk.twitter.Twitter$ShareParams
+cn.sharesdk.twitter.a
+cn.sharesdk.twitter.b
+cn.sharesdk.twitter.c
+cn.sharesdk.twitter.d
+cn.sharesdk.twitter.e
+cn.sharesdk.wechat.favorite.WechatFavorite
+cn.sharesdk.wechat.favorite.WechatFavorite$ShareParams
+cn.sharesdk.wechat.favorite.a
+cn.sharesdk.wechat.friends.Wechat
+cn.sharesdk.wechat.friends.Wechat$ShareParams
+cn.sharesdk.wechat.friends.a
+cn.sharesdk.wechat.moments.WechatMoments
+cn.sharesdk.wechat.moments.WechatMoments$ShareParams
+cn.sharesdk.wechat.moments.a
+cn.sharesdk.wechat.utils.WXAppExtendObject
+cn.sharesdk.wechat.utils.WXEmojiObject
+cn.sharesdk.wechat.utils.WXFileObject
+cn.sharesdk.wechat.utils.WXImageObject
+cn.sharesdk.wechat.utils.WXMediaMessage:
+    public static final java.lang.String ACTION_WXAPPMESSAGE
+    public final int getType()
+    public final void setThumbImage(android.graphics.Bitmap)
+cn.sharesdk.wechat.utils.WXMediaMessage$IMediaObject:
+    public static final int TYPE_UNKNOWN
+    public static final int TYPE_TEXT
+    public static final int TYPE_IMAGE
+    public static final int TYPE_MUSIC
+    public static final int TYPE_VIDEO
+    public static final int TYPE_URL
+    public static final int TYPE_FILE
+    public static final int TYPE_APPDATA
+    public static final int TYPE_EMOJI
+    public abstract int type()
+    public abstract boolean checkArgs()
+cn.sharesdk.wechat.utils.WXMusicObject
+cn.sharesdk.wechat.utils.WXTextObject
+cn.sharesdk.wechat.utils.WXVideoObject
+cn.sharesdk.wechat.utils.WXWebpageObject
+cn.sharesdk.wechat.utils.WechatClientNotExistException
+cn.sharesdk.wechat.utils.WechatFavoriteNotSupportedException
+cn.sharesdk.wechat.utils.WechatHelper:
+    public void a(cn.sharesdk.wechat.utils.k)
+    public boolean b()
+    public void a(cn.sharesdk.wechat.utils.k,cn.sharesdk.framework.Platform$ShareParams,cn.sharesdk.framework.PlatformActionListener)
+    public void b(cn.sharesdk.wechat.utils.k)
+    private void a(java.lang.String,java.lang.String,int,cn.sharesdk.wechat.utils.k)
+    private void a(android.content.Context,java.lang.String,java.lang.String,java.lang.String,int,cn.sharesdk.wechat.utils.k)
+    private void a(android.content.Context,java.lang.String,java.lang.String,android.graphics.Bitmap,int,cn.sharesdk.wechat.utils.k)
+    private void a(android.content.Context,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,cn.sharesdk.wechat.utils.k)
+    private void a(android.content.Context,java.lang.String,java.lang.String,java.lang.String,java.lang.String,android.graphics.Bitmap,int,cn.sharesdk.wechat.utils.k)
+    private void a(android.content.Context,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,cn.sharesdk.wechat.utils.k)
+    private void a(android.content.Context,java.lang.String,java.lang.String,java.lang.String,android.graphics.Bitmap,int,cn.sharesdk.wechat.utils.k)
+    private void b(android.content.Context,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,cn.sharesdk.wechat.utils.k)
+    private void b(android.content.Context,java.lang.String,java.lang.String,java.lang.String,android.graphics.Bitmap,int,cn.sharesdk.wechat.utils.k)
+    private void b(android.content.Context,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,cn.sharesdk.wechat.utils.k)
+    private void b(android.content.Context,java.lang.String,java.lang.String,java.lang.String,java.lang.String,android.graphics.Bitmap,int,cn.sharesdk.wechat.utils.k)
+    private void c(android.content.Context,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,cn.sharesdk.wechat.utils.k)
+    private void c(android.content.Context,java.lang.String,java.lang.String,java.lang.String,android.graphics.Bitmap,int,cn.sharesdk.wechat.utils.k)
+    private void b(android.content.Context,java.lang.String,java.lang.String,java.lang.String,int,cn.sharesdk.wechat.utils.k)
+    private void b(android.content.Context,java.lang.String,java.lang.String,android.graphics.Bitmap,int,cn.sharesdk.wechat.utils.k)
+    private byte[] a(java.lang.String)
+    private byte[] b(android.content.Context,java.lang.String)
+    private byte[] a(android.content.Context,android.graphics.Bitmap)
+    private byte[] a(android.content.Context,android.graphics.Bitmap,android.graphics.Bitmap$CompressFormat)
+    private android.graphics.Bitmap a(android.graphics.Bitmap,double)
+    public boolean a(android.content.Context,java.lang.String)
+    public boolean c()
+    public boolean d()
+    private void a(cn.sharesdk.wechat.utils.WXMediaMessage,java.lang.String,int,cn.sharesdk.wechat.utils.k)
+cn.sharesdk.wechat.utils.WechatHelper$ShareParams
+cn.sharesdk.wechat.utils.WechatResp$ErrCode
+cn.sharesdk.wechat.utils.WechatTimelineNotSupportedException
+cn.sharesdk.wechat.utils.a
+cn.sharesdk.wechat.utils.d
+cn.sharesdk.wechat.utils.g:
+    public g(cn.sharesdk.framework.Platform,int)
+    public void a(java.lang.String,java.lang.String)
+    public void a(cn.sharesdk.framework.PlatformActionListener)
+    static synthetic cn.sharesdk.framework.Platform a(cn.sharesdk.wechat.utils.g)
+cn.sharesdk.wechat.utils.i
+cn.sharesdk.wechat.utils.j:
+    private android.content.Context a
+    private java.lang.String b
+    public boolean a(android.content.Context,java.lang.String)
+    public void a(cn.sharesdk.wechat.utils.m)
+    public boolean a()
+    public boolean b()
+    private boolean d()
+    private java.lang.String a(java.lang.String)
+    public boolean c()
+cn.sharesdk.wechat.utils.k:
+    public k(cn.sharesdk.framework.Platform)
+    public void a(cn.sharesdk.framework.authorize.AuthorizeListener)
+    public void a(cn.sharesdk.framework.Platform$ShareParams,cn.sharesdk.framework.PlatformActionListener)
+    public void a(cn.sharesdk.wechat.utils.g)
+    public cn.sharesdk.framework.Platform$ShareParams a()
+    public cn.sharesdk.framework.Platform b()
+    public cn.sharesdk.framework.PlatformActionListener c()
+cn.sharesdk.wechat.utils.l
+cn.sharesdk.wechat.utils.m
+com.actionbarsherlock.internal.nineoldandroids.animation.AnimatorSet$Dependency:
+    static final int WITH
+    static final int AFTER
+com.actionbarsherlock.internal.view.menu.ActionMenuPresenter$HasPermanentMenuKey:
+    128:128:private ActionMenuPresenter$HasPermanentMenuKey()
+com.actionbarsherlock.internal.widget.IcsAdapterView$AdapterDataSetObserver:
+    807:808:public void clearSavedState()
+com.actionbarsherlock.internal.widget.IcsView
+com.actionbarsherlock.view.MenuInflater$MenuState:
+    private static final int defaultGroupId
+    private static final int defaultItemId
+    private static final int defaultItemCategory
+    private static final int defaultItemOrder
+    private static final int defaultItemCheckable
+    private static final boolean defaultItemChecked
+    private static final boolean defaultItemVisible
+    private static final boolean defaultItemEnabled
+com.actionbarsherlock.widget.ActivityChooserModel:
+    private static final boolean DEBUG
+    private static final java.lang.String TAG_HISTORICAL_RECORDS
+    private static final java.lang.String TAG_HISTORICAL_RECORD
+    private static final java.lang.String ATTRIBUTE_ACTIVITY
+    private static final java.lang.String ATTRIBUTE_TIME
+    private static final java.lang.String ATTRIBUTE_WEIGHT
+    public static final java.lang.String DEFAULT_HISTORY_FILE_NAME
+    public static final int DEFAULT_HISTORY_MAX_LENGTH
+    private static final int DEFAULT_ACTIVITY_INFLATION
+    private static final float DEFAULT_HISTORICAL_RECORD_WEIGHT
+    private static final java.lang.String HISTORY_FILE_EXTENSION
+    private static final int INVALID_INDEX
+    387:387:public android.content.Intent getIntent()
+    599:606:public void setActivitySorter(com.actionbarsherlock.widget.ActivityChooserModel$ActivitySorter)
+    638:646:public void setHistoryMaxSize(int)
+    654:654:public int getHistoryMaxSize()
+com.actionbarsherlock.widget.ActivityChooserModel$DefaultSorter:
+    private static final float WEIGHT_DECAY_COEFFICIENT
+com.actionbarsherlock.widget.ActivityChooserView:
+    450:450:public com.actionbarsherlock.widget.ActivityChooserModel getDataModel()
+    459:460:public void setOnDismissListener(android.widget.PopupWindow$OnDismissListener)
+    471:472:public void setInitialActivityCount(int)
+com.actionbarsherlock.widget.ActivityChooserView$ActivityChooserViewAdapter:
+    public static final int MAX_ACTIVITY_COUNT_UNLIMITED
+    public static final int MAX_ACTIVITY_COUNT_DEFAULT
+    private static final int ITEM_VIEW_TYPE_ACTIVITY
+    private static final int ITEM_VIEW_TYPE_FOOTER
+    private static final int ITEM_VIEW_TYPE_COUNT
+com.actionbarsherlock.widget.ActivityChooserView$SetActivated:
+    627:627:private ActivityChooserView$SetActivated()
+com.actionbarsherlock.widget.SuggestionsAdapter:
+    private static final boolean DBG
+    private static final java.lang.String LOG_TAG
+    private static final int QUERY_LIMIT
+    static final int REFINE_NONE
+    static final int REFINE_BY_ENTRY
+    static final int REFINE_ALL
+    static final int INVALID_INDEX
+    155:155:public int getQueryRefinement()
+    250:252:public void close()
+    690:701:private android.graphics.drawable.Drawable getActivityIconWithCache(android.content.ComponentName)
+    712:729:private android.graphics.drawable.Drawable getActivityIcon(android.content.ComponentName)
+com.baidu.lbsapi.auth.ErrorMessage:
+    ErrorMessage()
+com.baidu.location.b.j$a:
+    j$a()
+com.baidu.location.c.a:
+    static final int i
+    private static final int else
+    private static final int p
+    private static final int n
+    private static final int d
+    private static final int u
+    private static final int char
+    private static final int c
+    private static final double w
+    private static final double for
+    private static final int j
+    private static final int l
+    private static final int v
+    private static final int if
+    private static final int try
+    private static final int h
+    private static final int g
+    private static final int f
+    private static final int e
+    static final int s
+    void do()
+com.baidu.location.c.a$b:
+    private static final int dm
+    private static final int dz
+    private static final java.lang.String dq
+    private static final java.lang.String dA
+    private static final java.lang.String dE
+    private static final java.lang.String dx
+    private static final int dw
+    private static final long dy
+    private static final long dt
+com.baidu.location.c.c:
+    private static final java.lang.String R
+    private static final java.lang.String Z
+    private static final java.lang.String U
+    private static final java.lang.String M
+    private static final java.lang.String Y
+    private static final java.lang.String A
+    private static final java.lang.String J
+    private static final java.lang.String aa
+    private static final java.lang.String I
+    private static final java.lang.String K
+    private static final java.lang.String S
+    private static final java.lang.String T
+    private static final java.lang.String X
+    private static final java.lang.String N
+    private static final java.lang.String W
+    private static final java.lang.String F
+    private static final java.lang.String E
+    private static final java.lang.String L
+    private static final java.lang.String Q
+    private static final java.lang.String z
+    private static final java.lang.String C
+    private static final java.lang.String B
+    private static final java.lang.String P
+    private static final java.lang.String y
+    private static final java.lang.String V
+    private static final java.lang.String G
+    private static final java.lang.String O
+    private c()
+com.baidu.location.c.c$a:
+    private static final java.lang.String a
+    private static final java.lang.String case
+com.baidu.location.c.e:
+    private static final java.lang.String au
+com.baidu.location.c.e$a:
+    private static final java.lang.String ee
+    private static final java.lang.String dO
+    private static final java.lang.String dP
+    private static final java.lang.String ef
+    private static final java.lang.String dX
+    private static final java.lang.String dI
+    private static final java.lang.String d7
+    private static final java.lang.String dS
+    private static final java.lang.String dT
+    private static final java.lang.String d1
+    private static final java.lang.String eb
+    private static final java.lang.String d4
+    private static final java.lang.String dZ
+    private static final java.lang.String d6
+    private static final java.lang.String dL
+    private static final java.lang.String d8
+    private static final java.lang.String dK
+    private static final java.lang.String ec
+    private static final java.lang.String d0
+    private static final java.lang.String dR
+    private static final java.lang.String d5
+    private static final java.lang.String dH
+    private static final java.lang.String dV
+    private static final java.lang.String d3
+    private static final java.lang.String d2
+    private static final java.lang.String ed
+    private static final int dQ
+    private static final int dY
+    private static final long dW
+com.baidu.location.c.f:
+    static final java.lang.String aV
+    static final int a1
+    static final int a0
+    private static final double a2
+    private static final double a5
+    private static final double a3
+    private static final double a6
+    private static final java.lang.String aZ
+com.baidu.location.c.f$b:
+    private static final int byte
+    private static final java.lang.String new
+com.baidu.location.c.g:
+    private static final int bd
+    private static final int bc
+com.baidu.location.c.g$a:
+    private static final int et
+    private static final java.lang.String eu
+    private static final java.lang.String el
+    private static final java.lang.String es
+    private static final java.lang.String ej
+    private static final int eq
+    private static final int eo
+    private static final long ei
+com.baidu.location.e.g
+com.baidu.location.f.a.b$a:
+    private static final java.lang.String do
+com.baidu.location.g.a:
+    public java.lang.String cx()
+com.baidu.mapapi.clusterutil.clustering.view.DefaultClusterRenderer$MarkerModifier:
+    private static final int BLANK
+com.baidu.mapapi.clusterutil.clustering.view.DefaultClusterRenderer$ViewModifier:
+    private static final int RUN_TASK
+    private static final int TASK_FINISHED
+com.google.zxing.BarcodeFormat:
+    85:85:public java.lang.String getName()
+com.google.zxing.BinaryBitmap:
+    93:93:public boolean isCropSupported()
+    107:108:public com.google.zxing.BinaryBitmap crop(int,int,int,int)
+com.google.zxing.EncodeHintType
+com.google.zxing.MultiFormatReader:
+    50:51:public com.google.zxing.Result decode(com.google.zxing.BinaryBitmap)
+com.google.zxing.MultiFormatWriter
+com.google.zxing.Reader:
+    public abstract com.google.zxing.Result decode(com.google.zxing.BinaryBitmap)
+com.google.zxing.Result:
+    70:70:public byte[] getRawBytes()
+    132:132:public long getTimestamp()
+com.google.zxing.ResultMetadataType:
+    91:91:public java.lang.String getName()
+    99:106:public static com.google.zxing.ResultMetadataType valueOf(java.lang.String)
+com.google.zxing.Writer
+com.google.zxing.WriterException
+com.google.zxing.client.result.AbstractDoCoMoResultParser
+com.google.zxing.client.result.AddressBookAUResultParser
+com.google.zxing.client.result.AddressBookDoCoMoResultParser
+com.google.zxing.client.result.AddressBookParsedResult
+com.google.zxing.client.result.BizcardResultParser
+com.google.zxing.client.result.BookmarkDoCoMoResultParser
+com.google.zxing.client.result.CalendarParsedResult
+com.google.zxing.client.result.EmailAddressParsedResult
+com.google.zxing.client.result.EmailAddressResultParser
+com.google.zxing.client.result.EmailDoCoMoResultParser
+com.google.zxing.client.result.ExpandedProductParsedResult
+com.google.zxing.client.result.ExpandedProductResultParser
+com.google.zxing.client.result.GeoParsedResult
+com.google.zxing.client.result.GeoResultParser
+com.google.zxing.client.result.ISBNParsedResult
+com.google.zxing.client.result.ISBNResultParser
+com.google.zxing.client.result.ParsedResult
+com.google.zxing.client.result.ParsedResultType
+com.google.zxing.client.result.ProductParsedResult
+com.google.zxing.client.result.ProductResultParser
+com.google.zxing.client.result.ResultParser
+com.google.zxing.client.result.SMSMMSResultParser
+com.google.zxing.client.result.SMSParsedResult
+com.google.zxing.client.result.SMSTOMMSTOResultParser
+com.google.zxing.client.result.TelParsedResult
+com.google.zxing.client.result.TelResultParser
+com.google.zxing.client.result.TextParsedResult
+com.google.zxing.client.result.URIParsedResult
+com.google.zxing.client.result.URIResultParser
+com.google.zxing.client.result.URLTOResultParser
+com.google.zxing.client.result.VCardResultParser
+com.google.zxing.client.result.VEventResultParser
+com.google.zxing.client.result.WifiParsedResult
+com.google.zxing.client.result.WifiResultParser
+com.google.zxing.client.result.optional.AbstractNDEFResultParser
+com.google.zxing.client.result.optional.NDEFRecord
+com.google.zxing.client.result.optional.NDEFSmartPosterParsedResult
+com.google.zxing.client.result.optional.NDEFSmartPosterResultParser
+com.google.zxing.client.result.optional.NDEFTextResultParser
+com.google.zxing.client.result.optional.NDEFURIResultParser
+com.google.zxing.common.BitArray:
+    48:48:public int getSizeInBytes()
+    52:57:private void ensureCapacity(int)
+    82:83:public void flip(int)
+    93:94:public void setBulk(int,int)
+    148:153:public void appendBit(boolean)
+    161:168:public void appendBits(int,int)
+    171:176:public void appendBitArray(com.google.zxing.common.BitArray)
+    179:187:public void xor(com.google.zxing.common.BitArray)
+    198:208:public void toBytes(int,byte[],int,int)
+    215:215:public int[] getBitArray()
+com.google.zxing.common.BitMatrix:
+    95:99:public void clear()
+    138:145:public com.google.zxing.common.BitArray getRow(int,com.google.zxing.common.BitArray)
+com.google.zxing.common.CharacterSetECI:
+    104:107:public static com.google.zxing.common.CharacterSetECI getCharacterSetECIByName(java.lang.String)
+com.google.zxing.common.Collections:
+    29:30:private Collections()
+com.google.zxing.common.ECI:
+    34:34:public int getValue()
+    43:49:public static com.google.zxing.common.ECI getECIByValue(int)
+com.google.zxing.common.GlobalHistogramBinarizer:
+    private static final int LUMINANCE_BITS
+    private static final int LUMINANCE_SHIFT
+    private static final int LUMINANCE_BUCKETS
+com.google.zxing.common.GridSampler:
+    48:52:public static void setGridSampler(com.google.zxing.common.GridSampler)
+com.google.zxing.common.HybridBinarizer:
+    private static final int MINIMUM_DIMENSION
+com.google.zxing.common.PerspectiveTransform:
+    80:88:public void transformPoints(float[],float[])
+com.google.zxing.common.StringUtils:
+    public static final java.lang.String SHIFT_JIS
+    private static final java.lang.String EUC_JP
+    private static final java.lang.String UTF8
+    private static final java.lang.String ISO88591
+    40:40:private StringUtils()
+com.google.zxing.common.detector.MonochromeRectangleDetector
+com.google.zxing.common.detector.WhiteRectangleDetector:
+    private static final int INIT_SIZE
+    private static final int CORR
+com.google.zxing.common.reedsolomon.GF256Poly:
+    70:70:int[] getCoefficients()
+    201:223:com.google.zxing.common.reedsolomon.GF256Poly[] divide(com.google.zxing.common.reedsolomon.GF256Poly)
+com.google.zxing.common.reedsolomon.ReedSolomonEncoder
+com.google.zxing.datamatrix.DataMatrixReader:
+    57:57:public com.google.zxing.Result decode(com.google.zxing.BinaryBitmap)
+com.google.zxing.datamatrix.decoder.DecodedBitStreamParser:
+    private static final int PAD_ENCODE
+    private static final int ASCII_ENCODE
+    private static final int C40_ENCODE
+    private static final int TEXT_ENCODE
+    private static final int ANSIX12_ENCODE
+    private static final int EDIFACT_ENCODE
+    private static final int BASE256_ENCODE
+    75:76:private DecodedBitStreamParser()
+com.google.zxing.datamatrix.decoder.Decoder:
+    51:60:public com.google.zxing.common.DecoderResult decode(boolean[][])
+com.google.zxing.multi.ByQuadrantReader
+com.google.zxing.multi.GenericMultipleBarcodeReader
+com.google.zxing.multi.MultipleBarcodeReader
+com.google.zxing.multi.qrcode.QRCodeMultiReader
+com.google.zxing.multi.qrcode.detector.MultiDetector
+com.google.zxing.multi.qrcode.detector.MultiFinderPatternFinder
+com.google.zxing.multi.qrcode.detector.MultiFinderPatternFinder$1
+com.google.zxing.multi.qrcode.detector.MultiFinderPatternFinder$ModuleSizeComparator
+com.google.zxing.oned.CodaBarReader:
+    private static final java.lang.String ALPHABET_STRING
+    private static final int minCharacterLength
+com.google.zxing.oned.Code128Reader:
+    private static final int MAX_AVG_VARIANCE
+    private static final int MAX_INDIVIDUAL_VARIANCE
+    private static final int CODE_SHIFT
+    private static final int CODE_CODE_C
+    private static final int CODE_CODE_B
+    private static final int CODE_CODE_A
+    private static final int CODE_FNC_1
+    private static final int CODE_FNC_2
+    private static final int CODE_FNC_3
+    private static final int CODE_FNC_4_A
+    private static final int CODE_FNC_4_B
+    private static final int CODE_START_A
+    private static final int CODE_START_B
+    private static final int CODE_START_C
+    private static final int CODE_STOP
+com.google.zxing.oned.Code128Writer
+com.google.zxing.oned.Code39Reader:
+    static final java.lang.String ALPHABET_STRING
+    89:92:public Code39Reader(boolean,boolean)
+com.google.zxing.oned.Code39Writer
+com.google.zxing.oned.Code93Reader:
+    private static final java.lang.String ALPHABET_STRING
+com.google.zxing.oned.EAN13Writer
+com.google.zxing.oned.EAN8Writer
+com.google.zxing.oned.ITFReader:
+    private static final int MAX_AVG_VARIANCE
+    private static final int MAX_INDIVIDUAL_VARIANCE
+    private static final int W
+    private static final int N
+com.google.zxing.oned.ITFWriter
+com.google.zxing.oned.OneDReader:
+    protected static final int INTEGER_MATH_SHIFT
+    protected static final int PATTERN_MATCH_RESULT_SCALE_FACTOR
+    47:47:public com.google.zxing.Result decode(com.google.zxing.BinaryBitmap)
+com.google.zxing.oned.UPCAReader:
+    50:50:public com.google.zxing.Result decode(com.google.zxing.BinaryBitmap)
+com.google.zxing.oned.UPCEANReader:
+    private static final int MAX_AVG_VARIANCE
+    private static final int MAX_INDIVIDUAL_VARIANCE
+com.google.zxing.oned.UPCEANWriter
+com.google.zxing.oned.rss.AbstractRSSReader:
+    private static final int MAX_AVG_VARIANCE
+    private static final int MAX_INDIVIDUAL_VARIANCE
+    private static final float MIN_FINDER_PATTERN_RATIO
+    private static final float MAX_FINDER_PATTERN_RATIO
+com.google.zxing.oned.rss.RSSUtils:
+    22:22:private RSSUtils()
+    25:61:static int[] getRSSwidths(int,int,int,int,boolean)
+    127:151:static int[] elements(int[],int,int)
+com.google.zxing.oned.rss.expanded.BitArrayBuilder:
+    39:40:private BitArrayBuilder()
+com.google.zxing.oned.rss.expanded.RSSExpandedReader:
+    private static final int FINDER_PAT_A
+    private static final int FINDER_PAT_B
+    private static final int FINDER_PAT_C
+    private static final int FINDER_PAT_D
+    private static final int FINDER_PAT_E
+    private static final int FINDER_PAT_F
+    private static final int MAX_PAIRS
+com.google.zxing.oned.rss.expanded.decoders.AI01392xDecoder:
+    private static final int headerSize
+    private static final int lastDigitSize
+com.google.zxing.oned.rss.expanded.decoders.AI01393xDecoder:
+    private static final int headerSize
+    private static final int lastDigitSize
+    private static final int firstThreeDigitsSize
+com.google.zxing.oned.rss.expanded.decoders.AI013x0x1xDecoder:
+    private static final int headerSize
+    private static final int weightSize
+    private static final int dateSize
+com.google.zxing.oned.rss.expanded.decoders.AI013x0xDecoder:
+    private static final int headerSize
+    private static final int weightSize
+com.google.zxing.oned.rss.expanded.decoders.AI01AndOtherAIs:
+    private static final int HEADER_SIZE
+com.google.zxing.oned.rss.expanded.decoders.AI01decoder:
+    protected static final int gtinSize
+com.google.zxing.oned.rss.expanded.decoders.AnyAIDecoder:
+    private static final int HEADER_SIZE
+com.google.zxing.oned.rss.expanded.decoders.CurrentParsingState:
+    private static final int NUMERIC
+    private static final int ALPHA
+    private static final int ISO_IEC_646
+    51:51:boolean isNumeric()
+com.google.zxing.oned.rss.expanded.decoders.DecodedChar:
+    static final char FNC1
+com.google.zxing.oned.rss.expanded.decoders.DecodedNumeric:
+    static final int FNC1
+    64:64:int getValue()
+    76:76:boolean isAnyFNC1()
+com.google.zxing.oned.rss.expanded.decoders.FieldParser:
+    189:190:private FieldParser()
+com.google.zxing.pdf417.PDF417Reader:
+    55:55:public com.google.zxing.Result decode(com.google.zxing.BinaryBitmap)
+com.google.zxing.pdf417.decoder.BitMatrixParser:
+    private static final int MAX_ROW_DIFFERENCE
+    private static final int MAX_ROWS
+    private static final int MAX_CW_CAPACITY
+    private static final int MODULES_IN_SYMBOL
+com.google.zxing.pdf417.decoder.DecodedBitStreamParser:
+    private static final int TEXT_COMPACTION_MODE_LATCH
+    private static final int BYTE_COMPACTION_MODE_LATCH
+    private static final int NUMERIC_COMPACTION_MODE_LATCH
+    private static final int BYTE_COMPACTION_MODE_LATCH_6
+    private static final int BEGIN_MACRO_PDF417_CONTROL_BLOCK
+    private static final int BEGIN_MACRO_PDF417_OPTIONAL_FIELD
+    private static final int MACRO_PDF417_TERMINATOR
+    private static final int MODE_SHIFT_TO_BYTE_COMPACTION_MODE
+    private static final int MAX_NUMERIC_CODEWORDS
+    private static final int ALPHA
+    private static final int LOWER
+    private static final int MIXED
+    private static final int PUNCT
+    private static final int PUNCT_SHIFT
+    private static final int PL
+    private static final int LL
+    private static final int AS
+    private static final int ML
+    private static final int AL
+    private static final int PS
+    private static final int PAL
+    81:82:private DecodedBitStreamParser()
+com.google.zxing.pdf417.decoder.Decoder:
+    private static final int MAX_ERRORS
+    private static final int MAX_EC_CODEWORDS
+    52:61:public com.google.zxing.common.DecoderResult decode(boolean[][])
+com.google.zxing.pdf417.detector.Detector:
+    private static final int MAX_AVG_VARIANCE
+    private static final int MAX_INDIVIDUAL_VARIANCE
+    private static final int SKEW_THRESHOLD
+com.google.zxing.qrcode.QRCodeReader:
+    49:49:protected com.google.zxing.qrcode.decoder.Decoder getDecoder()
+    61:61:public com.google.zxing.Result decode(com.google.zxing.BinaryBitmap)
+com.google.zxing.qrcode.QRCodeWriter
+com.google.zxing.qrcode.decoder.DecodedBitStreamParser:
+    49:50:private DecodedBitStreamParser()
+com.google.zxing.qrcode.decoder.Decoder:
+    46:46:public com.google.zxing.common.DecoderResult decode(boolean[][])
+    61:70:public com.google.zxing.common.DecoderResult decode(boolean[][],java.util.Hashtable)
+    74:74:public com.google.zxing.common.DecoderResult decode(com.google.zxing.common.BitMatrix)
+com.google.zxing.qrcode.decoder.ErrorCorrectionLevel:
+    63:63:public int getBits()
+    67:67:public java.lang.String getName()
+com.google.zxing.qrcode.decoder.FormatInformation:
+    private static final int FORMAT_INFO_MASK_QR
+com.google.zxing.qrcode.decoder.Mode:
+    101:101:public int getBits()
+    105:105:public java.lang.String getName()
+com.google.zxing.qrcode.decoder.Version$ECBlocks:
+    207:211:public int getNumBlocks()
+    215:215:public int getTotalECCodewords()
+com.google.zxing.qrcode.detector.Detector:
+    48:48:protected com.google.zxing.common.BitMatrix getImage()
+    52:52:protected com.google.zxing.ResultPointCallback getResultPointCallback()
+    62:62:public com.google.zxing.common.DetectorResult detect()
+com.google.zxing.qrcode.detector.FinderPatternFinder:
+    private static final int CENTER_QUORUM
+    protected static final int MIN_SKIP
+    protected static final int MAX_MODULES
+    private static final int INTEGER_MATH_SHIFT
+    57:58:public FinderPatternFinder(com.google.zxing.common.BitMatrix)
+    68:68:protected com.google.zxing.common.BitMatrix getImage()
+    72:72:protected java.util.Vector getPossibleCenters()
+com.google.zxing.qrcode.encoder.BlockPair
+com.google.zxing.qrcode.encoder.ByteMatrix
+com.google.zxing.qrcode.encoder.Encoder
+com.google.zxing.qrcode.encoder.MaskUtil
+com.google.zxing.qrcode.encoder.MatrixUtil
+com.google.zxing.qrcode.encoder.QRCode
+com.jeremyfeinstein.slidingmenu.lib.SlidingMenu$1:
+    public static final int POSITION_OPEN
+    public static final int POSITION_CLOSE
+    public static final int POSITION_SECONDARY_OPEN
+com.method.wifilist.WifiAdmin:
+    private java.util.List mWifiList
+    private java.util.List mWifiConfiguration
+    android.net.wifi.WifiManager$WifiLock mWifiLock
+    49:49:public int checkState()
+    54:55:public void creatWifiLock()
+    59:60:public void acquireWifiLock()
+    65:68:public void releaseWifiLock()
+    72:72:public java.util.List getConfiguration()
+    78:83:public void connectConfiguration(int)
+    86:91:public void startScan()
+    95:95:public java.util.List getWifiList()
+    100:108:public java.lang.StringBuilder lookUpScan(java.util.List)
+    113:113:public java.lang.String getMacAddress()
+    118:118:public java.lang.String getBSSID()
+    127:127:public int getIPAddress()
+    137:137:public java.lang.String getWifiInfo()
+    146:150:public void addNetwork(android.net.wifi.WifiConfiguration)
+    154:156:public void disconnectWifi(int)
+com.method.wifilist.WifiConstant:
+    3:3:public WifiConstant()
+com.mob.commons.appcollector.PackageCollector:
+    public static synchronized boolean register(android.content.Context,java.lang.String)
+com.mob.commons.appcollector.RuntimeCollector:
+    public static synchronized void startCollector(android.content.Context,java.lang.String)
+com.mob.commons.authorize.DeviceAuthorizer:
+    public DeviceAuthorizer()
+    public static java.lang.String authorize(android.content.Context,com.mob.commons.authorize.MobProduct)
+com.mob.commons.authorize.MobProduct
+com.mob.commons.authorize.c
+com.mob.commons.eventrecoder.EventRecorder:
+    public EventRecorder()
+com.mob.commons.iosbridge.UDPServer:
+    public synchronized void stop()
+    private void b()
+com.mob.tools.FakeActivity:
+    public static void setShell(java.lang.Class)
+    public void setContentViewLayoutResName(java.lang.String)
+    public android.view.View getContentView()
+    public android.view.View findViewById(int)
+    public android.view.View findViewByResName(android.view.View,java.lang.String)
+    public android.view.View findViewByResName(java.lang.String)
+    public void onRequestPermissionsResult(int,java.lang.String[],int[])
+    public com.mob.tools.FakeActivity getParent()
+    public final void setResult(java.util.HashMap)
+    public void runOnUIThread(java.lang.Runnable)
+    public void runOnUIThread(java.lang.Runnable,long)
+    public void setRequestedOrientation(int)
+    public void requestPortraitOrientation()
+    public void requestLandscapeOrientation()
+    public int getOrientation()
+    public void requestFullScreen(boolean)
+    public void requestPermissions(java.lang.String[],int)
+com.mob.tools.FakeActivity$2
+com.mob.tools.FakeActivity$3
+com.mob.tools.MobHandlerThread:
+    public MobHandlerThread(int)
+    public boolean quit()
+    public int getThreadId()
+com.mob.tools.MobLog:
+    private MobLog()
+com.mob.tools.MobUIShell:
+    public void onRequestPermissionsResult(int,java.lang.String[],int[])
+    public java.lang.Object getExecutor()
+com.mob.tools.SSDKHandlerThread:
+    private static final int MSG_START
+    private static final int MSG_STOP
+    private java.lang.String name
+    public SSDKHandlerThread(java.lang.String)
+    public java.lang.String getName()
+com.mob.tools.gui.AsyncImageView
+com.mob.tools.gui.BitmapProcessor
+com.mob.tools.gui.BitmapProcessor$BitmapCallback
+com.mob.tools.gui.BitmapProcessor$ImageReq
+com.mob.tools.gui.BitmapProcessor$ManagerThread
+com.mob.tools.gui.BitmapProcessor$ManagerThread$1
+com.mob.tools.gui.BitmapProcessor$PatchInputStream
+com.mob.tools.gui.BitmapProcessor$WorkerThread
+com.mob.tools.gui.BitmapProcessor$WorkerThread$1
+com.mob.tools.gui.CachePool:
+    public synchronized void clear()
+    public synchronized void trimBeforeTime(long)
+    public int size()
+com.mob.tools.gui.CachePool$Node:
+    static synthetic long access$100(com.mob.tools.gui.CachePool$Node)
+com.mob.tools.gui.MobViewPager
+com.mob.tools.gui.MobViewPager$1
+com.mob.tools.gui.OnListStopScrollListener
+com.mob.tools.gui.PullToRequestAdatper
+com.mob.tools.gui.PullToRequestBaseAdapter
+com.mob.tools.gui.PullToRequestBaseListAdapter
+com.mob.tools.gui.PullToRequestGridAdapter
+com.mob.tools.gui.PullToRequestGridAdapter$1
+com.mob.tools.gui.PullToRequestListAdapter
+com.mob.tools.gui.PullToRequestListAdapter$1
+com.mob.tools.gui.PullToRequestView
+com.mob.tools.gui.PullToRequestView$1
+com.mob.tools.gui.RoundRectLayout
+com.mob.tools.gui.ScaledImageView
+com.mob.tools.gui.ScaledImageView$OnMatrixChangedListener
+com.mob.tools.gui.Scrollable
+com.mob.tools.gui.Scrollable$OnScrollListener
+com.mob.tools.gui.ScrollableGridView
+com.mob.tools.gui.ScrollableGridView$1
+com.mob.tools.gui.ScrollableListView
+com.mob.tools.gui.ScrollableListView$1
+com.mob.tools.gui.ViewPagerAdapter
+com.mob.tools.log.LogCollector:
+    public static final int LEVEL_NORMAL
+    public static final int LEVEL_CRASH
+    public static final int LEVEL_NATIVE
+com.mob.tools.log.MobUncaughtExceptionHandler:
+    public static void disable()
+    public static void closeLog()
+    public static void openLog()
+com.mob.tools.log.NLog:
+    public final int v(java.lang.Throwable)
+    public final varargs int v(java.lang.Object,java.lang.Object[])
+    public final varargs int v(java.lang.Throwable,java.lang.Object,java.lang.Object[])
+    public final varargs int d(java.lang.Throwable,java.lang.Object,java.lang.Object[])
+    public final varargs int i(java.lang.Throwable,java.lang.Object,java.lang.Object[])
+    public final int e(java.lang.Throwable)
+    public final varargs int e(java.lang.Object,java.lang.Object[])
+    public final varargs int e(java.lang.Throwable,java.lang.Object,java.lang.Object[])
+com.mob.tools.log.NativeErrorHandler:
+    private static final int MAX_LOG_SIZE
+    public NativeErrorHandler()
+com.mob.tools.network.BufferedByteArrayOutputStream
+com.mob.tools.network.ByteArrayPart
+com.mob.tools.network.FilePart:
+    public void setFile(java.io.File)
+com.mob.tools.network.HTTPPart:
+    public void setOffset(long)
+    public java.lang.Object getInputStreamEntity()
+    public void setOnReadListener(com.mob.tools.network.OnReadListener)
+com.mob.tools.network.HttpConnectionImpl
+com.mob.tools.network.HttpPatch
+com.mob.tools.network.NetworkHelper:
+    public java.lang.String downloadCache(android.content.Context,java.lang.String,java.lang.String,boolean,com.mob.tools.network.NetworkHelper$NetworkTimeOut)
+    public void rawGet(java.lang.String,com.mob.tools.network.RawNetworkCallback,com.mob.tools.network.NetworkHelper$NetworkTimeOut)
+    public java.lang.String jsonPost(java.lang.String,java.util.ArrayList,java.util.ArrayList,com.mob.tools.network.NetworkHelper$NetworkTimeOut)
+    public java.lang.String httpPostFiles(java.lang.String,java.util.ArrayList,java.util.ArrayList,java.util.ArrayList,com.mob.tools.network.NetworkHelper$NetworkTimeOut)
+    public void httpPost(java.lang.String,java.util.ArrayList,java.util.ArrayList,java.util.ArrayList,com.mob.tools.network.HttpResponseCallback,com.mob.tools.network.NetworkHelper$NetworkTimeOut)
+    public void rawPost(java.lang.String,java.util.ArrayList,com.mob.tools.network.HTTPPart,com.mob.tools.network.RawNetworkCallback,com.mob.tools.network.NetworkHelper$NetworkTimeOut)
+    public void rawPost(java.lang.String,java.util.ArrayList,com.mob.tools.network.HTTPPart,com.mob.tools.network.HttpResponseCallback,com.mob.tools.network.NetworkHelper$NetworkTimeOut)
+    public void getHttpPostResponse(java.lang.String,java.util.ArrayList,com.mob.tools.network.KVPair,java.util.ArrayList,com.mob.tools.network.HttpResponseCallback,com.mob.tools.network.NetworkHelper$NetworkTimeOut)
+    public java.lang.String httpPut(java.lang.String,java.util.ArrayList,com.mob.tools.network.KVPair,java.util.ArrayList,com.mob.tools.network.NetworkHelper$NetworkTimeOut)
+    public java.util.ArrayList httpHead(java.lang.String,java.util.ArrayList,com.mob.tools.network.KVPair,java.util.ArrayList,com.mob.tools.network.NetworkHelper$NetworkTimeOut)
+    public void httpPatch(java.lang.String,java.util.ArrayList,com.mob.tools.network.KVPair,long,java.util.ArrayList,com.mob.tools.network.OnReadListener,com.mob.tools.network.HttpResponseCallback,com.mob.tools.network.NetworkHelper$NetworkTimeOut)
+    private void httpPatchImpl(java.lang.String,java.util.ArrayList,com.mob.tools.network.KVPair,long,java.util.ArrayList,com.mob.tools.network.OnReadListener,com.mob.tools.network.HttpResponseCallback,com.mob.tools.network.NetworkHelper$NetworkTimeOut)
+    public void httpPatchImpl23(java.lang.String,java.util.ArrayList,com.mob.tools.network.KVPair,long,java.util.ArrayList,com.mob.tools.network.OnReadListener,com.mob.tools.network.HttpResponseCallback,com.mob.tools.network.NetworkHelper$NetworkTimeOut)
+com.mob.tools.network.ProgressCallback
+com.mob.tools.network.RawNetworkCallback
+com.mob.tools.network.SSLSocketFactoryEx
+com.mob.tools.network.SSLSocketFactoryEx$1
+com.mob.tools.utils.BitmapHelper:
+    public BitmapHelper()
+    public static android.graphics.Bitmap getBitmap(java.lang.String,int)
+    public static android.graphics.Bitmap getBitmap(java.io.File,int)
+    public static android.graphics.Bitmap getBitmap(java.lang.String)
+    public static android.graphics.Bitmap getBitmap(android.content.Context,java.lang.String)
+    public static java.lang.String saveViewToImage(android.view.View)
+    public static java.lang.String saveViewToImage(android.view.View,int,int)
+    public static android.graphics.Bitmap captureView(android.view.View,int,int)
+    public static android.graphics.Bitmap blur(android.graphics.Bitmap,int,int)
+    private static android.graphics.Bitmap blur(android.graphics.Bitmap,int,boolean)
+    public static android.graphics.Bitmap roundBitmap(android.graphics.Bitmap,int,int,float,float,float,float)
+    public static int[] fixRect(int[],int[])
+    public static int[] fixRect_2(int[],int[])
+    public static java.lang.String saveBitmap(android.content.Context,android.graphics.Bitmap,android.graphics.Bitmap$CompressFormat,int)
+    public static java.lang.String saveBitmap(android.content.Context,android.graphics.Bitmap)
+    public static android.graphics.Bitmap$CompressFormat getBmpFormat(byte[])
+    public static android.graphics.Bitmap cropBitmap(android.graphics.Bitmap,int,int,int,int)
+    public static boolean isBlackBitmap(android.graphics.Bitmap)
+    public static int mixAlpha(int,int)
+    public static android.graphics.Bitmap scaleBitmapByHeight(android.content.Context,int,int)
+    public static android.graphics.Bitmap scaleBitmapByHeight(android.graphics.Bitmap,int)
+com.mob.tools.utils.Data:
+    private static final java.lang.String CHAT_SET
+    public Data()
+    public static byte[] SHA1(java.io.InputStream)
+    public static byte[] SHA1(java.io.File)
+    public static java.lang.String AES128Decode(java.lang.String,byte[])
+    public static java.lang.String base62(long)
+    public static java.lang.String MD5(java.io.File)
+    public static java.lang.String urlEncode(java.lang.String)
+    public static java.lang.String CRC32(byte[])
+    public static byte[] rawRSAEncode(byte[],byte[],int)
+    public static byte[] rawRSADecode(byte[],byte[],int)
+com.mob.tools.utils.DeviceHelper:
+    public boolean isRooted()
+    public java.lang.String getMime()
+    public java.lang.String getDeviceDataNotAES()
+    public java.lang.String getOSVersion()
+    public java.lang.String getAppLanguage()
+    public java.lang.String getOSCountry()
+    public java.lang.String getMCC()
+    public java.lang.String getMNC()
+    public java.lang.String getSimSerialNumber()
+    public java.lang.String getLine1Number()
+    public java.lang.String getNetworkTypeForStatic()
+    public org.json.JSONArray getRunningApp()
+    public java.lang.String getRunningAppStr()
+    public java.lang.String getNetworkOperator()
+    public void hideSoftInput(android.view.View)
+    public void showSoftInput(android.view.View)
+    public boolean isMainProcess(int)
+    public java.lang.String getIMSI()
+    public java.lang.String getIPAddress()
+    public float[] getLocation(int,int)
+    public java.util.HashMap ping(java.lang.String,int,int)
+    public java.lang.String getDeviceType()
+com.mob.tools.utils.FileLocker:
+    public synchronized void lock(java.lang.Runnable,boolean)
+com.mob.tools.utils.Hashon:
+    public java.lang.String format(java.lang.String)
+    private java.lang.String format(java.lang.String,java.util.HashMap)
+    private java.lang.String format(java.lang.String,java.util.ArrayList)
+com.mob.tools.utils.LocalDB
+com.mob.tools.utils.LocationHelper:
+    public android.location.Location getLocation(android.content.Context)
+    public android.location.Location getLocation(android.content.Context,int)
+    public android.location.Location getLocation(android.content.Context,int,int)
+com.mob.tools.utils.R:
+    private static int deviceWidth
+    public R()
+    public static int pxToDip(android.content.Context,int)
+    public static int designToDevice(android.content.Context,int,int)
+    public static int designToDevice(android.content.Context,float,int)
+    public static int getScreenWidth(android.content.Context)
+    public static int getScreenHeight(android.content.Context)
+    public static void setResourceProvider(java.lang.Object)
+    public static int getStringArrayRes(android.content.Context,java.lang.String)
+    public static int getLayoutRes(android.content.Context,java.lang.String)
+    public static int getStyleRes(android.content.Context,java.lang.String)
+    public static int getIdRes(android.content.Context,java.lang.String)
+    public static int getColorRes(android.content.Context,java.lang.String)
+    public static int getRawRes(android.content.Context,java.lang.String)
+    public static int getPluralsRes(android.content.Context,java.lang.String)
+    public static int getAnimRes(android.content.Context,java.lang.String)
+    public static java.lang.String getImageCachePath(android.content.Context)
+    public static void deleteFilesInFolder(java.io.File)
+    public static java.lang.String toWordText(java.lang.String,int)
+    public static int getTextLengthInWord(java.lang.String)
+    public static long strToDate(java.lang.String)
+    public static long dateStrToLong(java.lang.String)
+    public static java.util.Date longToDate(long)
+    public static java.lang.String longToTime(long,int)
+    public static long dateToLong(java.lang.String)
+    public static int[] covertTimeInYears(long)
+    public static android.net.Uri pathToContentUri(android.content.Context,java.lang.String)
+    public static java.lang.String contentUriToPath(android.content.Context,android.net.Uri)
+    public static java.lang.String encodeUrl(android.os.Bundle)
+    public static java.lang.String encodeUrl(java.util.ArrayList)
+    public static java.lang.String toString(java.lang.Object)
+    public static long getFileSize(java.lang.String)
+    public static long getFileSize(java.io.File)
+    public static boolean saveObjectToFile(java.lang.String,java.lang.Object)
+    public static java.lang.Object readObjectFromFile(java.lang.String)
+com.mob.tools.utils.ReflectHelper:
+    public ReflectHelper()
+    public static varargs java.lang.Object invokeStaticMethod(java.lang.String,java.lang.String,java.lang.Object[])
+    private static varargs java.lang.Object onInvokeStaticMethod(java.lang.String,java.lang.String,java.lang.Object[])
+    public static java.lang.Class getClass(java.lang.String)
+    public static java.lang.String getName(java.lang.Class)
+    public static varargs java.lang.Object createProxy(java.util.HashMap,java.lang.Class[])
+com.mob.tools.utils.ReflectHelper$1
+com.mob.tools.utils.ReflectHelper$ReflectRunnable
+com.mob.tools.utils.SQLiteHelper:
+    public SQLiteHelper()
+    public static com.mob.tools.utils.SQLiteHelper$SingleTableDB getDatabase(android.content.Context,java.lang.String)
+    public static int update(com.mob.tools.utils.SQLiteHelper$SingleTableDB,android.content.ContentValues,java.lang.String,java.lang.String[])
+    public static void execSQL(com.mob.tools.utils.SQLiteHelper$SingleTableDB,java.lang.String)
+    public static android.database.Cursor rawQuery(com.mob.tools.utils.SQLiteHelper$SingleTableDB,java.lang.String,java.lang.String[])
+    public static int getSize(com.mob.tools.utils.SQLiteHelper$SingleTableDB)
+    public static void close(com.mob.tools.utils.SQLiteHelper$SingleTableDB)
+com.mob.tools.utils.SQLiteHelper$SingleTableDB:
+    public void setPrimary(java.lang.String,boolean)
+    private void close()
+    static synthetic void access$400(com.mob.tools.utils.SQLiteHelper$SingleTableDB)
+com.mob.tools.utils.SharePrefrenceHelper:
+    public void open(java.lang.String)
+    public void putFloat(java.lang.String,java.lang.Float)
+    public float getFloat(java.lang.String)
+    public void remove(java.lang.String)
+com.mob.tools.utils.UIHandler:
+    public UIHandler()
+    private static android.os.Message getShellMessage(int,android.os.Handler$Callback)
+    public static boolean sendMessageDelayed(android.os.Message,long,android.os.Handler$Callback)
+    public static boolean sendMessageAtTime(android.os.Message,long,android.os.Handler$Callback)
+    public static boolean sendMessageAtFrontOfQueue(android.os.Message,android.os.Handler$Callback)
+    public static boolean sendEmptyMessage(int,android.os.Handler$Callback)
+    public static boolean sendEmptyMessageAtTime(int,long,android.os.Handler$Callback)
+    public static boolean sendEmptyMessageDelayed(int,long,android.os.Handler$Callback)
+com.my51c.opengl.common.ESShader:
+    21:21:public ESShader()
+com.my51c.opengl.common.ESShapes
+com.my51c.opengl.common.ESTransform
+com.nineoldandroids.animation.Animator:
+    public abstract long getStartDelay()
+    public abstract void setStartDelay(long)
+    public abstract long getDuration()
+    183:187:public void removeAllListeners()
+    217:217:public void setupStartValues()
+    229:229:public void setupEndValues()
+    240:240:public void setTarget(java.lang.Object)
+com.nineoldandroids.animation.AnimatorInflater
+com.nineoldandroids.animation.AnimatorSet:
+    125:132:public varargs void playTogether(com.nineoldandroids.animation.Animator[])
+    160:170:public varargs void playSequentially(com.nineoldandroids.animation.Animator[])
+    179:189:public void playSequentially(java.util.List)
+    200:204:public java.util.ArrayList getChildAnimations()
+    216:224:public void setTarget(java.lang.Object)
+    378:378:public long getStartDelay()
+    389:390:public void setStartDelay(long)
+    402:402:public long getDuration()
+    429:432:public void setupStartValues()
+    436:439:public void setupEndValues()
+com.nineoldandroids.animation.AnimatorSet$Builder:
+    1064:1072:public com.nineoldandroids.animation.AnimatorSet$Builder before(com.nineoldandroids.animation.Animator)
+    1084:1092:public com.nineoldandroids.animation.AnimatorSet$Builder after(com.nineoldandroids.animation.Animator)
+    1105:1108:public com.nineoldandroids.animation.AnimatorSet$Builder after(long)
+com.nineoldandroids.animation.AnimatorSet$Dependency:
+    static final int WITH
+    static final int AFTER
+com.nineoldandroids.animation.ArgbEvaluator
+com.nineoldandroids.animation.IntKeyframeSet
+com.nineoldandroids.animation.Keyframe:
+    76:76:public static com.nineoldandroids.animation.Keyframe ofInt(float,int)
+    92:92:public static com.nineoldandroids.animation.Keyframe ofInt(float)
+    140:140:public static com.nineoldandroids.animation.Keyframe ofObject(float,java.lang.Object)
+    156:156:public static com.nineoldandroids.animation.Keyframe ofObject(float)
+    201:202:public void setFraction(float)
+    232:232:public java.lang.Class getType()
+com.nineoldandroids.animation.Keyframe$IntKeyframe
+com.nineoldandroids.animation.Keyframe$ObjectKeyframe
+com.nineoldandroids.animation.KeyframeSet:
+    54:65:public static varargs com.nineoldandroids.animation.KeyframeSet ofInt(int[])
+    85:111:public static varargs com.nineoldandroids.animation.KeyframeSet ofKeyframe(com.nineoldandroids.animation.Keyframe[])
+    116:127:public static varargs com.nineoldandroids.animation.KeyframeSet ofObject(java.lang.Object[])
+com.nineoldandroids.animation.ObjectAnimator:
+    private static final boolean DBG
+    142:142:public java.lang.String getPropertyName()
+    173:176:private ObjectAnimator(java.lang.Object,com.nineoldandroids.util.Property)
+    193:195:public static varargs com.nineoldandroids.animation.ObjectAnimator ofInt(java.lang.Object,java.lang.String,int[])
+    211:213:public static varargs com.nineoldandroids.animation.ObjectAnimator ofInt(java.lang.Object,com.nineoldandroids.util.Property,int[])
+    250:252:public static varargs com.nineoldandroids.animation.ObjectAnimator ofFloat(java.lang.Object,com.nineoldandroids.util.Property,float[])
+    274:277:public static varargs com.nineoldandroids.animation.ObjectAnimator ofObject(java.lang.Object,java.lang.String,com.nineoldandroids.animation.TypeEvaluator,java.lang.Object[])
+    297:300:public static varargs com.nineoldandroids.animation.ObjectAnimator ofObject(java.lang.Object,com.nineoldandroids.util.Property,com.nineoldandroids.animation.TypeEvaluator,java.lang.Object[])
+    322:325:public static varargs com.nineoldandroids.animation.ObjectAnimator ofPropertyValuesHolder(java.lang.Object,com.nineoldandroids.animation.PropertyValuesHolder[])
+    330:341:public varargs void setIntValues(int[])
+    360:371:public varargs void setObjectValues(java.lang.Object[])
+    438:438:public java.lang.Object getTarget()
+    448:457:public void setTarget(java.lang.Object)
+    461:466:public void setupStartValues()
+    470:475:public void setupEndValues()
+com.nineoldandroids.animation.PreHoneycombCompat:
+    167:167:private PreHoneycombCompat()
+com.nineoldandroids.animation.PreHoneycombCompat$11:
+    123:124:public void setValue(android.view.View,int)
+    120:120:public bridge synthetic void setValue(java.lang.Object,int)
+com.nineoldandroids.animation.PreHoneycombCompat$12:
+    134:135:public void setValue(android.view.View,int)
+    131:131:public bridge synthetic void setValue(java.lang.Object,int)
+com.nineoldandroids.animation.PropertyValuesHolder:
+    154:154:public static varargs com.nineoldandroids.animation.PropertyValuesHolder ofInt(java.lang.String,int[])
+    165:165:public static varargs com.nineoldandroids.animation.PropertyValuesHolder ofInt(com.nineoldandroids.util.Property,int[])
+    204:207:public static varargs com.nineoldandroids.animation.PropertyValuesHolder ofObject(java.lang.String,com.nineoldandroids.animation.TypeEvaluator,java.lang.Object[])
+    224:227:public static varargs com.nineoldandroids.animation.PropertyValuesHolder ofObject(com.nineoldandroids.util.Property,com.nineoldandroids.animation.TypeEvaluator,java.lang.Object[])
+    250:260:public static varargs com.nineoldandroids.animation.PropertyValuesHolder ofKeyframe(java.lang.String,com.nineoldandroids.animation.Keyframe[])
+    281:291:public static varargs com.nineoldandroids.animation.PropertyValuesHolder ofKeyframe(com.nineoldandroids.util.Property,com.nineoldandroids.animation.Keyframe[])
+    309:311:public varargs void setIntValues(int[])
+    337:344:public varargs void setKeyframes(com.nineoldandroids.animation.Keyframe[])
+    360:362:public varargs void setObjectValues(java.lang.Object[])
+    551:565:private void setupValue(java.lang.Object,com.nineoldandroids.animation.Keyframe)
+    576:577:void setupStartValue(java.lang.Object)
+    588:589:void setupEndValue(java.lang.Object)
+    659:661:public void setEvaluator(com.nineoldandroids.animation.TypeEvaluator)
+com.nineoldandroids.animation.PropertyValuesHolder$FloatPropertyValuesHolder:
+    901:905:public PropertyValuesHolder$FloatPropertyValuesHolder(java.lang.String,com.nineoldandroids.animation.FloatKeyframeSet)
+    908:915:public PropertyValuesHolder$FloatPropertyValuesHolder(com.nineoldandroids.util.Property,com.nineoldandroids.animation.FloatKeyframeSet)
+com.nineoldandroids.animation.PropertyValuesHolder$IntPropertyValuesHolder
+com.nineoldandroids.animation.TimeAnimator
+com.nineoldandroids.animation.TimeAnimator$TimeListener
+com.nineoldandroids.animation.ValueAnimator:
+    private static final long DEFAULT_FRAME_DELAY
+    static final int ANIMATION_START
+    static final int ANIMATION_FRAME
+    static final int STOPPED
+    static final int RUNNING
+    static final int SEEKED
+    public static final int RESTART
+    public static final int REVERSE
+    public static final int INFINITE
+    298:300:public static varargs com.nineoldandroids.animation.ValueAnimator ofInt(int[])
+    329:331:public static varargs com.nineoldandroids.animation.ValueAnimator ofPropertyValuesHolder(com.nineoldandroids.animation.PropertyValuesHolder[])
+    352:355:public static varargs com.nineoldandroids.animation.ValueAnimator ofObject(com.nineoldandroids.animation.TypeEvaluator,java.lang.Object[])
+    373:384:public varargs void setIntValues(int[])
+    433:445:public varargs void setObjectValues(java.lang.Object[])
+    476:476:public com.nineoldandroids.animation.PropertyValuesHolder[] getValues()
+    524:524:public long getDuration()
+    692:692:public long getStartDelay()
+    715:715:public static long getFrameDelay()
+    728:729:public static void setFrameDelay(long)
+    744:748:public java.lang.Object getAnimatedValue()
+    762:767:public java.lang.Object getAnimatedValue(java.lang.String)
+    789:789:public int getRepeatCount()
+    809:809:public int getRepeatMode()
+    820:824:public void addUpdateListener(com.nineoldandroids.animation.ValueAnimator$AnimatorUpdateListener)
+    830:835:public void removeAllUpdateListeners()
+    844:851:public void removeUpdateListener(com.nineoldandroids.animation.ValueAnimator$AnimatorUpdateListener)
+    878:878:public android.view.animation.Interpolator getInterpolator()
+    898:901:public void setEvaluator(com.nineoldandroids.animation.TypeEvaluator)
+    1009:1018:public void reverse()
+    1153:1153:public float getAnimatedFraction()
+    1239:1239:public static int getCurrentAnimationsCount()
+    1249:1252:public static void clearAllAnimations()
+com.nineoldandroids.util.IntProperty:
+    public abstract void setValue(java.lang.Object,int)
+com.nineoldandroids.util.NoSuchPropertyException
+com.nineoldandroids.util.Property:
+    55:55:public static com.nineoldandroids.util.Property of(java.lang.Class,java.lang.Class,java.lang.String)
+    76:76:public boolean isReadOnly()
+    104:104:public java.lang.Class getType()
+com.nineoldandroids.util.ReflectiveProperty
+com.nineoldandroids.view.ViewHelper
+com.nineoldandroids.view.ViewHelper$Honeycomb
+com.nineoldandroids.view.ViewPropertyAnimator
+com.nineoldandroids.view.ViewPropertyAnimatorHC
+com.nineoldandroids.view.ViewPropertyAnimatorHC$1
+com.nineoldandroids.view.ViewPropertyAnimatorHC$AnimatorEventListener
+com.nineoldandroids.view.ViewPropertyAnimatorHC$NameValuesHolder
+com.nineoldandroids.view.ViewPropertyAnimatorHC$PropertyBundle
+com.nineoldandroids.view.ViewPropertyAnimatorICS
+com.nineoldandroids.view.ViewPropertyAnimatorICS$1
+com.nineoldandroids.view.ViewPropertyAnimatorPreHC
+com.nineoldandroids.view.ViewPropertyAnimatorPreHC$1
+com.nineoldandroids.view.ViewPropertyAnimatorPreHC$AnimatorEventListener
+com.nineoldandroids.view.ViewPropertyAnimatorPreHC$NameValuesHolder
+com.nineoldandroids.view.ViewPropertyAnimatorPreHC$PropertyBundle
+com.nineoldandroids.view.animation.AnimatorProxy:
+    163:167:public void setScrollX(int)
+    176:180:public void setScrollY(int)
+com.sdview.view.BuildConfig
+com.sdview.view.R:
+    10:10:public R()
+com.sdview.view.R$anim
+com.sdview.view.R$attr
+com.sdview.view.R$bool
+com.sdview.view.R$color
+com.sdview.view.R$dimen
+com.sdview.view.R$drawable
+com.sdview.view.R$id
+com.sdview.view.R$integer
+com.sdview.view.R$layout
+com.sdview.view.R$menu
+com.sdview.view.R$raw
+com.sdview.view.R$string
+com.sdview.view.R$style
+com.sdview.view.R$styleable:
+    3904:3904:public R$styleable()
+com.sina.sso.RemoteSSO
+com.sina.sso.RemoteSSO$Stub
+com.sina.sso.RemoteSSO$Stub$Proxy
+com.sina.weibo.sdk.api.ImageObject:
+    public final void setImageObject(android.graphics.Bitmap)
+    public boolean checkArgs()
+    public int getObjType()
+com.sina.weibo.sdk.api.TextObject:
+    public boolean checkArgs()
+    public int getObjType()
+com.sina.weibo.sdk.api.WebpageObject:
+    public java.lang.String defaultText
+    public final void setThumbImage(android.graphics.Bitmap)
+    public boolean checkArgs()
+    public int getObjType()
+com.tencent.connect.UserInfo:
+    public static final java.lang.String GRAPH_OPEN_ID
+    26:27:public UserInfo(android.content.Context,com.tencent.connect.auth.QQAuth,com.tencent.connect.auth.QQToken)
+    37:41:public void getVipUserInfo(com.tencent.tauth.IUiListener)
+    44:48:public void getVipUserRichInfo(com.tencent.tauth.IUiListener)
+    55:60:public void getTenPayAddr(com.tencent.tauth.IUiListener)
+    67:71:public void getOpenId(com.tencent.tauth.IUiListener)
+com.tencent.connect.a.a:
+    105:117:public static void d(android.content.Context,com.tencent.connect.auth.QQToken)
+com.tencent.connect.auth.AuthAgent:
+    public static final java.lang.String SECURE_LIB_X86_FILE_NAME
+    public static final java.lang.String SECURE_LIB_X86_64_FILE_NAME
+    public static final java.lang.String SECURE_LIB_ARM_FILE_NAME
+    public static final java.lang.String SECURE_LIB_ARM64_FILE_NAME
+    private com.tencent.tauth.IUiListener a
+    private java.lang.String b
+    private java.lang.ref.WeakReference c
+    204:204:public int doLogin(android.app.Activity,java.lang.String,com.tencent.tauth.IUiListener)
+    208:228:public int doLogin(android.app.Activity,java.lang.String,com.tencent.tauth.IUiListener,boolean,android.support.v4.app.Fragment)
+    234:236:public void releaseResource()
+    239:301:private int a(boolean,com.tencent.tauth.IUiListener)
+    305:349:private boolean a(android.app.Activity,android.support.v4.app.Fragment,boolean)
+    358:377:protected void a(com.tencent.tauth.IUiListener)
+    385:391:protected void b(com.tencent.tauth.IUiListener)
+    66:66:static synthetic com.tencent.connect.auth.QQToken a(com.tencent.connect.auth.AuthAgent)
+    66:66:static synthetic com.tencent.connect.auth.QQToken b(com.tencent.connect.auth.AuthAgent)
+    66:66:static synthetic com.tencent.connect.auth.QQToken c(com.tencent.connect.auth.AuthAgent)
+    66:66:static synthetic com.tencent.connect.auth.QQToken d(com.tencent.connect.auth.AuthAgent)
+    66:66:static synthetic java.lang.ref.WeakReference e(com.tencent.connect.auth.AuthAgent)
+    66:66:static synthetic com.tencent.connect.auth.QQToken f(com.tencent.connect.auth.AuthAgent)
+    66:66:static synthetic android.os.Bundle g(com.tencent.connect.auth.AuthAgent)
+    66:66:static synthetic com.tencent.connect.auth.QQToken h(com.tencent.connect.auth.AuthAgent)
+com.tencent.connect.auth.AuthAgent$1
+com.tencent.connect.auth.AuthAgent$1$1
+com.tencent.connect.auth.AuthAgent$CheckLoginListener
+com.tencent.connect.auth.AuthAgent$FeedConfirmListener
+com.tencent.connect.auth.AuthAgent$FeedConfirmListener$1
+com.tencent.connect.auth.AuthAgent$FeedConfirmListener$2
+com.tencent.connect.auth.AuthAgent$FeedConfirmListener$3
+com.tencent.connect.auth.AuthAgent$FeedConfirmListener$ButtonListener
+com.tencent.connect.auth.AuthAgent$TokenListener
+com.tencent.connect.auth.AuthConstants
+com.tencent.connect.auth.AuthDialog
+com.tencent.connect.auth.AuthDialog$1
+com.tencent.connect.auth.AuthDialog$2
+com.tencent.connect.auth.AuthDialog$3
+com.tencent.connect.auth.AuthDialog$LoginWebViewClient
+com.tencent.connect.auth.AuthDialog$LoginWebViewClient$1
+com.tencent.connect.auth.AuthDialog$OnTimeListener
+com.tencent.connect.auth.AuthDialog$THandler
+com.tencent.connect.auth.AuthDialog$TimeOutRunable
+com.tencent.connect.auth.AuthMap
+com.tencent.connect.auth.AuthMap$Auth
+com.tencent.connect.auth.QQAuth:
+    103:104:public int login(android.app.Activity,java.lang.String,com.tencent.tauth.IUiListener)
+    127:128:public int login(android.app.Activity,java.lang.String,com.tencent.tauth.IUiListener,java.lang.String)
+    152:154:public int login(android.support.v4.app.Fragment,java.lang.String,com.tencent.tauth.IUiListener,java.lang.String)
+    167:193:private int a(android.app.Activity,android.support.v4.app.Fragment,java.lang.String,com.tencent.tauth.IUiListener,java.lang.String)
+    210:225:public int loginWithOEM(android.app.Activity,java.lang.String,com.tencent.tauth.IUiListener,java.lang.String,java.lang.String,java.lang.String)
+    248:249:public int reAuth(android.app.Activity,java.lang.String,com.tencent.tauth.IUiListener)
+    256:257:public void reportDAU()
+    265:266:public void checkLogin(com.tencent.tauth.IUiListener)
+    276:285:public void logout(android.content.Context)
+    307:309:public void setAccessToken(java.lang.String,java.lang.String)
+    318:321:public boolean isSessionValid()
+    332:336:public void setOpenId(android.content.Context,java.lang.String)
+    359:362:public boolean onActivityResult(int,int,android.content.Intent)
+com.tencent.connect.auth.QQToken:
+    public static final int AUTH_WEB
+    public static final int AUTH_QQ
+    public static final int AUTH_QZONE
+    27:28:public void setAppId(java.lang.String)
+    53:53:public int getAuthSource()
+    57:58:public void setAuthSource(int)
+    61:61:public long getExpireTimeInSecond()
+com.tencent.connect.avatar.QQAvatar
+com.tencent.connect.common.AssistActivity:
+    private static final java.lang.String RESTART_FLAG
+    private static final java.lang.String TAG
+    public static final java.lang.String EXTRA_INTENT
+    protected static final int FINISH_BY_TIMEOUT
+    35:36:public static android.content.Intent getAssistActivityIntent(android.content.Context)
+com.tencent.connect.common.BaseApi:
+    private static final java.lang.String TAG
+    private static final java.lang.String KEY_REQUEST_CODE
+    protected static final java.lang.String DEFAULT_PF
+    protected static final java.lang.String PREFERENCE_PF
+    protected static final java.lang.String ACTIVITY_ENCRY_TOKEN
+    protected static final java.lang.String ACTIVITY_AGENT
+    protected static final java.lang.String ACTION_CHECK_TOKEN
+    protected static final java.lang.String PARAM_ENCRY_EOKEN
+    private static final int MSG_COMPLETE
+    protected static final java.lang.String VERSION
+    protected static final java.lang.String PLATFORM
+    protected android.app.ProgressDialog mProgressDialog
+    119:145:protected android.os.Bundle composeActivityParams()
+    173:178:protected void startAssistActivity(android.app.Activity,android.os.Bundle,int,android.content.Intent)
+    190:193:protected void startAssitActivity(android.support.v4.app.Fragment,android.content.Intent,int)
+    217:232:protected android.content.Intent getTargetActivityIntent(java.lang.String)
+    236:246:protected void handleDownloadLastestQQ(android.app.Activity,android.os.Bundle,com.tencent.tauth.IUiListener)
+    250:258:protected void showProgressDialog(android.content.Context,java.lang.String,java.lang.String)
+    261:261:protected android.content.Intent getAgentIntent()
+    266:283:protected android.content.Intent getAgentIntentWithTarget(java.lang.String)
+    288:288:public void releaseResource()
+com.tencent.connect.common.Constants
+com.tencent.connect.common.UIListenerManager:
+    private static final java.lang.String TAG
+    77:84:public com.tencent.tauth.IUiListener getListnerWithRequestCode(int)
+    112:166:public void handleDataToListener(android.content.Intent,com.tencent.tauth.IUiListener)
+    169:179:private com.tencent.tauth.IUiListener buildListener(int,com.tencent.tauth.IUiListener)
+    183:274:public boolean onActivityResult(int,int,android.content.Intent,com.tencent.tauth.IUiListener)
+com.tencent.connect.dataprovider.CallbackManager
+com.tencent.connect.dataprovider.Constants
+com.tencent.connect.dataprovider.DataType:
+    public static final int CONTENT_AND_IMAGE_PATH
+    public static final int CONTENT_AND_VIDEO_PATH
+    public static final int CONTENT_ONLY
+    6:55:public DataType()
+com.tencent.connect.dataprovider.DataType$TextAndMediaPath:
+    15:18:public DataType$TextAndMediaPath(java.lang.String,java.lang.String)
+    21:21:public java.lang.String getText()
+    25:25:public java.lang.String getMediaPath()
+com.tencent.connect.dataprovider.DataType$TextOnly:
+    58:60:public DataType$TextOnly(java.lang.String)
+    63:63:public java.lang.String getText()
+com.tencent.connect.dataprovider.ErrorCode
+com.tencent.connect.share.QQShare:
+    public static final int QQ_SHARE_TITLE_MAX_LENGTH
+    public static final int QQ_SHARE_SUMMARY_MAX_LENGTH
+    public static final java.lang.String SHARE_TO_QQ_IMAGE_URL
+    public static final java.lang.String SHARE_TO_QQ_IMAGE_LOCAL_URL
+    public static final java.lang.String SHARE_TO_QQ_TITLE
+    public static final java.lang.String SHARE_TO_QQ_SUMMARY
+    public static final java.lang.String SHARE_TO_QQ_SITE
+    public static final java.lang.String SHARE_TO_QQ_TARGET_URL
+    public static final java.lang.String SHARE_TO_QQ_APP_NAME
+    public static final java.lang.String SHARE_TO_QQ_AUDIO_URL
+    public static final java.lang.String SHARE_TO_QQ_KEY_TYPE
+    public static final java.lang.String SHARE_TO_QQ_EXT_STR
+    public static final java.lang.String SHARE_TO_QQ_EXT_INT
+    public static final int SHARE_TO_QQ_FLAG_QZONE_AUTO_OPEN
+    public static final int SHARE_TO_QQ_FLAG_QZONE_ITEM_HIDE
+    public static final int SHARE_TO_QQ_TYPE_DEFAULT
+    public static final int SHARE_TO_QQ_TYPE_AUDIO
+    public static final int SHARE_TO_QQ_TYPE_IMAGE
+    public static final int SHARE_TO_QQ_TYPE_APP
+    446:446:public void releaseResource()
+com.tencent.connect.share.QzonePublish:
+    public static final java.lang.String PUBLISH_TO_QZONE_KEY_TYPE
+    public static final int PUBLISH_TO_QZONE_TYPE_PUBLISHMOOD
+    public static final int PUBLISH_TO_QZONE_TYPE_PUBLISHVIDEO
+    public static final java.lang.String PUBLISH_TO_QZONE_IMAGE_URL
+    public static final java.lang.String PUBLISH_TO_QZONE_SUMMARY
+    public static final java.lang.String PUBLISH_TO_QZONE_VIDEO_PATH
+    public static final java.lang.String PUBLISH_TO_QZONE_VIDEO_DURATION
+    public static final java.lang.String PUBLISH_TO_QZONE_VIDEO_SIZE
+    public static final java.lang.String PUBLISH_TO_QZONE_APP_NAME
+com.tencent.connect.share.QzoneShare:
+    public static final java.lang.String SHARE_TO_QZONE_KEY_TYPE
+    public static final int SHARE_TO_QZONE_TYPE_NO_TYPE
+    public static final int SHARE_TO_QZONE_TYPE_IMAGE_TEXT
+    public static final int SHARE_TO_QZONE_TYPE_IMAGE
+    public static final int SHARE_TO_QZONE_TYPE_APP
+    public static final java.lang.String SHARE_TO_QQ_IMAGE_URL
+    public static final java.lang.String SHARE_TO_QQ_IMAGE_LOCAL_URL
+    public static final java.lang.String SHARE_TO_QQ_TITLE
+    public static final java.lang.String SHARE_TO_QQ_SUMMARY
+    public static final java.lang.String SHARE_TO_QQ_SITE
+    public static final java.lang.String SHARE_TO_QQ_TARGET_URL
+    public static final java.lang.String SHARE_TO_QQ_APP_NAME
+    public static final java.lang.String SHARE_TO_QQ_AUDIO_URL
+    public static final java.lang.String SHARE_TO_QQ_EXT_STR
+    public static final java.lang.String SHARE_TO_QQ_EXT_INT
+    502:502:public void releaseResource()
+com.tencent.map.a.a.a
+com.tencent.map.a.a.b
+com.tencent.map.a.a.c
+com.tencent.map.a.a.d
+com.tencent.map.b.a
+com.tencent.map.b.a$1
+com.tencent.map.b.b
+com.tencent.map.b.b$a
+com.tencent.map.b.b$b
+com.tencent.map.b.c
+com.tencent.map.b.c$a
+com.tencent.map.b.c$b
+com.tencent.map.b.d
+com.tencent.map.b.d$1
+com.tencent.map.b.d$a
+com.tencent.map.b.d$b
+com.tencent.map.b.d$c
+com.tencent.map.b.e
+com.tencent.map.b.e$a
+com.tencent.map.b.e$b
+com.tencent.map.b.e$c
+com.tencent.map.b.f
+com.tencent.map.b.f$1
+com.tencent.map.b.f$2
+com.tencent.map.b.f$a
+com.tencent.map.b.f$b
+com.tencent.map.b.f$c
+com.tencent.map.b.g:
+    private android.content.Context a
+    private com.tencent.map.b.g$a c
+    private byte[] j
+    public g()
+    public final boolean a(android.content.Context,com.tencent.map.b.g$c,int)
+    public final void a()
+    public final boolean b()
+    public final boolean c()
+    static synthetic void a(com.tencent.map.b.g)
+com.tencent.map.b.g$1
+com.tencent.map.b.g$a:
+    public g$a(com.tencent.map.b.g)
+com.tencent.map.b.g$b:
+    public final java.util.List a()
+com.tencent.map.b.h
+com.tencent.map.b.i
+com.tencent.map.b.j
+com.tencent.map.b.k
+com.tencent.map.b.k$a
+com.tencent.map.b.l
+com.tencent.map.b.m
+com.tencent.map.b.n
+com.tencent.map.b.o
+com.tencent.map.b.p
+com.tencent.map.b.q
+com.tencent.map.b.r
+com.tencent.open.GameAppOperation
+com.tencent.open.GameAppOperation$1
+com.tencent.open.GameAppOperation$2
+com.tencent.open.GameAppOperation$3
+com.tencent.open.GameAppOperation$4
+com.tencent.open.LocationApi
+com.tencent.open.LocationApi$1
+com.tencent.open.LocationApi$2
+com.tencent.open.LocationApi$3
+com.tencent.open.LocationApi$a
+com.tencent.open.LocationApi$b
+com.tencent.open.PKDialog
+com.tencent.open.PKDialog$1
+com.tencent.open.PKDialog$FbWebViewClient
+com.tencent.open.PKDialog$JsListener
+com.tencent.open.PKDialog$OnTimeListener
+com.tencent.open.PKDialog$THandler
+com.tencent.open.SocialApi
+com.tencent.open.SocialApiIml
+com.tencent.open.SocialApiIml$1
+com.tencent.open.SocialApiIml$a
+com.tencent.open.SocialApiIml$b
+com.tencent.open.SocialApiIml$c
+com.tencent.open.SocialConstants
+com.tencent.open.TDialog:
+    44:44:static synthetic android.os.Handler b(com.tencent.open.TDialog)
+com.tencent.open.TDialog$JsListener:
+    325:327:public void onAddShare(java.lang.String)
+    332:333:public void onInvite(java.lang.String)
+    338:340:public void onCancelAddShare(java.lang.String)
+    345:346:public void onCancelLogin()
+    351:353:public void onCancelInvite()
+    356:359:public void onComplete(java.lang.String)
+    362:365:public void onCancel(java.lang.String)
+    369:370:public void showMsg(java.lang.String)
+    379:380:public void onLoad(java.lang.String)
+com.tencent.open.TaskGuide
+com.tencent.open.TaskGuide$1
+com.tencent.open.TaskGuide$2
+com.tencent.open.TaskGuide$3
+com.tencent.open.TaskGuide$4
+com.tencent.open.TaskGuide$a
+com.tencent.open.TaskGuide$b
+com.tencent.open.TaskGuide$c
+com.tencent.open.TaskGuide$d
+com.tencent.open.TaskGuide$d$1
+com.tencent.open.TaskGuide$e
+com.tencent.open.TaskGuide$f
+com.tencent.open.TaskGuide$g
+com.tencent.open.TaskGuide$h
+com.tencent.open.TaskGuide$i
+com.tencent.open.TaskGuide$j
+com.tencent.open.TaskGuide$j$1
+com.tencent.open.TaskGuide$k
+com.tencent.open.a.a:
+    148:151:public void b()
+com.tencent.open.a.f:
+    212:218:public static void b()
+    245:250:protected void d()
+com.tencent.open.b:
+    private static final java.lang.String TAG
+    19:20:public b(android.content.Context)
+com.tencent.open.b.d:
+    58:62:public void a(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+com.tencent.open.c
+com.tencent.open.c$a
+com.tencent.open.c.a
+com.tencent.open.c.a$a
+com.tencent.open.c.c
+com.tencent.open.d
+com.tencent.open.e
+com.tencent.open.e$a
+com.tencent.open.qzone.Albums
+com.tencent.open.qzone.Albums$AlbumSecurity
+com.tencent.open.t.Weibo
+com.tencent.open.utils.ApkExternalInfoTool
+com.tencent.open.utils.ApkExternalInfoTool$1
+com.tencent.open.utils.ApkExternalInfoTool$ApkExternalInfo
+com.tencent.open.utils.AsynLoadImgBack:
+    public static final int LOAD_IMAGE_COMPLETED
+    public static final int LOAD_IMAGE_PATH_NULL
+    public static final int LOAD_IMAGE_NO_SDCARD
+    public static final int LOAD_IMAGE_IMAGE_FORMAT_ERROR
+com.tencent.open.utils.DataConvert
+com.tencent.open.utils.Global:
+    46:46:public Global()
+    77:80:public static final android.content.SharedPreferences getSharedPreferences(java.lang.String,int)
+    92:108:public static void saveVersionCode()
+    111:112:public static int getVersionCode()
+com.tencent.open.utils.HttpUtils:
+    157:158:private HttpUtils()
+    869:989:public static org.json.JSONObject upload(com.tencent.connect.auth.QQToken,android.content.Context,java.lang.String,android.os.Bundle)
+com.tencent.open.utils.HttpUtils$HttpStatusException:
+    public static final java.lang.String ERROR_INFO
+com.tencent.open.utils.HttpUtils$NetworkUnavailableException:
+    public static final java.lang.String ERROR_INFO
+com.tencent.open.utils.OpenConfig:
+    262:264:public long getLong(java.lang.String)
+com.tencent.open.utils.ServerSetting:
+    public static final int ENVIRONMENT_NORMOL
+    public static final int ENVIRONMENT_EXPERIENCE
+    public static final java.lang.String KEY_OPEN_SETTING
+    public static final java.lang.String KEY_OPEN_ENV
+    public static final java.lang.String KEY_HOST_FUSION
+    public static final java.lang.String KEY_HOST_APPIC
+    public static final java.lang.String KEY_HOST_OPEN_MOBILE
+    public static final java.lang.String KEY_HOST_MAPP_QZONE
+    public static final java.lang.String KEY_HOST_ANALY
+    public static final java.lang.String KEY_HOST_QZAPP_QLOGO
+    public static final java.lang.String KEY_HOST_I_GTIMG
+    public static final java.lang.String KEY_HOST_APP_SUPPORT
+    public static final java.lang.String KEY_HOST_QZS_QQ
+    public static final java.lang.String DEFAULT_REDIRECT_URI
+    public static final java.lang.String DEFAULT_CGI_AUTHORIZE
+    public static final java.lang.String DEFAULT_URL_SEND_STORY
+    public static final java.lang.String DEFAULT_URL_INVITE
+    public static final java.lang.String DEFAULT_URL_REPORT
+    public static final java.lang.String DEFAULT_URL_GRAPH_BASE
+    public static final java.lang.String DEFAULT_URL_BRAG
+    public static final java.lang.String DEFAULT_URL_ASK
+    public static final java.lang.String DEFAULT_URL_GIFT
+    public static final java.lang.String DEFAULT_LOCAL_STORAGE_URI
+    public static final java.lang.String DEFAULT_URL_VOICE
+    public static final java.lang.String DEFAULT_URL_REACTIVE
+    public static final java.lang.String DOWNLOAD_QQ_URL
+    public static final java.lang.String DOWNLOAD_QQ_URL_COMMON
+    public static final java.lang.String CGI_FETCH_QQ_URL
+    public static final java.lang.String APP_DETAIL_PAGE
+    public static final java.lang.String URL_FUSION_BASE
+    public static final java.lang.String URL_FUSION_CGI_BASE
+    public static final java.lang.String URL_PRIZE_MAKE_SHARE_URL
+    public static final java.lang.String URL_PRIZE_GET_ACTIVITY_STATE
+    public static final java.lang.String URL_PRIZE_QUERY_UNEXCHANGE
+    public static final java.lang.String URL_PRIZE_EXCHANGE
+    public static final java.lang.String NEED_QQ_VERSION_TIPS_URL
+    96:97:public void changeServer()
+    141:188:public void setEnvironment(android.content.Context,int)
+com.tencent.open.utils.SystemUtils:
+    public static final java.lang.String QQ_VERSION_NAME_4_2_0
+    public static final java.lang.String QQ_VERSION_NAME_4_3_0
+    public static final java.lang.String QQ_VERSION_NAME_4_5_0
+    public static final java.lang.String QQ_VERSION_NAME_4_6_0
+    public static final java.lang.String QQ_VERSION_NAME_5_0_0
+    public static final java.lang.String QQ_VERSION_NAME_5_1_0
+    public static final java.lang.String QQ_VERSION_NAME_5_2_0
+    public static final java.lang.String QQ_VERSION_NAME_5_3_0
+    public static final java.lang.String QQ_VERSION_NAME_5_9_5
+    public static final java.lang.String QQ_SHARE_CALLBACK_ACTION
+    public static final java.lang.String QZONE_SHARE_CALLBACK_ACTION
+    public static final java.lang.String QQFAVORITES_CALLBACK_ACTION
+    public static final java.lang.String QQDATALINE_CALLBACK_ACTION
+    public static final java.lang.String TROOPBAR_CALLBACK_ACTION
+    public static final java.lang.String ACTION_LOGIN
+    public static final java.lang.String ACTION_SHARE
+    public static final java.lang.String IS_LOGIN
+    public static final java.lang.String IS_QQ_MOBILE_SHARE
+    public static final java.lang.String H5_SHARE_DATA
+    public static final java.lang.String ACTION_REQUEST_API
+    30:30:public SystemUtils()
+    131:147:public static boolean isAppSignatureValid(android.content.Context,java.lang.String,java.lang.String)
+    158:184:public static java.lang.String getAppSignatureMD5(android.content.Context,java.lang.String)
+    208:215:public static java.lang.String getRealPathFromUri(android.app.Activity,android.net.Uri)
+    220:221:public static java.lang.String getAppName(android.content.Context)
+    240:268:public static boolean checkMobileQQ(android.content.Context)
+    308:365:public static boolean extractSecureLib(java.lang.String,java.lang.String,int)
+    376:397:public static boolean isLibExtracted(java.lang.String,int)
+    401:410:private static long a(java.io.InputStream,java.io.OutputStream)
+com.tencent.open.utils.ThreadManager:
+    private static android.os.Handler a
+    private static android.os.Handler e
+    private static android.os.HandlerThread f
+    80:80:public static void init()
+    89:92:public static void executeOnNetWorkThread(java.lang.Runnable)
+    100:107:public static android.os.Handler getMainHandler()
+    118:125:public static android.os.Handler getFileThreadHandler()
+    129:129:public static android.os.Looper getFileThreadLooper()
+    133:136:public static java.lang.Thread getSubThread()
+    159:159:public static android.os.Looper getSubThreadLooper()
+    178:179:public static void executeOnFileThread(java.lang.Runnable)
+com.tencent.open.utils.Util:
+    62:253:public Util()
+    99:120:public static java.lang.String encodePostBody(android.os.Bundle,java.lang.String)
+    213:220:public static android.os.Bundle parseUrl(java.lang.String)
+    286:384:public static com.tencent.open.utils.Util$Statistic upload(android.content.Context,java.lang.String,android.os.Bundle)
+    397:415:private static java.lang.String a(org.apache.http.HttpResponse)
+    494:498:public static void showAlert(android.content.Context,java.lang.String,java.lang.String)
+    515:529:public static java.lang.String getUserIp()
+    803:811:public static java.lang.String toHexString(java.lang.String)
+    817:842:public static java.lang.String hexToString(java.lang.String)
+    852:858:public static java.lang.String getAppVersion(android.content.Context)
+    974:988:public static boolean checkNetWork(android.content.Context)
+    1152:1157:public static boolean isNumeric(java.lang.String)
+    1161:1196:public static boolean isTablet(android.content.Context)
+com.tencent.open.utils.Util$TBufferedOutputStream
+com.tencent.open.utils.ZipLong
+com.tencent.open.utils.ZipShort
+com.tencent.open.web.security.JniInterface
+com.tencent.open.web.security.SecureJsInterface
+com.tencent.open.web.security.a
+com.tencent.open.web.security.b
+com.tencent.open.web.security.c
+com.tencent.open.wpa.WPA
+com.tencent.open.yyb.AppbarActivity:
+    private static final java.lang.String TAG
+    private static final java.lang.String WEBVIEW_PATH
+    public static final java.lang.String MYAPP_CACHE_PATH
+    private static final java.lang.String UA_PREFIX
+    private static final int FLOATING_DIALOG_HEIGHT
+    private int titlebarTop
+    409:426:public void showFloatingDialog()
+    429:435:private int getTitbarTop()
+    457:518:public void login()
+    645:646:public void setShareVisibility(boolean)
+    649:650:public void setAppbarTitle(java.lang.String)
+    653:654:public void setShareModel(com.tencent.open.yyb.ShareModel)
+    657:657:private java.lang.String buildTransaction(java.lang.String)
+com.tencent.open.yyb.AppbarActivity$1:
+    459:459:AppbarActivity$1(com.tencent.open.yyb.AppbarActivity)
+com.tencent.open.yyb.AppbarAgent
+com.tencent.open.yyb.AppbarJsBridge:
+    public static final java.lang.String CALLBACK_LOGIN
+    public static final java.lang.String CALLBACK_SHARE
+    public static final java.lang.String BUTTON_CLICK_CALLBACK_FUNCTION_NAME
+    public static final java.lang.String READY_CALLBACK_FUNCTION_NAME
+    public static final java.lang.String JS_BRIDGE_SCHEME
+    public static final int JSBRIDGE_VERSION
+    public static final int Result_OK
+    public static final int Result_Fail
+    public static final int Code_None
+    public static final int Code_Java_Exception
+    public static final int AUTHORIZE_FAIL
+    public static final int SHARE_QQ
+    public static final int SHARE_QZ
+    public static final int SHARE_WX
+    public static final int SHARE_TIMELINE
+    71:73:public void closeWebView(android.net.Uri,int,java.lang.String,java.lang.String)
+    83:95:public void pageControl(android.net.Uri,int,java.lang.String,java.lang.String)
+    99:140:public void share(android.net.Uri,int,java.lang.String,java.lang.String)
+    154:193:public void getAppInfo(android.net.Uri,int,java.lang.String,java.lang.String)
+    200:208:public void openNewWindow(android.net.Uri,int,java.lang.String,java.lang.String)
+    212:224:public void setWebView(android.net.Uri,int,java.lang.String,java.lang.String)
+    228:230:public void openLoginActivity(android.net.Uri,int,java.lang.String,java.lang.String)
+com.tencent.open.yyb.MoreFloatingDialog:
+    private static final java.lang.String TAG
+    private static final java.lang.String SOURCE_FLOATING_BG
+    private static final java.lang.String SOURCE_QQ_BG
+    private static final java.lang.String SOURCE_QZONE_BG
+    private static final java.lang.String SOURCE_WEIXIN_BG
+    private static final java.lang.String SOURCE_FRIENDS_BG
+    private static final float SHARE_ICON_SIZE
+    private static final float NINE_PATCH_TOP
+    78:78:public int getContentViewHeight()
+    98:98:public int getHeight()
+com.tencent.open.yyb.TitleBar:
+    public static final float TITLEBAR_HEIGHT
+    public static final float BACKBTN_LEFT_MARGIN
+    public static final float SHAREBTN_RIGHT_MARGIN
+    private static final java.lang.String SOURCE_TITLEBAR
+    private static final java.lang.String SOURCE_BACK_BTN
+    private static final java.lang.String SOURCE_MORE_BTN
+    private static final float BACK_PADDING_LEFT
+    private static final float BACK_PADDING_TOP
+    private static final float BACK_PADDING_RIGHT
+    private static final float BACK_PADDING_BOTTOM
+    private static final float BACK_BTN_WIDTH
+    private static final float BACK_BTN_HEIGHT
+    private static final float SHARE_BTN_SIZE
+    private static final int ID_BACK_BTN
+com.tencent.open.yyb.a$a
+com.tencent.qqconnect.dataprovider.datatype.TextAndMediaPath:
+    10:13:public TextAndMediaPath(java.lang.String,java.lang.String)
+    16:16:public java.lang.String getText()
+    20:20:public java.lang.String getMediaPath()
+com.tencent.qqconnect.dataprovider.datatype.TextOnly:
+    9:11:public TextOnly(java.lang.String)
+    14:14:public java.lang.String getText()
+com.tencent.stat.DeviceInfo:
+    public static final int NEW_USER
+    public static final int OLD_USER
+    public static final int UPGRADE_USER
+    public static final java.lang.String TAG_MID
+    public static final java.lang.String TAG_IMEI
+    public static final java.lang.String TAG_MAC
+    public static final java.lang.String TAG_ANDROID_ID
+    public static final java.lang.String TAG_TIMESTAMPS
+    public static final java.lang.String TAG_VERSION
+    public static final java.lang.String TAG_FLAG
+com.tencent.stat.MtaSDkException
+com.tencent.stat.NetworkMonitor:
+    public long getMillisecondsConsume()
+    public int getStatusCode()
+    public java.lang.String getDomain()
+    public int getPort()
+    public java.lang.String getRemoteIp()
+com.tencent.stat.StatAppMonitor
+com.tencent.stat.StatConfig:
+    static boolean a(int,int,int)
+    public static boolean isDebugEnable()
+    public static void setDebugEnable(boolean)
+    public static void setSessionTimoutMillis(int)
+    public static void setMaxBatchReportCount(int)
+    public static void setMaxSendRetryCount(int)
+    public static void setMaxStoreEventCount(int)
+    public static java.lang.String getCustomProperty(java.lang.String)
+    public static java.lang.String getCustomProperty(java.lang.String,java.lang.String)
+    static void a(android.content.Context,java.lang.String)
+    static java.lang.String a(android.content.Context)
+    private static boolean a(java.lang.String)
+    public static void setAppKey(android.content.Context,java.lang.String)
+    public static void setAppKey(java.lang.String)
+    public static void setInstallChannel(java.lang.String)
+    public static java.lang.String getQQ()
+    public static void setQQ(android.content.Context,java.lang.String)
+    public static void setSendPeriodMinutes(int)
+    public static void setMaxParallelTimmingEvents(int)
+    public static void setEnableSmartReporting(boolean)
+    public static void setAutoExceptionCaught(boolean)
+    public static void setStatReportUrl(java.lang.String)
+    public static void setMaxSessionStatReportCount(int)
+    public static void setMaxDaySessionNumbers(int)
+    public static void setMaxReportEventLength(int)
+    public static void setEnableConcurrentProcess(boolean)
+    public static void setCustomUserId(android.content.Context,java.lang.String)
+    static void a(boolean)
+    public static void initNativeCrashReport(android.content.Context,java.lang.String)
+com.tencent.stat.StatGameUser
+com.tencent.stat.StatMid:
+    public StatMid()
+com.tencent.stat.StatNativeCrashReport:
+    public static final java.lang.String PRE_TAG_TOMBSTONE_FNAME
+    public native java.lang.String stringFromJNI()
+    public native boolean initJNICrash(java.lang.String)
+    public native void enableNativeCrashDebug(boolean)
+    public native void enableNativeCrash(boolean)
+    public native java.lang.String makeJniCrash()
+    public static java.lang.String onNativeCrashHappened()
+    public static void doNativeCrashTest()
+    public static void setNativeCrashEnable(boolean)
+    public static boolean isNativeCrashEnable()
+    public static void setNativeCrashDebugEnable(boolean)
+    public static boolean isNativeCrashDebugEnable()
+    public static void initNativeCrash(android.content.Context,java.lang.String)
+com.tencent.stat.StatService:
+    static boolean a(java.lang.String)
+    public static void startNewSession(android.content.Context)
+    public static void stopSession()
+    public static void setEnvAttributes(android.content.Context,java.util.Map)
+    public static void reportQQ(android.content.Context,java.lang.String)
+    public static void reportGameUser(android.content.Context,com.tencent.stat.StatGameUser)
+    public static boolean startStatService(android.content.Context,java.lang.String,java.lang.String)
+    public static void reportError(android.content.Context,java.lang.String)
+    static void a(android.content.Context,java.util.Map)
+    public static void reportException(android.content.Context,java.lang.Throwable)
+    public static varargs void trackCustomEvent(android.content.Context,java.lang.String,java.lang.String[])
+    public static void trackCustomKVEvent(android.content.Context,java.lang.String,java.util.Properties)
+    public static varargs void trackCustomBeginEvent(android.content.Context,java.lang.String,java.lang.String[])
+    public static varargs void trackCustomEndEvent(android.content.Context,java.lang.String,java.lang.String[])
+    public static void trackCustomBeginKVEvent(android.content.Context,java.lang.String,java.util.Properties)
+    public static void trackCustomEndKVEvent(android.content.Context,java.lang.String,java.util.Properties)
+    public static void reportAppMonitorStat(android.content.Context,com.tencent.stat.StatAppMonitor)
+    public static void commitEvents(android.content.Context,int)
+    public static void testSpeed(android.content.Context,java.util.Map)
+com.tencent.stat.a.a
+com.tencent.stat.a.b
+com.tencent.stat.a.c
+com.tencent.stat.a.g
+com.tencent.stat.a.h
+com.tencent.stat.common.StatConstants:
+    public static final java.lang.String VERSION
+    public static final java.lang.String MTA_SERVER
+    public static final java.lang.String MTA_STAT_URL
+    public static final java.lang.String MTA_COOPERATION_TAG
+    public static final int STAT_DB_VERSION
+    public static final int SDK_ONLINE_CONFIG_TYPE
+    public static final int USER_ONLINE_CONFIG_TYPE
+com.tencent.stat.common.StatLogger:
+    public int getLogLevel()
+    public void setLogLevel(int)
+    public void setTag(java.lang.String)
+    public void verbose(java.lang.Object)
+    public void v(java.lang.Object)
+com.tencent.stat.common.a:
+    public static void a(android.content.Context,java.util.Map)
+com.tencent.tauth.AuthActivity:
+    public static final java.lang.String ACTION_KEY
+    private static final java.lang.String TAG
+    private static final java.lang.String ACTION_SHARE_TO_QQ
+    private static final java.lang.String ACTION_SHARE_TO_QZONE
+    private static final java.lang.String ACTION_ADD_TO_QQFAVORITES
+    private static final java.lang.String ACTION_SEND_TO_MY_COMPUTER
+    private static final java.lang.String ACTION_SHARE_TO_TROOP_BAR
+    public static final java.lang.String ACTION_SHARE_PRIZE
+    private static final java.lang.String SHARE_PRIZE_ACTIVITY_ID
+com.tencent.tauth.Tencent:
+    private static final java.lang.String TAG
+    public static final int REQUEST_LOGIN
+    private com.tencent.open.LocationApi mLocationApi
+    private com.tencent.open.yyb.AppbarAgent mAgent
+    156:157:public int login(android.app.Activity,java.lang.String,com.tencent.tauth.IUiListener)
+    184:185:public int login(android.support.v4.app.Fragment,java.lang.String,com.tencent.tauth.IUiListener)
+    212:214:public int loginServerSide(android.app.Activity,java.lang.String,com.tencent.tauth.IUiListener)
+    241:243:public int loginServerSide(android.support.v4.app.Fragment,java.lang.String,com.tencent.tauth.IUiListener)
+    259:260:public int loginWithOEM(android.app.Activity,java.lang.String,com.tencent.tauth.IUiListener,java.lang.String,java.lang.String,java.lang.String)
+    270:271:public int reAuth(android.app.Activity,java.lang.String,com.tencent.tauth.IUiListener)
+    280:281:public void reportDAU()
+    289:291:public void checkLogin(com.tencent.tauth.IUiListener)
+    294:297:public int invite(android.app.Activity,android.os.Bundle,com.tencent.tauth.IUiListener)
+    301:304:public int story(android.app.Activity,android.os.Bundle,com.tencent.tauth.IUiListener)
+    308:311:public int gift(android.app.Activity,android.os.Bundle,com.tencent.tauth.IUiListener)
+    315:318:public int ask(android.app.Activity,android.os.Bundle,com.tencent.tauth.IUiListener)
+    323:326:public void requestAsync(java.lang.String,android.os.Bundle,java.lang.String,com.tencent.tauth.IRequestListener,java.lang.Object)
+    331:332:public org.json.JSONObject request(java.lang.String,android.os.Bundle,java.lang.String)
+    343:346:public void shareToQzone(android.app.Activity,android.os.Bundle,com.tencent.tauth.IUiListener)
+    355:355:public void releaseResource()
+    374:376:public static boolean onActivityResultData(int,int,android.content.Intent,com.tencent.tauth.IUiListener)
+    380:380:public boolean isSessionValid()
+    388:388:public java.lang.String getAccessToken()
+    392:392:public long getExpiresIn()
+    406:406:public java.lang.String getOpenId()
+    421:423:public void handleLoginData(android.content.Intent,com.tencent.tauth.IUiListener)
+    435:437:public static void handleResultData(android.content.Intent,com.tencent.tauth.IUiListener)
+    456:458:public void setAccessToken(java.lang.String,java.lang.String)
+    469:474:public void setOpenId(java.lang.String)
+    482:483:public boolean isReady()
+    495:502:public boolean isSupportSSOLogin(android.app.Activity)
+    509:511:public void makeFriend(android.app.Activity,android.os.Bundle)
+    523:525:public void bindQQGroup(android.app.Activity,android.os.Bundle)
+    538:540:public void addToQQFavorites(android.app.Activity,android.os.Bundle,com.tencent.tauth.IUiListener)
+    553:555:public void sendToMyComputer(android.app.Activity,android.os.Bundle,com.tencent.tauth.IUiListener)
+    568:570:public void shareToTroopBar(android.app.Activity,android.os.Bundle,com.tencent.tauth.IUiListener)
+    588:588:public int startWPAConversation(android.app.Activity,java.lang.String,java.lang.String)
+    615:617:public int startWPAConversation(android.app.Activity,java.lang.String,java.lang.String,java.lang.String)
+    621:624:public void getWPAUserOnlineState(java.lang.String,com.tencent.tauth.IUiListener)
+    629:632:public int reactive(android.app.Activity,android.os.Bundle,com.tencent.tauth.IUiListener)
+    636:641:public int searchNearby(android.app.Activity,android.os.Bundle,com.tencent.tauth.IUiListener)
+    645:650:public int deleteLocation(android.app.Activity,android.os.Bundle,com.tencent.tauth.IUiListener)
+    654:657:public int brag(android.app.Activity,android.os.Bundle,com.tencent.tauth.IUiListener)
+    661:664:public int challenge(android.app.Activity,android.os.Bundle,com.tencent.tauth.IUiListener)
+    668:673:public void setAvatar(android.app.Activity,android.os.Bundle,com.tencent.tauth.IUiListener)
+    677:682:public void setAvatar(android.app.Activity,android.os.Bundle,com.tencent.tauth.IUiListener,int,int)
+    685:688:public void grade(android.app.Activity,android.os.Bundle,com.tencent.tauth.IUiListener)
+    692:695:public void voice(android.app.Activity,android.os.Bundle,com.tencent.tauth.IUiListener)
+    698:701:public void showTaskGuideWindow(android.app.Activity,android.os.Bundle,com.tencent.tauth.IUiListener)
+    704:709:public void startAppbar(android.app.Activity,java.lang.String)
+    712:717:public void startAppbarLabel(android.app.Activity,java.lang.String)
+    728:731:public void sharePrizeToQQ(android.app.Activity,android.os.Bundle,com.tencent.tauth.IUiListener)
+    740:743:public void queryUnexchangePrize(android.app.Activity,android.os.Bundle,com.tencent.tauth.IUiListener)
+    754:757:public void exchangePrize(android.app.Activity,android.os.Bundle,com.tencent.tauth.IUiListener)
+    768:771:public void checkActivityAvailable(android.app.Activity,java.lang.String,com.tencent.tauth.IUiListener)
+    783:791:public boolean checkPrizeByIntent(android.app.Activity,android.content.Intent)
+    801:806:public void startAppbarThread(android.app.Activity,java.lang.String)
+    816:832:public boolean joinQQGroup(android.app.Activity,java.lang.String)
+com.tutk.IOTC.AVAPIs:
+    public static final int TIME_DELAY_DELTA
+    public static final int TIME_DELAY_MIN
+    public static final int TIME_DELAY_MAX
+    public static final int TIME_DELAY_INITIAL
+    public static final int TIME_SPAN_LOSED
+    public static final int IOTYPE_INNER_SND_DATA_DELAY
+    public static final int API_ER_ANDROID_NULL
+    public static final int AV_ER_NoERROR
+    public static final int AV_ER_INVALID_ARG
+    public static final int AV_ER_BUFPARA_MAXSIZE_INSUFF
+    public static final int AV_ER_EXCEED_MAX_CHANNEL
+    public static final int AV_ER_MEM_INSUFF
+    public static final int AV_ER_FAIL_CREATE_THREAD
+    public static final int AV_ER_EXCEED_MAX_ALARM
+    public static final int AV_ER_EXCEED_MAX_SIZE
+    public static final int AV_ER_SERV_NO_RESPONSE
+    public static final int AV_ER_CLIENT_NO_AVLOGIN
+    public static final int AV_ER_WRONG_VIEWACCorPWD
+    public static final int AV_ER_INVALID_SID
+    public static final int AV_ER_TIMEOUT
+    public static final int AV_ER_DATA_NOREADY
+    public static final int AV_ER_INCOMPLETE_FRAME
+    public static final int AV_ER_LOSED_THIS_FRAME
+    public static final int AV_ER_SESSION_CLOSE_BY_REMOTE
+    public static final int AV_ER_REMOTE_TIMEOUT_DISCONNECT
+    public static final int AV_ER_SERVER_EXIT
+    public static final int AV_ER_CLIENT_EXIT
+    public static final int AV_ER_NOT_INITIALIZED
+    public static final int AV_ER_CLIENT_NOT_SUPPORT
+    public static final int AV_ER_SENDIOCTRL_ALREADY_CALLED
+    public static final int AV_ER_SENDIOCTRL_EXIT
+    22:22:public AVAPIs()
+    public static native int avGetAVApiVer()
+    public static native int avSendFrameData(int,byte[],int,byte[],int)
+    public static native void avClientExit(int,int)
+    public static native int avRecvFrameData(int,byte[],int,byte[],int,int[])
+    public static native int avCheckAudioBuf(int)
+    public static native void avClientSetMaxBufSize(int)
+com.tutk.IOTC.AVFrame:
+    public static final int FRAMEINFO_SIZE
+    public static final int MEDIA_CODEC_UNKNOWN
+    public static final int MEDIA_CODEC_VIDEO_MPEG4
+    public static final int MEDIA_CODEC_VIDEO_H263
+    public static final int MEDIA_CODEC_VIDEO_H264
+    public static final int MEDIA_CODEC_VIDEO_MJPEG
+    public static final int MEDIA_CODEC_AUDIO_ADPCM
+    public static final int MEDIA_CODEC_AUDIO_PCM
+    public static final int MEDIA_CODEC_AUDIO_SPEEX
+    public static final int MEDIA_CODEC_AUDIO_MP3
+    public static final int MEDIA_CODEC_AUDIO_G726
+    public static final int IPC_FRAME_FLAG_PBFRAME
+    public static final int IPC_FRAME_FLAG_IFRAME
+    public static final int IPC_FRAME_FLAG_MD
+    public static final int IPC_FRAME_FLAG_IO
+    public static final int AUDIO_SAMPLE_8K
+    public static final int AUDIO_SAMPLE_11K
+    public static final int AUDIO_SAMPLE_12K
+    public static final int AUDIO_SAMPLE_16K
+    public static final int AUDIO_SAMPLE_22K
+    public static final int AUDIO_SAMPLE_24K
+    public static final int AUDIO_SAMPLE_32K
+    public static final int AUDIO_SAMPLE_44K
+    public static final int AUDIO_SAMPLE_48K
+    public static final int AUDIO_DATABITS_8
+    public static final int AUDIO_DATABITS_16
+    public static final int AUDIO_CHANNEL_MONO
+    public static final int AUDIO_CHANNEL_STERO
+    public static final byte FRM_STATE_UNKOWN
+    public static final byte FRM_STATE_COMPLETE
+    public static final byte FRM_STATE_INCOMPLETE
+    public static final byte FRM_STATE_LOSED
+    109:151:public static int getSamplerate(byte)
+    164:164:public byte getCamIndex()
+    180:180:public int getDataSize()
+    184:184:public byte getFlags()
+    188:188:public byte getFrmState()
+    192:192:public long getFrmNo()
+    200:200:public byte getOnlineNum()
+    212:212:public int getVideoWidth()
+    216:216:public int getVideoHeight()
+com.tutk.IOTC.AVIOCTRLDEFs:
+    public static final int IOTYPE_USER_IPCAM_START
+    public static final int IOTYPE_USER_IPCAM_STOP
+    public static final int IOTYPE_USER_IPCAM_AUDIOSTART
+    public static final int IOTYPE_USER_IPCAM_AUDIOSTOP
+    public static final int IOTYPE_USER_IPCAM_SPEAKERSTART
+    public static final int IOTYPE_USER_IPCAM_SPEAKERSTOP
+    public static final int IOTYPE_USER_IPCAM_SETSTREAMCTRL_REQ
+    public static final int IOTYPE_USER_IPCAM_SETSTREAMCTRL_RESP
+    public static final int IOTYPE_USER_IPCAM_GETSTREAMCTRL_REQ
+    public static final int IOTYPE_USER_IPCAM_GETSTREAMCTRL_RESP
+    public static final int IOTYPE_USER_IPCAM_SETMOTIONDETECT_REQ
+    public static final int IOTYPE_USER_IPCAM_SETMOTIONDETECT_RESP
+    public static final int IOTYPE_USER_IPCAM_GETMOTIONDETECT_REQ
+    public static final int IOTYPE_USER_IPCAM_GETMOTIONDETECT_RESP
+    public static final int IOTYPE_USER_IPCAM_GETSUPPORTSTREAM_REQ
+    public static final int IOTYPE_USER_IPCAM_GETSUPPORTSTREAM_RESP
+    public static final int IOTYPE_USER_IPCAM_GETAUDIOOUTFORMAT_REQ
+    public static final int IOTYPE_USER_IPCAM_GETAUDIOOUTFORMAT_RESP
+    public static final int IOTYPE_USER_IPCAM_DEVINFO_REQ
+    public static final int IOTYPE_USER_IPCAM_DEVINFO_RESP
+    public static final int IOTYPE_USER_IPCAM_SETPASSWORD_REQ
+    public static final int IOTYPE_USER_IPCAM_SETPASSWORD_RESP
+    public static final int IOTYPE_USER_IPCAM_LISTWIFIAP_REQ
+    public static final int IOTYPE_USER_IPCAM_LISTWIFIAP_RESP
+    public static final int IOTYPE_USER_IPCAM_SETWIFI_REQ
+    public static final int IOTYPE_USER_IPCAM_SETWIFI_RESP
+    public static final int IOTYPE_USER_IPCAM_GETWIFI_REQ
+    public static final int IOTYPE_USER_IPCAM_GETWIFI_RESP
+    public static final int IOTYPE_USER_IPCAM_SETWIFI_REQ_2
+    public static final int IOTYPE_USER_IPCAM_GETWIFI_RESP_2
+    public static final int IOTYPE_USER_IPCAM_SETRECORD_REQ
+    public static final int IOTYPE_USER_IPCAM_SETRECORD_RESP
+    public static final int IOTYPE_USER_IPCAM_GETRECORD_REQ
+    public static final int IOTYPE_USER_IPCAM_GETRECORD_RESP
+    public static final int IOTYPE_USER_IPCAM_SETRCD_DURATION_REQ
+    public static final int IOTYPE_USER_IPCAM_SETRCD_DURATION_RESP
+    public static final int IOTYPE_USER_IPCAM_GETRCD_DURATION_REQ
+    public static final int IOTYPE_USER_IPCAM_GETRCD_DURATION_RESP
+    public static final int IOTYPE_USER_IPCAM_LISTEVENT_REQ
+    public static final int IOTYPE_USER_IPCAM_LISTEVENT_RESP
+    public static final int IOTYPE_USER_IPCAM_RECORD_PLAYCONTROL
+    public static final int IOTYPE_USER_IPCAM_RECORD_PLAYCONTROL_RESP
+    public static final int IOTYPE_USER_IPCAM_GET_EVENTCONFIG_REQ
+    public static final int IOTYPE_USER_IPCAM_GET_EVENTCONFIG_RESP
+    public static final int IOTYPE_USER_IPCAM_SET_EVENTCONFIG_REQ
+    public static final int IOTYPE_USER_IPCAM_SET_EVENTCONFIG_RESP
+    public static final int IOTYPE_USER_IPCAM_SET_ENVIRONMENT_REQ
+    public static final int IOTYPE_USER_IPCAM_SET_ENVIRONMENT_RESP
+    public static final int IOTYPE_USER_IPCAM_GET_ENVIRONMENT_REQ
+    public static final int IOTYPE_USER_IPCAM_GET_ENVIRONMENT_RESP
+    public static final int IOTYPE_USER_IPCAM_SET_VIDEOMODE_REQ
+    public static final int IOTYPE_USER_IPCAM_SET_VIDEOMODE_RESP
+    public static final int IOTYPE_USER_IPCAM_GET_VIDEOMODE_REQ
+    public static final int IOTYPE_USER_IPCAM_GET_VIDEOMODE_RESP
+    public static final int IOTYPE_USER_IPCAM_FORMATEXTSTORAGE_REQ
+    public static final int IOTYPE_USER_IPCAM_FORMATEXTSTORAGE_RESP
+    public static final int IOTYPE_USER_IPCAM_PTZ_COMMAND
+    public static final int IOTYPE_USER_IPCAM_EVENT_REPORT
+    public static final int IOTYPE_USER_IPCAM_RECEIVE_FIRST_IFRAME
+    public static final int IOTYPE_USER_IPCAM_GET_FLOWINFO_REQ
+    public static final int IOTYPE_USER_IPCAM_GET_FLOWINFO_RESP
+    public static final int IOTYPE_USER_IPCAM_CURRENT_FLOWINFO
+    public static final int IOTYPE_USER_IPCAM_GET_TIMEZONE_REQ
+    public static final int IOTYPE_USER_IPCAM_GET_TIMEZONE_RESP
+    public static final int IOTYPE_USER_IPCAM_SET_TIMEZONE_REQ
+    public static final int IOTYPE_USER_IPCAM_SET_TIMEZONE_RESP
+    public static final int AVIOCTRL_EVENT_ALL
+    public static final int AVIOCTRL_EVENT_MOTIONDECT
+    public static final int AVIOCTRL_EVENT_VIDEOLOST
+    public static final int AVIOCTRL_EVENT_IOALARM
+    public static final int AVIOCTRL_EVENT_MOTIONPASS
+    public static final int AVIOCTRL_EVENT_VIDEORESUME
+    public static final int AVIOCTRL_EVENT_IOALARMPASS
+    public static final int AVIOCTRL_EVENT_EXPT_REBOOT
+    public static final int AVIOCTRL_EVENT_SDFAULT
+    public static final int AVIOCTRL_RECORD_PLAY_PAUSE
+    public static final int AVIOCTRL_RECORD_PLAY_STOP
+    public static final int AVIOCTRL_RECORD_PLAY_STEPFORWARD
+    public static final int AVIOCTRL_RECORD_PLAY_STEPBACKWARD
+    public static final int AVIOCTRL_RECORD_PLAY_FORWARD
+    public static final int AVIOCTRL_RECORD_PLAY_BACKWARD
+    public static final int AVIOCTRL_RECORD_PLAY_SEEKTIME
+    public static final int AVIOCTRL_RECORD_PLAY_END
+    public static final int AVIOCTRL_RECORD_PLAY_START
+    public static final int AVIOCTRL_PTZ_STOP
+    public static final int AVIOCTRL_PTZ_UP
+    public static final int AVIOCTRL_PTZ_DOWN
+    public static final int AVIOCTRL_PTZ_LEFT
+    public static final int AVIOCTRL_PTZ_LEFT_UP
+    public static final int AVIOCTRL_PTZ_LEFT_DOWN
+    public static final int AVIOCTRL_PTZ_RIGHT
+    public static final int AVIOCTRL_PTZ_RIGHT_UP
+    public static final int AVIOCTRL_PTZ_RIGHT_DOWN
+    public static final int AVIOCTRL_PTZ_AUTO
+    public static final int AVIOCTRL_PTZ_SET_POINT
+    public static final int AVIOCTRL_PTZ_CLEAR_POINT
+    public static final int AVIOCTRL_PTZ_GOTO_POINT
+    public static final int AVIOCTRL_PTZ_SET_MODE_START
+    public static final int AVIOCTRL_PTZ_SET_MODE_STOP
+    public static final int AVIOCTRL_PTZ_MODE_RUN
+    public static final int AVIOCTRL_PTZ_MENU_OPEN
+    public static final int AVIOCTRL_PTZ_MENU_EXIT
+    public static final int AVIOCTRL_PTZ_MENU_ENTER
+    public static final int AVIOCTRL_PTZ_FLIP
+    public static final int AVIOCTRL_PTZ_START
+    public static final int AVIOCTRL_LENS_APERTURE_OPEN
+    public static final int AVIOCTRL_LENS_APERTURE_CLOSE
+    public static final int AVIOCTRL_LENS_ZOOM_IN
+    public static final int AVIOCTRL_LENS_ZOOM_OUT
+    public static final int AVIOCTRL_LENS_FOCAL_NEAR
+    public static final int AVIOCTRL_LENS_FOCAL_FAR
+    public static final int AVIOCTRL_AUTO_PAN_SPEED
+    public static final int AVIOCTRL_AUTO_PAN_LIMIT
+    public static final int AVIOCTRL_AUTO_PAN_START
+    public static final int AVIOCTRL_PATTERN_START
+    public static final int AVIOCTRL_PATTERN_STOP
+    public static final int AVIOCTRL_PATTERN_RUN
+    public static final int AVIOCTRL_SET_AUX
+    public static final int AVIOCTRL_CLEAR_AUX
+    public static final int AVIOCTRL_MOTOR_RESET_POSITION
+    public static final int AVIOCTRL_PTZ_MIRROR
+    public static final int AVIOCTRL_QUALITY_UNKNOWN
+    public static final int AVIOCTRL_QUALITY_MAX
+    public static final int AVIOCTRL_QUALITY_HIGH
+    public static final int AVIOCTRL_QUALITY_MIDDLE
+    public static final int AVIOCTRL_QUALITY_LOW
+    public static final int AVIOCTRL_QUALITY_MIN
+    public static final int AVIOTC_WIFIAPMODE_ADHOC
+    public static final int AVIOTC_WIFIAPMODE_MANAGED
+    public static final int AVIOTC_WIFIAPENC_INVALID
+    public static final int AVIOTC_WIFIAPENC_NONE
+    public static final int AVIOTC_WIFIAPENC_WEP
+    public static final int AVIOTC_WIFIAPENC_WPA_TKIP
+    public static final int AVIOTC_WIFIAPENC_WPA_AES
+    public static final int AVIOTC_WIFIAPENC_WPA2_TKIP
+    public static final int AVIOTC_WIFIAPENC_WPA2_AES
+    public static final int AVIOTC_WIFIAPENC_WPA_PSK_TKIP
+    public static final int AVIOTC_WIFIAPENC_WPA_PSK_AES
+    public static final int AVIOTC_WIFIAPENC_WPA2_PSK_TKIP
+    public static final int AVIOTC_WIFIAPENC_WPA2_PSK_AES
+    public static final int AVIOTC_RECORDTYPE_OFF
+    public static final int AVIOTC_RECORDTYPE_FULLTIME
+    public static final int AVIOTC_RECORDTYPE_ALAM
+    public static final int AVIOTC_RECORDTYPE_MANUAL
+    public static final int AVIOCTRL_ENVIRONMENT_INDOOR_50HZ
+    public static final int AVIOCTRL_ENVIRONMENT_INDOOR_60HZ
+    public static final int AVIOCTRL_ENVIRONMENT_OUTDOOR
+    public static final int AVIOCTRL_ENVIRONMENT_NIGHT
+    public static final int AVIOCTRL_VIDEOMODE_NORMAL
+    public static final int AVIOCTRL_VIDEOMODE_FLIP
+    public static final int AVIOCTRL_VIDEOMODE_MIRROR
+    public static final int AVIOCTRL_VIDEOMODE_FLIP_MIRROR
+    7:7:public AVIOCTRLDEFs()
+com.tutk.IOTC.AVIOCTRLDEFs$SAvEvent
+com.tutk.IOTC.AVIOCTRLDEFs$SFrameInfo:
+    short codec_id
+    byte flags
+    byte cam_index
+    byte onlineNum
+    byte[] reserved
+    int reserved2
+    int timestamp
+    206:206:public AVIOCTRLDEFs$SFrameInfo()
+com.tutk.IOTC.AVIOCTRLDEFs$SMsgAVIoctrlAVStream:
+    int channel
+    byte[] reserved
+    234:234:public AVIOCTRLDEFs$SMsgAVIoctrlAVStream()
+com.tutk.IOTC.AVIOCTRLDEFs$SMsgAVIoctrlCurrentFlowInfo
+com.tutk.IOTC.AVIOCTRLDEFs$SMsgAVIoctrlDeviceInfoReq
+com.tutk.IOTC.AVIOCTRLDEFs$SMsgAVIoctrlDeviceInfoResp
+com.tutk.IOTC.AVIOCTRLDEFs$SMsgAVIoctrlEvent
+com.tutk.IOTC.AVIOCTRLDEFs$SMsgAVIoctrlEventConfig
+com.tutk.IOTC.AVIOCTRLDEFs$SMsgAVIoctrlFormatExtStorageReq
+com.tutk.IOTC.AVIOCTRLDEFs$SMsgAVIoctrlFormatExtStorageResp
+com.tutk.IOTC.AVIOCTRLDEFs$SMsgAVIoctrlGetAudioOutFormatReq
+com.tutk.IOTC.AVIOCTRLDEFs$SMsgAVIoctrlGetAudioOutFormatResp
+com.tutk.IOTC.AVIOCTRLDEFs$SMsgAVIoctrlGetEnvironmentReq
+com.tutk.IOTC.AVIOCTRLDEFs$SMsgAVIoctrlGetEnvironmentResp
+com.tutk.IOTC.AVIOCTRLDEFs$SMsgAVIoctrlGetFlowInfoReq
+com.tutk.IOTC.AVIOCTRLDEFs$SMsgAVIoctrlGetFlowInfoResp
+com.tutk.IOTC.AVIOCTRLDEFs$SMsgAVIoctrlGetMotionDetectReq:
+    int channel
+    byte[] reserved
+    341:341:public AVIOCTRLDEFs$SMsgAVIoctrlGetMotionDetectReq()
+com.tutk.IOTC.AVIOCTRLDEFs$SMsgAVIoctrlGetMotionDetectResp
+com.tutk.IOTC.AVIOCTRLDEFs$SMsgAVIoctrlGetRcdDurationReq
+com.tutk.IOTC.AVIOCTRLDEFs$SMsgAVIoctrlGetRcdDurationResp
+com.tutk.IOTC.AVIOCTRLDEFs$SMsgAVIoctrlGetRecordReq
+com.tutk.IOTC.AVIOCTRLDEFs$SMsgAVIoctrlGetRecordResp
+com.tutk.IOTC.AVIOCTRLDEFs$SMsgAVIoctrlGetStreamCtrlReq
+com.tutk.IOTC.AVIOCTRLDEFs$SMsgAVIoctrlGetStreamCtrlResp
+com.tutk.IOTC.AVIOCTRLDEFs$SMsgAVIoctrlGetSupportStreamReq
+com.tutk.IOTC.AVIOCTRLDEFs$SMsgAVIoctrlGetSupportStreamResp
+com.tutk.IOTC.AVIOCTRLDEFs$SMsgAVIoctrlGetVideoModeReq
+com.tutk.IOTC.AVIOCTRLDEFs$SMsgAVIoctrlGetVideoModeResp
+com.tutk.IOTC.AVIOCTRLDEFs$SMsgAVIoctrlGetWifiReq
+com.tutk.IOTC.AVIOCTRLDEFs$SMsgAVIoctrlGetWifiResp
+com.tutk.IOTC.AVIOCTRLDEFs$SMsgAVIoctrlListEventReq
+com.tutk.IOTC.AVIOCTRLDEFs$SMsgAVIoctrlListEventResp
+com.tutk.IOTC.AVIOCTRLDEFs$SMsgAVIoctrlListWifiApReq
+com.tutk.IOTC.AVIOCTRLDEFs$SMsgAVIoctrlListWifiApResp
+com.tutk.IOTC.AVIOCTRLDEFs$SMsgAVIoctrlPlayRecord
+com.tutk.IOTC.AVIOCTRLDEFs$SMsgAVIoctrlPlayRecordResp
+com.tutk.IOTC.AVIOCTRLDEFs$SMsgAVIoctrlPtzCmd:
+    byte control
+    byte speed
+    byte point
+    byte limit
+    byte aux
+    byte channel
+    byte[] reserved
+    255:255:public AVIOCTRLDEFs$SMsgAVIoctrlPtzCmd()
+com.tutk.IOTC.AVIOCTRLDEFs$SMsgAVIoctrlReceiveFirstIFrame
+com.tutk.IOTC.AVIOCTRLDEFs$SMsgAVIoctrlSetEnvironmentReq
+com.tutk.IOTC.AVIOCTRLDEFs$SMsgAVIoctrlSetEnvironmentResp
+com.tutk.IOTC.AVIOCTRLDEFs$SMsgAVIoctrlSetMotionDetectReq:
+    int channel
+    int sensitivity
+    319:319:public AVIOCTRLDEFs$SMsgAVIoctrlSetMotionDetectReq()
+com.tutk.IOTC.AVIOCTRLDEFs$SMsgAVIoctrlSetMotionDetectResp
+com.tutk.IOTC.AVIOCTRLDEFs$SMsgAVIoctrlSetPasswdReq
+com.tutk.IOTC.AVIOCTRLDEFs$SMsgAVIoctrlSetPasswdResp
+com.tutk.IOTC.AVIOCTRLDEFs$SMsgAVIoctrlSetRcdDurationReq
+com.tutk.IOTC.AVIOCTRLDEFs$SMsgAVIoctrlSetRcdDurationResp
+com.tutk.IOTC.AVIOCTRLDEFs$SMsgAVIoctrlSetRecordReq
+com.tutk.IOTC.AVIOCTRLDEFs$SMsgAVIoctrlSetRecordResp
+com.tutk.IOTC.AVIOCTRLDEFs$SMsgAVIoctrlSetStreamCtrlReq:
+    int channel
+    byte quality
+    byte[] reserved
+    278:278:public AVIOCTRLDEFs$SMsgAVIoctrlSetStreamCtrlReq()
+com.tutk.IOTC.AVIOCTRLDEFs$SMsgAVIoctrlSetStreamCtrlResp
+com.tutk.IOTC.AVIOCTRLDEFs$SMsgAVIoctrlSetVideoModeReq
+com.tutk.IOTC.AVIOCTRLDEFs$SMsgAVIoctrlSetVideoModeResp
+com.tutk.IOTC.AVIOCTRLDEFs$SMsgAVIoctrlSetWifiReq
+com.tutk.IOTC.AVIOCTRLDEFs$SMsgAVIoctrlSetWifiResp
+com.tutk.IOTC.AVIOCTRLDEFs$SMsgAVIoctrlTimeZone
+com.tutk.IOTC.AVIOCTRLDEFs$SStreamDef
+com.tutk.IOTC.AVIOCTRLDEFs$STimeDay
+com.tutk.IOTC.AVIOCTRLDEFs$SWifiAp
+com.tutk.IOTC.IOTCAPIs:
+    public static final int API_ER_ANDROID_NULL
+    public static final int IOTC_ER_NoERROR
+    public static final int IOTC_ER_SERVER_NOT_RESPONSE
+    public static final int IOTC_ER_FAIL_RESOLVE_HOSTNAME
+    public static final int IOTC_ER_ALREADY_INITIALIZED
+    public static final int IOTC_ER_FAIL_CREATE_MUTEX
+    public static final int IOTC_ER_FAIL_CREATE_THREAD
+    public static final int IOTC_ER_FAIL_CREATE_SOCKET
+    public static final int IOTC_ER_FAIL_SOCKET_OPT
+    public static final int IOTC_ER_FAIL_SOCKET_BIND
+    public static final int IOTC_ER_UNLICENSE
+    public static final int IOTC_ER_LOGIN_ALREADY_CALLED
+    public static final int IOTC_ER_NOT_INITIALIZED
+    public static final int IOTC_ER_TIMEOUT
+    public static final int IOTC_ER_INVALID_SID
+    public static final int IOTC_ER_UNKNOWN_DEVICE
+    public static final int IOTC_ER_FAIL_GET_LOCAL_IP
+    public static final int IOTC_ER_LISTEN_ALREADY_CALLED
+    public static final int IOTC_ER_EXCEED_MAX_SESSION
+    public static final int IOTC_ER_CAN_NOT_FIND_DEVICE
+    public static final int IOTC_ER_CONNECT_IS_CALLING
+    public static final int IOTC_ER_SESSION_CLOSE_BY_REMOTE
+    public static final int IOTC_ER_REMOTE_TIMEOUT_DISCONNECT
+    public static final int IOTC_ER_DEVICE_NOT_LISTENING
+    public static final int IOTC_ER_CH_NOT_ON
+    public static final int IOTC_ER_FAIL_CONNECT_SEARCH
+    public static final int IOTC_ER_MASTER_TOO_FEW
+    public static final int IOTC_ER_AES_CERTIFY_FAIL
+    public static final int IOTC_ER_SESSION_NO_FREE_CHANNEL
+    public static final int IOTC_ER_TCP_TRAVEL_FAILED
+    public static final int IOTC_ER_TCP_CONNECT_TO_SERVER_FAILED
+    public static final int IOTC_ER_CLIENT_NOT_SECURE_MODE
+    public static final int IOTC_ER_CLIENT_SECURE_MODE
+    public static final int IOTC_ER_DEVICE_NOT_SECURE_MODE
+    public static final int IOTC_ER_DEVICE_SECURE_MODE
+    public static final int IOTC_ER_INVALID_MODE
+    public static final int IOTC_ER_EXIT_LISTEN
+    public static final int IOTC_ER_NO_PERMISSION
+    public static final int IOTC_ER_NETWORK_UNREACHABLE
+    public static final int IOTC_ER_FAIL_SETUP_RELAY
+    public static final int IOTC_ER_NOT_SUPPORT_RELAY
+    public static final int IOTC_ER_NO_SERVER_LIST
+    public static final int IOTC_ER_DEVICE_MULTI_LOGIN
+    public static final int IOTC_ER_INVALID_ARG
+    20:20:public IOTCAPIs()
+    public static native int IOTC_Get_Login_Info(long[])
+    public static native void IOTC_Get_Version(long[])
+    public static native void IOTC_Set_Max_Session_Number(long)
+    public static native int IOTC_Initialize2(int)
+    public static native int IOTC_Device_Login(java.lang.String,java.lang.String,java.lang.String)
+    public static native int IOTC_Listen(long)
+    public static native int IOTC_Listen2(long,java.lang.String,int)
+    public static native int IOTC_Connect_ByUID2(java.lang.String,java.lang.String,int)
+    public static native void IOTC_Connect_Stop()
+    public static native int IOTC_Session_Check(int,com.tutk.IOTC.St_SInfo)
+    public static native int IOTC_Session_Read(int,byte[],int,int,int)
+    public static native int IOTC_Session_Write(int,byte[],int,int)
+    public static native int IOTC_Session_Channel_ON(int,int)
+    public static native int IOTC_Get_Nat_Type()
+    public static native int IOTC_IsDeviceSecureMode(int)
+    public static native com.tutk.IOTC.st_LanSearchInfo[] IOTC_Lan_Search(int[],int)
+com.tutk.IOTC.Packet:
+    16:16:public Packet()
+    27:34:public static final int byteArrayToInt_Little(byte[])
+    39:39:public static final long byteArrayToLong_Little(byte[],int)
+    44:51:public static final int byteArrayToInt_Big(byte[])
+    55:55:public static final byte[] longToByteArray_Little(long)
+    64:64:public static final byte[] intToByteArray_Big(int)
+    72:72:public static final byte[] shortToByteArray_Big(short)
+com.tutk.IOTC.St_SInfo
+com.tutk.IOTC.st_LanSearchInfo
+com.xqe.method.DelEditText:
+    private android.graphics.drawable.Drawable dLeft
+org.achartengine.ChartFactory
+org.achartengine.GraphicalView:
+    147:151:public double[] toRealPoint(int)
+    234:243:public void addZoomListener(org.achartengine.tools.ZoomListener,boolean,boolean)
+    251:256:public synchronized void removeZoomListener(org.achartengine.tools.ZoomListener)
+    264:265:public void addPanListener(org.achartengine.tools.PanListener)
+    273:274:public void removePanListener(org.achartengine.tools.PanListener)
+    316:321:public void repaint(int,int,int,int)
+    329:337:public android.graphics.Bitmap toBitmap()
+org.achartengine.GraphicalView$2
+org.achartengine.ITouchHandler:
+    public abstract void addZoomListener(org.achartengine.tools.ZoomListener)
+    public abstract void removeZoomListener(org.achartengine.tools.ZoomListener)
+    public abstract void addPanListener(org.achartengine.tools.PanListener)
+    public abstract void removePanListener(org.achartengine.tools.PanListener)
+org.achartengine.TouchHandler:
+    169:172:public void addZoomListener(org.achartengine.tools.ZoomListener)
+    180:183:public void removeZoomListener(org.achartengine.tools.ZoomListener)
+    191:194:public void addPanListener(org.achartengine.tools.PanListener)
+    202:205:public void removePanListener(org.achartengine.tools.PanListener)
+org.achartengine.TouchHandlerOld:
+    105:105:public void addZoomListener(org.achartengine.tools.ZoomListener)
+    113:113:public void removeZoomListener(org.achartengine.tools.ZoomListener)
+    121:124:public void addPanListener(org.achartengine.tools.PanListener)
+    132:135:public void removePanListener(org.achartengine.tools.PanListener)
+org.achartengine.chart.AbstractChart:
+    302:332:protected void drawPath(android.graphics.Canvas,java.util.List,android.graphics.Paint,boolean)
+    404:414:private java.lang.String getFitText(java.lang.String,float,android.graphics.Paint)
+    460:511:protected void drawLabel(android.graphics.Canvas,java.lang.String,org.achartengine.renderer.DefaultRenderer,java.util.List,int,int,float,float,float,float,int,int,int,android.graphics.Paint,boolean,boolean)
+org.achartengine.chart.BarChart
+org.achartengine.chart.BarChart$Type
+org.achartengine.chart.BubbleChart
+org.achartengine.chart.CombinedXYChart
+org.achartengine.chart.CubicLineChart
+org.achartengine.chart.DialChart
+org.achartengine.chart.DoughnutChart
+org.achartengine.chart.LineChart
+org.achartengine.chart.LineChart$1
+org.achartengine.chart.PieChart
+org.achartengine.chart.PieMapper
+org.achartengine.chart.PieSegment
+org.achartengine.chart.PointStyle:
+    62:70:public static org.achartengine.chart.PointStyle getPointStyleForName(java.lang.String)
+    79:87:public static int getIndexForName(java.lang.String)
+org.achartengine.chart.RangeBarChart
+org.achartengine.chart.RangeStackedBarChart
+org.achartengine.chart.RoundChart:
+    protected static final int SHAPE_WIDTH
+    protected org.achartengine.model.CategorySeries mDataset
+    protected static final int NO_VALUE
+    49:52:public RoundChart(org.achartengine.model.CategorySeries,org.achartengine.renderer.DefaultRenderer)
+    64:71:public void drawTitle(android.graphics.Canvas,int,int,int,android.graphics.Paint)
+org.achartengine.chart.ScatterChart:
+    public static final java.lang.String TYPE
+    private static final float SIZE
+    private static final int SHAPE_WIDTH
+    43:44:ScatterChart()
+    53:55:public ScatterChart(org.achartengine.model.XYMultipleSeriesDataset,org.achartengine.renderer.XYMultipleSeriesRenderer)
+    60:62:protected void setDatasetRenderer(org.achartengine.model.XYMultipleSeriesDataset,org.achartengine.renderer.XYMultipleSeriesRenderer)
+    272:272:public java.lang.String getChartType()
+org.achartengine.chart.TimeChart
+org.achartengine.chart.XYChart:
+    84:87:public XYChart(org.achartengine.model.XYMultipleSeriesDataset,org.achartengine.renderer.XYMultipleSeriesRenderer)
+    92:94:protected void setDatasetRenderer(org.achartengine.model.XYMultipleSeriesDataset,org.achartengine.renderer.XYMultipleSeriesRenderer)
+    470:470:protected android.graphics.Rect getScreenR()
+    474:475:protected void setScreenR(android.graphics.Rect)
+    805:806:public void setCalcRange(double[],int)
+    809:809:public double[] toRealPoint(float,float)
+    813:813:public double[] toScreenPoint(double[])
+    847:864:public double[] toScreenPoint(double[],int)
+    943:943:public double getDefaultMinimum()
+    public abstract java.lang.String getChartType()
+org.achartengine.model.CategorySeries
+org.achartengine.model.MultipleCategorySeries
+org.achartengine.model.Point:
+    46:47:public void setX(float)
+    50:51:public void setY(float)
+org.achartengine.model.RangeCategorySeries
+org.achartengine.model.SeriesSelection:
+    35:35:public int getSeriesIndex()
+    39:39:public int getPointIndex()
+    43:43:public double getXValue()
+    47:47:public double getValue()
+org.achartengine.model.TimeSeries
+org.achartengine.model.XYMultipleSeriesDataset:
+    25:27:public XYMultipleSeriesDataset()
+    35:36:public synchronized void addSeries(org.achartengine.model.XYSeries)
+    45:46:public synchronized void addSeries(int,org.achartengine.model.XYSeries)
+    54:55:public synchronized void addAllSeries(java.util.List)
+    63:64:public synchronized void removeSeries(int)
+    72:73:public synchronized void removeSeries(org.achartengine.model.XYSeries)
+    79:80:public synchronized void clear()
+org.achartengine.model.XYSeries:
+    private static final double PADDING
+    60:61:public XYSeries(java.lang.String)
+    69:73:public XYSeries(java.lang.String,int)
+    83:93:private void initRange()
+    102:106:private void updateRange(double,double)
+    123:124:public void setTitle(java.lang.String)
+    133:140:public synchronized void add(double,double)
+    150:157:public synchronized void add(int,double,double)
+    160:160:protected double getPadding()
+    169:175:public synchronized void remove(int)
+    181:184:public synchronized void clear()
+    193:193:public synchronized double getX(int)
+    214:216:public void addAnnotation(java.lang.String,double,double)
+    224:226:public void removeAnnotation(int)
+org.achartengine.model.XYValueSeries
+org.achartengine.renderer.DefaultRenderer:
+    public static final int NO_COLOR
+    public static final int BACKGROUND_COLOR
+    public static final int TEXT_COLOR
+    private boolean mDisplayValues
+    126:127:public void setChartTitle(java.lang.String)
+    144:145:public void setChartTitleTextSize(float)
+    153:154:public void addSeriesRenderer(org.achartengine.renderer.SimpleSeriesRenderer)
+    163:164:public void addSeriesRenderer(int,org.achartengine.renderer.SimpleSeriesRenderer)
+    172:173:public void removeSeriesRenderer(org.achartengine.renderer.SimpleSeriesRenderer)
+    179:180:public void removeAllRenderers()
+    207:207:public org.achartengine.renderer.SimpleSeriesRenderer[] getSeriesRenderers()
+    225:226:public void setBackgroundColor(int)
+    243:244:public void setApplyBackgroundColor(boolean)
+    261:262:public void setAxesColor(int)
+    279:280:public void setLabelsColor(int)
+    297:298:public void setLabelsTextSize(float)
+    315:316:public void setShowAxes(boolean)
+    333:334:public void setShowLabels(boolean)
+    360:361:public void setShowGridX(boolean)
+    369:370:public void setShowGridY(boolean)
+    378:380:public void setShowGrid(boolean)
+    397:398:public void setShowCustomTextGrid(boolean)
+    415:416:public void setShowLegend(boolean)
+    433:434:public void setFitLegend(boolean)
+    478:479:public void setLegendTextSize(float)
+    488:490:public void setTextTypeface(java.lang.String,int)
+    498:499:public void setTextTypeface(android.graphics.Typeface)
+    516:517:public void setAntialiasing(boolean)
+    562:563:public void setZoomEnabled(boolean)
+    580:581:public void setZoomButtonsVisible(boolean)
+    598:599:public void setExternalZoomEnabled(boolean)
+    625:626:public void setPanEnabled(boolean)
+    634:635:public void setZoomRate(float)
+    652:653:public void setClickEnabled(boolean)
+    670:671:public void setSelectableBuffer(int)
+    688:689:public void setLegendHeight(int)
+    708:709:public void setMargins(int[])
+    727:728:public void setInScroll(boolean)
+    738:738:public float getStartAngle()
+    749:750:public void setStartAngle(float)
+    758:758:public boolean isDisplayValues()
+    767:768:public void setDisplayValues(boolean)
+org.achartengine.renderer.DialRenderer
+org.achartengine.renderer.DialRenderer$Type
+org.achartengine.renderer.SimpleSeriesRenderer:
+    private double mGradientStartValue
+    private int mGradientStartColor
+    private double mGradientStopValue
+    private int mGradientStopColor
+    private boolean mHighlighted
+    76:77:public void setColor(int)
+    94:95:public void setDisplayChartValues(boolean)
+    112:113:public void setDisplayChartValuesDistance(int)
+    130:131:public void setChartValuesTextSize(float)
+    148:149:public void setChartValuesTextAlign(android.graphics.Paint$Align)
+    167:168:public void setChartValuesSpacing(float)
+    185:186:public void setStroke(org.achartengine.renderer.BasicStroke)
+    194:194:public boolean isGradientEnabled()
+    203:204:public void setGradientEnabled(boolean)
+    212:212:public double getGradientStartValue()
+    221:221:public int getGradientStartColor()
+    231:233:public void setGradientStart(double,int)
+    241:241:public double getGradientStopValue()
+    250:250:public int getGradientStopColor()
+    260:262:public void setGradientStop(double,int)
+    279:280:public void setShowLegendItem(boolean)
+    288:288:public boolean isHighlighted()
+    297:298:public void setHighlighted(boolean)
+    315:316:public void setDisplayBoundingPoints(boolean)
+    333:334:public void setChartValuesFormat(java.text.NumberFormat)
+org.achartengine.renderer.XYMultipleSeriesRenderer:
+    188:189:public void setOrientation(org.achartengine.renderer.XYMultipleSeriesRenderer$Orientation)
+    206:207:public void setXTitle(java.lang.String)
+    234:235:public void setYTitle(java.lang.String)
+    244:245:public void setYTitle(java.lang.String,int)
+    262:263:public void setAxisTitleTextSize(float)
+    271:271:public double getXAxisMin()
+    280:281:public void setXAxisMin(double)
+    289:289:public boolean isMinXSet()
+    298:298:public double getXAxisMax()
+    307:308:public void setXAxisMax(double)
+    316:316:public boolean isMaxXSet()
+    325:325:public double getYAxisMin()
+    334:335:public void setYAxisMin(double)
+    343:343:public boolean isMinYSet()
+    352:352:public double getYAxisMax()
+    361:362:public void setYAxisMax(double)
+    370:370:public boolean isMaxYSet()
+    520:521:public void setXLabels(int)
+    531:532:public void addTextLabel(double,java.lang.String)
+    541:542:public synchronized void addXTextLabel(double,java.lang.String)
+    550:551:public synchronized void removeXTextLabel(double)
+    578:579:public void clearTextLabels()
+    585:586:public synchronized void clearXTextLabels()
+    594:594:public boolean isXRoundedLabels()
+    603:604:public void setXRoundedLabels(boolean)
+    613:614:public void addYTextLabel(double,java.lang.String)
+    622:623:public void removeYTextLabel(double)
+    633:634:public synchronized void addYTextLabel(double,java.lang.String,int)
+    643:644:public synchronized void removeYTextLabel(double,int)
+    653:653:public java.lang.String getYTextLabel(java.lang.Double)
+    673:673:public java.lang.Double[] getYTextLabelLocations()
+    690:691:public void clearYTextLabels()
+    699:700:public synchronized void clearYTextLabels(int)
+    717:718:public void setYLabels(int)
+    727:731:public void setDisplayChartValues(boolean)
+    740:744:public void setChartValuesTextSize(float)
+    752:752:public float getBarWidth()
+    761:762:public void setBarWidth(float)
+    798:800:public void setPanEnabled(boolean,boolean)
+    808:809:public void setPanEnabled(boolean)
+    845:847:public void setZoomEnabled(boolean,boolean)
+    856:856:public double getBarsSpacing()
+    865:865:public double getBarSpacing()
+    876:877:public void setBarSpacing(double)
+    912:913:public void setGridColor(int)
+    932:933:public void setPanLimits(double[])
+    952:953:public void setZoomLimits(double[])
+    970:971:public void setXLabelsAngle(float)
+    988:989:public void setYLabelsAngle(float)
+    997:997:public float getPointSize()
+    1006:1007:public void setPointSize(float)
+    1010:1011:public void setRange(double[])
+    1047:1047:public double[] getInitialRange()
+    1067:1068:public void setInitialRange(double[])
+    1078:1079:public void setInitialRange(double[],int)
+    1105:1106:public void setXLabelsColor(int)
+    1115:1116:public void setYLabelsColor(int,int)
+    1133:1134:public void setXLabelsAlign(android.graphics.Paint$Align)
+    1147:1148:public void setYLabelsAlign(android.graphics.Paint$Align)
+    1155:1156:public void setYAxisAlign(android.graphics.Paint$Align,int)
+    1164:1165:public void setYLabelsAlign(android.graphics.Paint$Align,int)
+    1182:1183:public void setXLabelsPadding(float)
+    1200:1201:public void setYLabelsVerticalPadding(float)
+    1218:1219:public void setYLabelsPadding(float)
+    1236:1237:public void setLabelFormat(java.text.NumberFormat)
+    1261:1262:public void setZoomInLimitX(double)
+    1286:1287:public void setZoomInLimitY(double)
+org.achartengine.renderer.XYSeriesRenderer:
+    123:123:public boolean isFillBelowLine()
+    136:142:public void setFillBelowLine(boolean)
+    150:150:public org.achartengine.renderer.XYSeriesRenderer$FillOutsideLine[] getFillOutsideLine()
+    161:162:public void addFillOutsideLine(org.achartengine.renderer.XYSeriesRenderer$FillOutsideLine)
+    179:180:public void setFillPoints(boolean)
+    191:194:public void setFillBelowLineColor(int)
+    211:212:public void setPointStyle(org.achartengine.chart.PointStyle)
+    229:230:public void setPointStrokeWidth(float)
+    238:238:public float getLineWidth()
+    247:248:public void setLineWidth(float)
+org.achartengine.renderer.XYSeriesRenderer$FillOutsideLine
+org.achartengine.renderer.XYSeriesRenderer$FillOutsideLine$Type
+org.achartengine.tools.Pan:
+    151:152:public synchronized void addPanListener(org.achartengine.tools.PanListener)
+    160:161:public synchronized void removePanListener(org.achartengine.tools.PanListener)
+org.achartengine.tools.Zoom:
+    public static final int ZOOM_AXIS_XY
+    public static final int ZOOM_AXIS_X
+    public static final int ZOOM_AXIS_Y
+    182:183:public synchronized void addZoomListener(org.achartengine.tools.ZoomListener)
+    191:192:public synchronized void removeZoomListener(org.achartengine.tools.ZoomListener)
+org.achartengine.tools.ZoomEvent:
+    45:45:public boolean isZoomIn()
+    54:54:public float getZoomRate()
+org.achartengine.util.IndexXYMap:
+    32:33:public IndexXYMap()
+    42:44:public java.lang.Object put(int,java.lang.Object,java.lang.Object)
+    60:60:public double getMaxXDifference()
+    97:98:public org.achartengine.util.XYEntry getByIndex(int)
+    107:108:public org.achartengine.util.XYEntry removeByIndex(int)
+org.achartengine.util.MathHelper:
+    public static final double NULL_VALUE
+    35:37:private MathHelper()
+    46:57:public static double[] minmax(java.util.List)
+org.achartengine.util.XYEntry
+org.simple.ripple.RippleLayout:
+    private static final int DEFAULT_RIPPLE_COUNT
+    private static final int DEFAULT_DURATION_TIME
+    private static final float DEFAULT_SCALE
+    private static final int DEFAULT_STROKE_WIDTH
+    private static final int DEFAULT_RADIUS
+org.simple.ripplelayout.R:
+    9:9:public R()
+org.simple.ripplelayout.R$attr
+org.simple.ripplelayout.R$drawable
+org.simple.ripplelayout.R$string
+org.simple.ripplelayout.R$styleable:
+    25:25:public R$styleable()

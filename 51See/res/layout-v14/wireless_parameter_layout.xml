@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="@color/hui">
+    <TextView 
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:background="@color/qianhui"
+        android:textStyle="bold|italic"
+        android:textColor="@color/black"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/wirelessNetworkParameters"/>
+
+    
+    
+            <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_below="@id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp" >
+
+		<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            
+	       <RelativeLayout 
+				android:layout_width="fill_parent"
+	            android:layout_height="45dp"
+	            android:layout_marginTop="10dp"
+	            android:background="@color/white">
+	            <TextView
+					android:id="@+id/textViewdhcpwifi"
+					android:layout_alignParentLeft="true"
+					android:layout_centerVertical="true"
+					android:layout_marginLeft="5dp"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:textColor="@color/qianhei"
+	                android:text="@string/wifiClientMode" 
+	                android:textAppearance="?android:attr/textAppearanceMedium"/>
+	
+				<com.my51c.see51.widget.NewSwitch
+				    android:layout_alignParentRight="true"
+	                android:id="@+id/wifiSwitch"
+	                android:background="@drawable/phone_my_setting_switch_selected_new"
+        			android:textColor="@android:color/white"
+        			android:layout_centerVertical="true"
+        			android:textSize="14sp"
+        			android:paddingLeft="5dp"
+        			android:paddingRight="5dp"
+        			android:layout_width="58dp"
+        			android:layout_height="25dp"
+        			android:layout_marginLeft="10dp"
+        			android:layout_marginRight="2dp"/>
+			</RelativeLayout>
+			
+	       <ImageView 
+	           android:layout_width="fill_parent"
+	           android:layout_height="2dp"
+	           android:scaleType="fitXY"
+	           android:src="@drawable/progress_buffering"
+	           android:background="@color/white"/>
+	       
+	       <RelativeLayout
+                    android:id="@+id/tableRow3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_centerVertical="true"
+                		android:layout_alignParentLeft="true"
+                		android:textColor="@color/qianhei"
+                        android:text="@string/encryption" 
+                        android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+                    <Spinner
+                        android:id="@+id/encryptionSpinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                		android:layout_alignParentRight="true"
+                        android:gravity="center" 
+                		android:minWidth="120dp"/>
+                </RelativeLayout>
+
+                <ImageView 
+	           		android:layout_width="fill_parent"
+	           		android:layout_height="2dp"
+	           		android:scaleType="fitXY"
+	           		android:src="@drawable/progress_buffering"
+	           		android:background="@color/white"/>
+
+			<RelativeLayout
+				android:id="@+id/tableRow2"
+            	android:layout_width="wrap_content"
+            	android:layout_height="45dp" 
+            	android:background="@color/white">
+            	<TextView
+					android:id="@+id/textView2"
+                	android:layout_width="wrap_content"
+                	android:layout_height="wrap_content"
+                	android:layout_marginLeft="5dp"
+                	android:layout_centerVertical="true"
+                	android:layout_alignParentLeft="true"
+                	android:text="@string/ssid" 
+                	android:textColor="@color/qianhei"
+                	android:textAppearance="?android:attr/textAppearanceMedium"/>
+            
+            	
+				
+            	<EditText
+                	android:id="@+id/ssidEditText"
+                	android:layout_width="wrap_content"
+                	android:layout_height="wrap_content"
+                	android:layout_centerVertical="true"
+                	android:layout_alignParentRight="true"
+                	android:gravity="center"
+                	android:inputType="text" 
+                	android:ems="8" 
+                	android:textAppearance="?android:attr/textAppearanceMedium"/>
+            	<ImageButton
+			    	android:id="@+id/btnSelectWifi"
+			   	 	android:layout_width="30dp"
+			    	android:layout_height="30dp"
+			    	android:layout_centerVertical="true"
+			    	android:layout_toLeftOf="@id/ssidEditText"
+			    	android:background="@drawable/wifi_button"
+			    	android:text="@string/select" />
+                	
+			</RelativeLayout>
+
+			<ImageView 
+	           android:layout_width="fill_parent"
+	           android:layout_height="2dp"
+	           android:scaleType="fitXY"
+	           android:src="@drawable/progress_buffering"
+	           android:background="@color/white"/>
+			
+                
+                
+                <RelativeLayout
+                    android:id="@+id/tableRow4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_centerVertical="true"
+                		android:layout_alignParentLeft="true"
+                		android:textColor="@color/qianhei"
+                        android:text="@string/password" 
+                        android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+                    <EditText
+                        android:id="@+id/passwordEditText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="8" 
+                        android:layout_centerVertical="true"
+                		android:layout_alignParentRight="true"
+                        android:gravity="center" 
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                         />
+                </RelativeLayout>
+
+                <include
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    layout="@layout/ip_setting_module_layout" />
+            
+            <LinearLayout
+                android:id="@+id/tableRow6"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal"
+                android:background="@color/transparent" >
+
+                <Button
+                    android:id="@+id/buttonCancel"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_marginRight="2dp"
+                    android:textColor="@color/shenhui"
+                    android:background="@drawable/shap_dialog_btn"
+                    android:text="@android:string/no" />
+
+                <Button
+                    android:id="@+id/buttonOK"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="2dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:textColor="@color/orange"
+                    android:background="@drawable/shap_dialog_btn"
+                    android:text="@android:string/yes" />
+
+            </LinearLayout>
+			
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,8 @@
+<level-list xmlns:android="http://schemas.android.com/apk/res/android"> 
+ <item android:maxLevel="4" android:drawable="@drawable/battery_charging_0" /> 
+ <item android:maxLevel="14" android:drawable="@drawable/battery_charging_1" /> 
+ <item android:maxLevel="29" android:drawable="@drawable/battery_level_2" /> 
+ <item android:maxLevel="50" android:drawable="@drawable/battery_level_3" /> 
+ <item android:maxLevel="89" android:drawable="@drawable/battery_level_4" /> 
+ <item android:maxLevel="100" android:drawable="@drawable/battery_level_5" /> 
+</level-list>

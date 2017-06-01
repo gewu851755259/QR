@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="sdk">
+    <target name="sdk" description="" depends="clean">
+        <jar jarfile="bin/see51-sdk.jar">
+            <fileset dir="bin/classes/">
+                <include name="com/my51c/see51/data/*.class" />
+                <include name="com/my51c/see51/media/*.class" />
+                <include name="com/my51c/see51/service/*.class" />
+                <include name="com/my51c/see51/protocal/*.class" />
+                <include name="com/my51c/see51/sdk/*.class" />              
+            </fileset>
+        </jar>
+
+    </target>
+    <target name="clean">
+         <delete dir="bin/see51-sdk.jar" />
+          <delete dir="doc/" />
+    </target>
+</project>

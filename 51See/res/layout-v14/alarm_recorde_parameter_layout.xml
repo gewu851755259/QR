@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="right"
+    android:orientation="vertical" >
+
+<!--     <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/alarmTextView0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="8dp"
+            android:text="@string/setAlarm"
+            android:textSize="22sp" />
+
+    </TableLayout> -->
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+			<TableLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:stretchColumns="1" >
+			    
+			    <TableRow
+		        android:id="@+id/tableRow1"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" >
+		        <LinearLayout 
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:orientation="horizontal"
+		            android:gravity="center_vertical|right">
+		            <TextView
+	                android:id="@+id/textViewalarmSwitch"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_gravity="center|right"
+	               	android:text="@string/alarm" 
+	                android:textAppearance="?android:attr/textAppearanceMedium"/>
+		        <com.my51c.see51.widget.NewSwitch
+		            android:id="@+id/alarmSwitch"
+		            android:background="@drawable/phone_my_setting_switch_selected_new"
+        			android:textColor="@android:color/white"
+        				android:gravity="center_vertical"
+        				android:textSize="14sp"
+        				android:paddingLeft="5dp"
+        				android:paddingRight="5dp"
+        				android:layout_width="58dp"
+        				android:layout_height="25dp"
+        				android:layout_marginLeft="10dp"
+        				android:layout_marginRight="2dp"/>
+		        </LinearLayout>
+				
+		
+		    </TableRow>
+		    
+		    <TableRow
+		        android:id="@+id/tableRow2"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="5dp" >
+		        <LinearLayout 
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:orientation="horizontal"
+		            android:gravity="center_vertical|right">
+				<TextView
+	                android:id="@+id/textViewcameraAlarmSwitch"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_gravity="center|right"
+	               	android:text="@string/cameraAlarm" 
+	                android:textAppearance="?android:attr/textAppearanceMedium"/>
+		
+		
+		        <com.my51c.see51.widget.NewSwitch
+		            android:id="@+id/cameraAlarmSwitch"
+		            android:background="@drawable/phone_my_setting_switch_selected_new"
+        			android:textColor="@android:color/white"
+        				android:gravity="center_vertical"
+        				android:textSize="14sp"
+        				android:paddingLeft="5dp"
+        				android:paddingRight="5dp"
+        				android:layout_width="58dp"
+        				android:layout_height="25dp"
+        				android:layout_marginLeft="10dp"
+        				android:layout_marginRight="2dp"/>
+		        </LinearLayout>
+		
+		    </TableRow>
+		        
+			    <TableRow
+			        android:id="@+id/tableRow3"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_gravity="right"
+			        android:gravity="center|right|start"
+			        android:paddingTop="8dp" >
+			
+			        <TextView
+			            android:id="@+id/textViewIsSearching"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_gravity="center|right"
+			            android:gravity="center"
+			            android:text="@string/sensitivity" 
+			            android:textAppearance="?android:attr/textAppearanceMedium"/>
+		
+			        <Spinner
+			            android:id="@+id/sensitivitySpinner"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:gravity="center" />
+			
+			    </TableRow>
+		    
+		
+			<TableRow
+			    android:id="@+id/tableRow4"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content" >
+			        <LinearLayout 
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:orientation="horizontal"
+		            android:gravity="center_vertical|right">
+				<TextView
+		            android:id="@+id/textViewemailMessageSwitch"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="center|right"
+		            android:text="@string/emailMessage" 
+		            android:textAppearance="?android:attr/textAppearanceMedium"/>
+		
+		
+		        <com.my51c.see51.widget.NewSwitch
+		            android:id="@+id/emailMessageSwitch"
+		            android:background="@drawable/phone_my_setting_switch_selected_new"
+        			android:textColor="@android:color/white"
+        				android:gravity="center_vertical"
+        				android:textSize="14sp"
+        				android:paddingLeft="5dp"
+        				android:paddingRight="5dp"
+        				android:layout_width="58dp"
+        				android:layout_height="25dp"
+        				android:layout_marginLeft="10dp"
+        				android:layout_marginRight="2dp"/>
+		        </LinearLayout>
+			    
+		
+			</TableRow>
+			</TableLayout>
+		
+			<TableRow
+			    android:id="@+id/tableRow5"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:gravity="center" >
+		
+			<RadioGroup
+			    android:id="@+id/fileTypeRadioGroup"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:orientation="horizontal" 
+			    >
+		
+			    <RadioButton
+			        android:id="@+id/aviRadio"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:checked="true"
+			        android:text="@string/avi" />
+		
+		
+			    <RadioButton
+			        android:id="@+id/jpegRadio"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="@string/jpeg" />
+		
+		
+			    <RadioButton
+			        android:id="@+id/noneRadio"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="@string/none" />
+		
+			</RadioGroup>
+		</TableRow>
+		
+			<TableRow
+			    android:id="@+id/tableRow6"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_gravity="right"
+			    android:gravity="center|right|start" >
+		
+		
+				<TextView
+				    android:id="@+id/textView2"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:layout_gravity="center|right"
+				    android:layout_marginLeft="18sp"
+				    android:gravity="center"
+				    android:text="@string/emailAddr" 
+				    android:textAppearance="?android:attr/textAppearanceMedium"/>
+		
+				<EditText
+				    android:id="@+id/emailAddrEditText"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:ems="10"
+				    android:inputType="textEmailAddress" >
+		
+				    <requestFocus />
+				</EditText>
+		
+			</TableRow>
+		
+		
+			<TableRow
+			    android:id="@+id/tableRow7"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:gravity="center|right|start" >
+		
+		
+				<TextView
+				    android:id="@+id/textView3"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:layout_marginLeft="18sp"
+				    android:text="@string/alarmRecordTo" 
+				    android:textAppearance="?android:attr/textAppearanceMedium"/>
+		
+		
+				<RadioGroup
+				    android:id="@+id/alarmRecordRadioGroup"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:orientation="horizontal" >
+		
+		
+				    <RadioButton
+				        android:id="@+id/sdCardRadio1"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:checked="true"
+				        android:text="@string/sdCard" />
+		
+		
+				    <RadioButton
+				        android:id="@+id/ftpRadio1"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:text="@string/ftpServer" />
+		
+				</RadioGroup>
+		
+			</TableRow>
+			
+			<TableRow
+			    android:id="@+id/tableRow8"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:gravity="center|right|start" >
+		
+		
+		
+				<TextView
+				    android:id="@+id/textView4"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:layout_marginLeft="18sp"
+				    android:text="@string/scheduleRecordTo" 
+				    android:textAppearance="?android:attr/textAppearanceMedium"/>
+		
+				<RadioGroup
+				    android:id="@+id/scheduleRecordRadioGroup"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:orientation="horizontal" >
+		
+		
+				    <RadioButton
+				        android:id="@+id/sdCardRadio2"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:checked="true"
+				        android:text="@string/sdCard" />
+		
+		
+				    <RadioButton
+				        android:id="@+id/ftpRadio2"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:text="@string/ftpServer" />
+		
+				</RadioGroup>
+		
+			</TableRow>
+		
+			<TableRow
+			    android:id="@+id/tableRow9"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content" 
+			    android:gravity="center|right|start">
+		
+				<TextView
+				    android:id="@+id/scheduleAdd"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:layout_marginLeft="18sp"
+				    android:text="@string/scheduleSetting" 
+				    android:textAppearance="?android:attr/textAppearanceMedium"/>
+		
+			</TableRow>
+		
+			<TableLayout
+			    android:id ="@+id/schedualLayout"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content" >
+		
+			</TableLayout>            
+            
+			<TableRow
+			    android:id="@+id/tableRow60"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_marginTop="20dp" >
+
+                <Button
+                    android:id="@+id/buttonCancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="@android:string/no" />
+
+                <Button
+                    android:id="@+id/buttonOK"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="@android:string/yes" />
+
+            </TableRow>			
+        </LinearLayout>
+    </ScrollView>
+    	
+</LinearLayout>
+
+

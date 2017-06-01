@@ -1,0 +1,10 @@
+local.properties
+.gradle/
+.idea/
+.metadata/
+build/
+51See/build
+actionbarsherlocak/build
+gen/
+ripplelayout-master/build
+slidingmenu_library/build

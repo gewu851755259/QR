@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+    android:background="@color/hui">
+    
+    <TextView 
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:background="@color/qianhui"
+        android:textStyle="bold|italic"
+        android:textColor="@color/black"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/smtpSetting"/>
+   
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp" >
+
+        <RelativeLayout
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp" 
+            android:background="@color/white">
+
+
+            <TextView
+                android:id="@+id/textViewIsSearching"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/qianhei"
+                android:text="@string/server" />
+
+            <EditText
+                android:id="@+id/serverEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:ems="8" >
+
+                <requestFocus />
+            </EditText>
+
+        </RelativeLayout>
+        
+        <ImageView 
+	        android:layout_width="fill_parent"
+	        android:layout_height="2dp"
+	        android:scaleType="fitXY"
+	        android:src="@drawable/progress_buffering"
+	        android:background="@color/white"/>
+
+        <RelativeLayout
+            android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp" 
+            android:background="@color/white">
+
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:textColor="@color/qianhei"
+                android:layout_marginLeft="5dp"
+                android:text="@string/port" />
+
+            <EditText
+                android:id="@+id/portEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:ems="8" ></EditText>
+
+        </RelativeLayout>
+        
+        <ImageView 
+	        android:layout_width="fill_parent"
+	        android:layout_height="2dp"
+	        android:scaleType="fitXY"
+	        android:src="@drawable/progress_buffering"
+	        android:background="@color/white"/>
+
+        <RelativeLayout
+            android:id="@+id/tableRow3"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp" 
+            android:background="@color/white">
+
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:textColor="@color/qianhei"
+                android:layout_marginLeft="5dp"
+                android:text="@string/username" />
+
+            <EditText
+                android:id="@+id/usernameEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:ems="8" ></EditText>
+
+        </RelativeLayout>
+        
+        <ImageView 
+	        android:layout_width="fill_parent"
+	        android:layout_height="2dp"
+	        android:scaleType="fitXY"
+	        android:src="@drawable/progress_buffering"
+	        android:background="@color/white"/>
+
+        <RelativeLayout
+            android:id="@+id/tableRow4"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp" 
+            android:background="@color/white">
+
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:textColor="@color/qianhei"
+                android:layout_marginLeft="5dp"
+                android:text="@string/password" />
+
+            <EditText
+                android:id="@+id/passwordEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:ems="8" ></EditText>
+
+        </RelativeLayout>
+    </TableLayout>
+
+	<TableRow
+	    android:id="@+id/tableRow6"
+	    android:layout_width="match_parent"
+	    android:layout_height="45dp">
+
+          <Button
+                    android:id="@+id/buttonCancel"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_marginRight="2dp"
+                    android:textColor="@color/shenhui"
+                    android:background="@drawable/shap_dialog_btn"
+                    android:text="@android:string/no" />
+
+                <Button
+                    android:id="@+id/buttonOK"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="2dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:textColor="@color/orange"
+                    android:background="@drawable/shap_dialog_btn"
+                    android:text="@android:string/yes" />
+
+      </TableRow>
+</LinearLayout>

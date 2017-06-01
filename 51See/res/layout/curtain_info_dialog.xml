@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:layout_height="200dp"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@drawable/add_dialog_bac">
+    <TextView 
+        android:text="设置窗帘信息"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        android:textSize="15sp"
+        android:textColor="@color/black"/>
+    <RelativeLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="50dp">
+        <TextView 
+        	android:text="开关:"
+        	android:layout_centerVertical="true"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_alignParentLeft="true"
+        	android:layout_marginLeft="20dp"
+        	android:textSize="15sp"
+        	android:textColor="@color/black"/>
+        <com.my51c.see51.widget.NewSwitch
+	        android:id="@+id/curtainOpen"
+	        android:background="@drawable/phone_my_setting_switch_selected_new"
+        	android:textColor="@android:color/white"
+        	android:layout_centerInParent="true"
+        	android:textSize="14sp"
+        	android:paddingLeft="5dp"
+        	android:paddingRight="5dp"
+        	android:layout_width="58dp"
+        	android:layout_height="25dp"
+	        android:layout_marginLeft="15dp" />      
+    </RelativeLayout>
+    <RelativeLayout 
+        android:layout_marginTop="10dp"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp">
+        <TextView 
+        	android:text="停止:"
+        	android:layout_centerVertical="true"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_alignParentLeft="true"
+        	android:layout_marginLeft="20dp"
+        	android:textSize="15sp"
+        	android:textColor="@color/black"/>
+        <Button 
+            android:id="@+id/stopBtn"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="停止"/>
+    </RelativeLayout>
+    
+
+</LinearLayout>

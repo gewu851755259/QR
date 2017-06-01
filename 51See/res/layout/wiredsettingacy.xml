@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/qianhui"
+    android:orientation="vertical" >
+    
+      <RelativeLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/title_bac">
+        <LinearLayout
+            android:id="@+id/backLayout" 
+            android:layout_width="60dp"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+        	android:orientation="horizontal"
+        	android:layout_alignParentLeft="true"
+        	android:background="@drawable/shap_linearlayout">
+            <ImageView 
+                android:layout_width="30dp"
+            	android:layout_height="30dp"
+            	android:layout_marginLeft="10dp"
+            	android:layout_gravity="center_vertical"
+                android:background="@drawable/back_img_shap"/>
+        	
+        </LinearLayout>
+        <TextView 
+            android:layout_width="wrap_content"
+           	android:layout_height="wrap_content"
+          	android:textColor="@color/qianhei"
+           	android:textSize="18sp"
+           	android:layout_centerInParent="true"
+           	android:text="@string/wiredParameterSetting"/>
+        
+        <TextView 
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:id="@+id/saveTx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_save"
+            android:textSize="18sp"
+            android:textColor="@color/orange"
+            android:textStyle="bold|italic"/>
+    </RelativeLayout>
+    
+    <ImageView 
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/progress_buffering"/>
+
+    <include
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        layout="@layout/ip_setting_module_layout" />
+    
+          
+</TableLayout>

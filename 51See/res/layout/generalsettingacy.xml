@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@color/qianhui">
+
+ 	<RelativeLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/title_bac">
+        <LinearLayout
+            android:id="@+id/backLayout" 
+            android:layout_width="60dp"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+        	android:orientation="horizontal"
+        	android:layout_alignParentLeft="true"
+        	android:background="@drawable/shap_linearlayout">
+            <ImageView 
+                android:layout_width="30dp"
+            	android:layout_height="30dp"
+            	android:layout_marginLeft="10dp"
+            	android:layout_gravity="center_vertical"
+                android:background="@drawable/back_img_shap"/>
+        	
+        </LinearLayout>
+        <TextView 
+            android:layout_width="wrap_content"
+           	android:layout_height="wrap_content"
+          	android:textColor="@color/qianhei"
+           	android:textSize="18sp"
+           	android:layout_centerInParent="true"
+           	android:text="@string/general"/>
+        
+        <TextView 
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:id="@+id/saveTx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_save"
+            android:textSize="18sp"
+            android:textColor="@color/orange"
+            android:textStyle="bold|italic"/>
+    </RelativeLayout>
+    
+    <ImageView 
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/progress_buffering"/>
+
+
+   
+   
+    <com.my51c.see51.widget.ReboundScrollView 
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:layout_marginBottom="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" 
+                >
+                
+               <!--  <LinearLayout 
+  			android:layout_width="fill_parent"
+  		  	android:layout_height="15dp"
+  		  	android:layout_marginTop="2dp"
+  	    	android:orientation="horizontal"
+  	    	android:background="@drawable/menu_linear_pre"
+  	    	android:gravity="center">
+  			<TextView
+	            android:id="@+id/textView3"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/softwareversion"
+	            android:textSize="10sp"
+	            android:textColor="@color/highhui"/>
+           <TextView
+                android:id="@+id/softwareVersionTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="15-0914"
+                android:textSize="10sp"
+               	android:textColor="@color/highhui"
+				android:textAppearance="?android:attr/textAppearanceMedium"/>
+           
+           <TextView
+	            android:id="@+id/textView8"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/id" 
+	            android:textSize="10sp"
+	            android:layout_marginLeft="10dp"
+	            android:textColor="@color/highhui"/>
+           <TextView
+                android:id="@+id/serialIDTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="a8120845849"
+                android:textSize="10sp"
+               	android:textColor="@color/highhui"
+				android:textAppearance="?android:attr/textAppearanceMedium"/>
+  		</LinearLayout>
+  		 -->
+                
+            <LinearLayout
+         	    android:layout_marginTop="10dp"
+         	    android:layout_width="match_parent"
+         	    android:layout_height="wrap_content"
+         	    android:orientation="vertical">
+            	<TextView
+              		style="@style/style0"
+              		android:id="@+id/textView4"
+              		android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="left"
+		            android:layout_marginLeft="10dp"
+		            android:textColor="@color/highhui"
+		            android:textSize="15sp"
+		            android:text="@string/devicename"
+                    android:textAppearance="?android:attr/textAppearanceMedium">
+            	</TextView>
+            	<EditText
+	            	android:id="@+id/deviceNameEditText1"
+	            	android:layout_width="fill_parent"
+        			android:layout_height="50dp"
+        			android:layout_gravity="center"
+        			android:gravity="left|center_vertical"
+        			android:paddingLeft="5dp"
+        			android:layout_marginTop="5dp"
+        			android:layout_marginLeft="10dp"
+        			android:layout_marginRight="10dp"
+        			android:layout_marginBottom="10dp"
+        			android:textColor="@color/qianhei"
+       			 	android:textSize="18sp"
+        			android:background="@drawable/listview_border"
+	            	android:inputType="none" />
+          	</LinearLayout>
+
+            <RelativeLayout 
+                android:id="@+id/changePassword"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:paddingLeft="10dp"
+                android:background="@color/white">
+                <ImageView 
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+					android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/icon_add_password"/>
+                <TextView
+                     android:id="@+id/textView2"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginLeft="55dp"
+                     android:layout_centerVertical="true"
+                     android:textSize="15sp"
+                     android:textColor="@color/qianhei"
+                     android:text="@string/changepassword"
+                     android:textAppearance="?android:attr/textAppearanceMedium"
+                       />
+                <ImageView 
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/arrow"/>
+            </RelativeLayout>
+            
+                <RelativeLayout
+                    android:layout_marginTop="1dp"
+                    android:id="@+id/tableRow7"
+                    android:paddingLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/white"
+                    >
+                	<ImageView 
+                    	android:layout_width="25dp"
+                    	android:layout_height="25dp"
+                    	android:layout_alignParentLeft="true"
+						android:layout_centerVertical="true"
+                    	android:layout_marginLeft="10dp"
+                    	android:background="@drawable/icon_menu_time"/>
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:textSize="15sp"
+                        android:layout_marginLeft="55dp"
+                        android:textColor="@color/qianhei"
+                        android:text="@string/timezone" 
+                        android:textAppearance="?android:attr/textAppearanceMedium"/>
+					<ImageView 
+		        		    android:id="@+id/arrow"
+		        		    android:layout_width="50dp"
+		        		    android:layout_height="fill_parent"
+		        		    android:background="@drawable/arrow"
+		        		    android:layout_alignParentRight="true"/>
+		        		<TextView 
+		        		    android:id="@+id/timeZoneTx"
+		        		    android:layout_width="wrap_content"
+		        		    android:layout_height="wrap_content"
+		        		    android:layout_centerVertical="true"
+		        		    android:layout_toLeftOf="@id/arrow"
+		        		    android:textSize="15sp"
+		        		    android:textColor="@color/qianhei"
+		        		    android:text="10s"/>
+                </RelativeLayout>
+                
+                <LinearLayout 
+                    android:layout_marginTop="1dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:padding="10dp"
+                    android:orientation="vertical">
+                    <TextView 
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/qianhei"
+                        android:textSize="15sp"
+                        android:text="@string/date"/>
+                    <LinearLayout 
+                        android:layout_weight="1"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView 
+                            android:id="@+id/dateEditText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/highhui"
+                        	android:textSize="13sp"
+                            android:text="2015-12-01"/>
+                        <TextView 
+                            android:id="@+id/timeEditText"
+                            android:layout_marginLeft="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/highhui"
+                        	android:textSize="13sp"
+                            android:text="16:15:39"/>
+                        
+                    </LinearLayout>
+                </LinearLayout>
+                
+                
+                <LinearLayout 
+                    android:layout_marginTop="1dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:padding="10dp"
+                    android:orientation="vertical">
+                    <TextView 
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/qianhei"
+                        android:textSize="15sp"
+                        android:text="@string/softwareversion"/>
+                    <LinearLayout 
+                        android:layout_weight="1"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView 
+                            android:id="@+id/softwareVersionTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/highhui"
+                        	android:textSize="13sp"
+                            android:text="16-0123"/>
+                        
+                    </LinearLayout>
+                </LinearLayout>
+                
+                <LinearLayout 
+                    android:layout_marginTop="1dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:padding="10dp"
+                    android:orientation="vertical">
+                    <TextView 
+                        android:id="@+id/textView8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/qianhei"
+                        android:textSize="15sp"
+                        android:text="@string/id"/>
+                    <LinearLayout 
+                        android:layout_weight="1"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView 
+                            android:id="@+id/serialIDTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/highhui"
+                        	android:textSize="13sp"
+                            android:text="a8348786859"/>
+                        
+                    </LinearLayout>
+                </LinearLayout>
+                
+                
+            
+            </TableLayout>
+
+            <Button
+                android:layout_margin="10dp"
+                android:id="@+id/getMobileTime"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textColor="@color/white"
+                android:background="@drawable/button_shap"
+                android:text="@string/btnGetMobileTime" />
+
+            <Button
+                android:id="@+id/btnReboot"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textColor="@color/white"
+                android:background="@drawable/button_shap"
+                android:text="@string/reboot" />
+
+            <Button
+                android:visibility="gone"
+                android:layout_margin="10dp"
+                android:id="@+id/btnDefaultSetting"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textColor="@color/white"
+                android:background="@drawable/button_shap"
+                android:text="@string/defaultSetting" />
+
+        </LinearLayout>
+        
+    </com.my51c.see51.widget.ReboundScrollView >
+
+</LinearLayout>

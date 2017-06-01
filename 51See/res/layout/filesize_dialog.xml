@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" 
+    android:alpha="1"
+    android:background="@drawable/shap_white_dialog">
+    <FrameLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+         <ListView 
+        android:id="@+id/sizeList"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:divider="@color/qianhui"
+        android:choiceMode="singleChoice"
+        android:listSelector="@null"
+        android:dividerHeight="1dp"></ListView>
+         <ImageView 
+        android:id="@+id/closeImg"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/close_img"
+		android:layout_gravity="right"/>	
+    </FrameLayout>
+    
+
+</RelativeLayout>

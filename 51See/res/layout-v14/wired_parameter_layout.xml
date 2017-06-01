@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/hui"
+    android:orientation="vertical" >
+
+<!--     <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center" >
+        
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingTop="8dp"
+            android:text="@string/wiredParameterSetting"
+            android:textSize="22sp" />
+        
+    </TableRow> -->
+    <TextView 
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:background="@color/qianhui"
+        android:textStyle="bold|italic"
+        android:textColor="@color/black"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/wiredParameterSetting"/>
+
+    <include
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        layout="@layout/ip_setting_module_layout" />
+    
+            <TableRow
+                android:id="@+id/tableRow2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <Button
+                    android:id="@+id/buttonCancel"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_marginRight="2dp"
+                    android:textColor="@color/shenhui"
+                    android:background="@drawable/shap_dialog_btn"
+                    android:text="@android:string/no" />
+
+                <Button
+                    android:id="@+id/buttonOK"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="2dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:textColor="@color/orange"
+                    android:background="@drawable/shap_dialog_btn"
+                    android:text="@android:string/yes" />
+
+            </TableRow>
+
+</TableLayout>

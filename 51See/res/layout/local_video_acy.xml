@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/qianhui" >
+    
+    <RelativeLayout 
+        android:id="@+id/topL"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/title_bac">
+        <LinearLayout
+            android:id="@+id/backLayout" 
+            android:layout_width="60dp"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+        	android:orientation="horizontal"
+        	android:background="@drawable/shap_linearlayout"
+        	android:layout_alignParentLeft="true">
+            <ImageView 
+                android:layout_width="30dp"
+            	android:layout_height="30dp"
+            	android:layout_marginLeft="10dp"
+            	android:layout_gravity="center_vertical"
+                android:background="@drawable/back_img_shap"/>
+        	
+        </LinearLayout>
+        <TextView 
+            android:layout_width="wrap_content"
+           	android:layout_height="wrap_content"
+          	android:textColor="@color/qianhei"
+           	android:textSize="18sp"
+           	android:textStyle="bold"
+           	android:layout_centerInParent="true"
+           	android:text="@string/local_file"/>
+    </RelativeLayout>
+    <ImageView 
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/topL"
+        android:background="@drawable/progress_buffering"/>
+    
+    <LinearLayout 
+        android:layout_marginTop="50dp"
+        android:layout_centerInParent="true"
+        android:layout_width="fill_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical" 
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView 
+                android:id="@+id/pic_preview"
+                android:layout_width="200dp"
+            	android:layout_height="160dp"
+                android:background="@drawable/gallery"/>
+            <TextView 
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                android:text="@string/picvideo"
+                android:background="@drawable/text_bac"/>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical" 
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView 
+                android:id="@+id/sd_pic_preview"
+                android:layout_width="200dp"
+            	android:layout_height="160dp"
+                android:background="@drawable/gallery"/>
+            <TextView 
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                android:text="@string/sd_picvideo"
+                android:background="@drawable/text_bac"/>
+        </LinearLayout>
+    </LinearLayout>
+    
+    <ImageView 
+        android:layout_width="fill_parent"
+        android:layout_height="10dp"
+        android:scaleType="fitXY"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/play_divide"/>
+    
+    
+   
+    
+	<ExpandableListView 
+	    android:visibility="gone"
+	    android:id="@+id/expandableListView"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:divider="@drawable/progress_buffering"
+	    android:dividerHeight="2dp"
+	    android:childDivider="@drawable/progress_buffering"
+	    android:layout_marginTop="5dp"
+	    android:layout_marginBottom="5dp"></ExpandableListView>
+    
+
+</RelativeLayout>

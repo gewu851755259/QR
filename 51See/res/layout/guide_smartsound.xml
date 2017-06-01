@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/qianhui"
+    android:id="@+id/guid_smartsound_layout"
+    >
+    <RelativeLayout 
+        android:id="@+id/topLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/title_bac">
+        <LinearLayout
+            android:id="@+id/smartsound_backLayout" 
+            android:layout_width="60dp"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+        	android:orientation="horizontal"
+        	android:layout_alignParentLeft="true"
+        	android:background="@drawable/shap_linearlayout">
+            <ImageView 
+                android:layout_width="30dp"
+            	android:layout_height="30dp"
+            	android:layout_marginLeft="10dp"
+            	android:layout_gravity="center_vertical"
+                android:background="@drawable/back_img_shap"/>
+        	
+        </LinearLayout>
+        <TextView 
+            android:layout_width="wrap_content"
+           	android:layout_height="wrap_content"
+          	android:textColor="@color/qianhei"
+           	android:textSize="18sp"
+           	android:visibility="gone"
+           	android:layout_centerInParent="true"
+           	android:text="@string/guideSmartConnection"/>
+    </RelativeLayout>
+    <ImageView 
+        android:id="@+id/divider_img"
+        android:layout_width="fill_parent"
+        android:layout_below="@id/topLayout"
+        android:layout_height="2dp"
+        android:background="@drawable/progress_buffering"/>
+    
+   <TextView
+       android:id="@+id/smarttitle1"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_centerHorizontal="true"
+       android:text="@string/send_sonic_complete"
+       android:gravity="center_horizontal"
+       android:textColor="#fb7f37"
+       android:textSize="25sp" 
+       android:layout_below="@id/divider_img"
+       android:layout_marginTop="8dp"/>
+   
+   <TextView
+       android:id="@+id/smarttitle2"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="@string/no_sound"
+       android:gravity="center_horizontal"
+       android:textColor="#4cb848"
+       android:layout_below="@id/smarttitle1"
+       android:textSize="15sp"  />
+	
+   
+   <org.simple.ripple.RippleLayout
+        xmlns:ripple="http://schemas.android.com/apk/org.simple.ripplelayout"
+        android:id="@+id/ripple_layout"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_centerInParent="true"
+        ripple:duration="3000"
+        ripple:radius="32dp"
+        ripple:rippleNums="1"
+        ripple:scale="4"
+        ripple:color="#8899CC" >
+
+        <ImageView
+            android:id="@+id/centerImage"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_sound_default" />
+        <TextView
+           android:id="@+id/tvTime"
+	       android:layout_width="match_parent"
+	       android:layout_height="wrap_content"
+	       android:text="@string/Send_Sonic"
+	       android:gravity="center_horizontal"
+	       android:layout_centerInParent="true"
+	       android:textColor="#ffffff"
+	       android:textSize="18sp"  />
+    </org.simple.ripple.RippleLayout>
+
+    <Button
+       android:id="@+id/btnNext"
+       android:layout_width="match_parent"
+       android:layout_height="46dip"
+       android:layout_marginLeft="18dp"
+       android:layout_marginRight="18dp"
+       android:layout_below="@id/ripple_layout"
+       android:layout_gravity="center_horizontal"
+       android:layout_centerHorizontal="true"
+       android:background="@drawable/button_shap"
+       android:layout_marginTop="20dp"
+       android:text="@string/next" 
+       android:textColor="@color/white"
+       />
+    
+    
+    
+</RelativeLayout>

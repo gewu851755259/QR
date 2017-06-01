@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/player_control_bar"  
+  	xmlns:android="http://schemas.android.com/apk/res/android"
+  	android:layout_width="fill_parent"
+ 	android:layout_height="wrap_content"
+  	android:orientation="vertical"
+  	android:gravity="center"
+  	android:baselineAligned="true"
+  	android:layout_centerInParent="true"
+>
+
+    <LinearLayout
+     android:id="@+id/first_line"  
+ 	  android:layout_width="fill_parent"
+	  android:layout_height="wrap_content" 
+	  android:gravity="right"
+	>
+	  <Button android:id="@+id/btn_zoomin"      
+	        android:layout_width="wrap_content"      
+	        android:layout_height="wrap_content"      
+	      	android:background="@drawable/zoomin"
+	        android:textColor="#0000ff"
+	        android:textSize="22dip"	 
+	  /> 
+	  <Button android:id="@+id/btn_ptz_v"      
+	        android:layout_width="wrap_content"      
+	        android:layout_height="wrap_content"      
+	      	android:background="@drawable/ptz_v"
+	        android:textColor="#0000ff"
+	        android:textSize="22dip"
+	        
+	 
+	  /> 
+	  <Button android:id="@+id/btn_ptz_reset"      
+	        android:layout_width="wrap_content"      
+	        android:layout_height="wrap_content"      
+	      	android:background="@drawable/ptz_reset"
+	        android:textColor="#0000ff"
+	        android:textSize="22dip" 
+
+	  /> 
+	   <Button android:id="@+id/btn_scrennshot"      
+	        android:layout_width="wrap_content"      
+	        android:layout_height="wrap_content"      
+	      	android:background="@drawable/screenshot"
+	        android:textColor="#0000ff"
+	        android:textSize="22dip"
+	 
+	  /> 
+	  <Button android:id="@+id/btn_record"      
+	        android:layout_width="wrap_content"      
+	        android:layout_height="wrap_content"      
+	      	android:background="@drawable/record"
+	        android:textColor="#0000ff"
+	        android:textSize="22dip"
+
+	  /> 
+	</LinearLayout>
+	<LinearLayout
+	  android:id="@+id/secondline"  
+	  android:layout_width="fill_parent"
+	  android:layout_height="wrap_content" 
+	  android:gravity="center"
+	>
+	 <Button android:id="@+id/btn_zoomout"      
+	        android:layout_width="wrap_content"      
+	        android:layout_height="wrap_content"      
+	      	android:background="@drawable/zoomout"
+	        android:textColor="#0000ff"
+	        android:textSize="22dip" 
+	  /> 
+	   <Button android:id="@+id/btn_ptz_h"      
+	        android:layout_width="wrap_content"      
+	        android:layout_height="wrap_content"      
+	      	android:background="@drawable/ptz_h"
+	        android:textColor="#0000ff"
+	        android:textSize="22dip"
+	  /> 
+	  <Button android:id="@+id/btn_alarm"      
+	        android:layout_width="wrap_content"      
+	        android:layout_height="wrap_content"      
+	      	android:background="@drawable/alarm_on"
+	        android:textColor="#0000ff"
+	        android:textSize="22dip"
+	 
+	  /> 
+	  <Button android:id="@+id/btn_ptz_stop"      
+	        android:layout_width="wrap_content"      
+	        android:layout_height="wrap_content"      
+	      	android:background="@drawable/ptz_stop"
+	        android:textColor="#0000ff"
+	        android:textSize="22dip" 
+	  />
+
+	   <Button
+	       android:id="@+id/btn_pause"
+	       android:layout_width="wrap_content"
+	       android:layout_height="wrap_content"
+	       android:background="@drawable/pause"
+	       android:textColor="#0000ff"
+	       android:textSize="22dip" 
+
+	   />
+      </LinearLayout>
+</LinearLayout>

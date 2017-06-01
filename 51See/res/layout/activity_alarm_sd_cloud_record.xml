@@ -1,0 +1,138 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/qianhui"
+    tools:context="${relativePackage}.${activityClass}" >
+    
+    <RelativeLayout
+        android:id="@+id/devInfo_topLayout" 
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:gravity="center_vertical"
+        android:background="@color/title_bac"
+        android:layout_alignParentTop="true">
+        <LinearLayout 
+            android:id="@+id/back_layout"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/shap_menu_linearlayout"
+            android:orientation="horizontal">
+            <ImageView 
+                android:layout_width="30dp"
+            	android:layout_height="30dp"
+            	android:layout_marginLeft="10dp"
+            	android:layout_gravity="center_vertical"
+                android:background="@drawable/back_img_shap"/>
+        </LinearLayout>
+        
+        <TextView 
+            android:id="@+id/sd_titleName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="报警录像"
+            android:textSize="18sp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/qianhei"/>
+       
+    </RelativeLayout>
+    
+    <FrameLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        >
+        <ScrollView 
+        android:id="@+id/scroller"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+     <LinearLayout 
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        >
+        <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@drawable/shap_listview_white"
+        >
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+ 		android:layout_centerVertical="true"
+ 		android:textColor="@color/qianhei"
+ 		android:layout_marginLeft="5dp"
+        android:text="@string/sdcardbtn" />
+    </RelativeLayout>
+        <com.my51c.see51.widget.ScollListView
+        android:id="@+id/sdlist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >   
+        </com.my51c.see51.widget.ScollListView>  
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@drawable/shap_listview_white"
+        >
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+ 		android:layout_centerVertical="true"
+ 		android:textColor="@color/qianhei"
+ 		android:layout_marginLeft="5dp"
+        android:text="@string/cloudbtn" />
+    </RelativeLayout>
+   
+       <com.my51c.see51.widget.ScollListView
+        android:id="@+id/cloudlist" 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        
+    </com.my51c.see51.widget.ScollListView>
+        
+    </LinearLayout>
+        
+    </ScrollView>
+     <LinearLayout
+            android:id="@+id/emptyView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical" 
+            android:background="@color/qianhui">
+
+            <LinearLayout
+                android:id="@+id/progress_get_devices_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="50dp"
+                android:orientation="vertical" >
+
+                <ProgressBar
+                    android:id="@+id/progressBarDeviceList"
+                    style="?android:attr/progressBarStyleLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:id="@+id/loading"
+                    style="@style/style5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/wait" />
+            </LinearLayout>
+        </LinearLayout>
+        
+    </FrameLayout>
+    
+ 
+       
+
+</LinearLayout>

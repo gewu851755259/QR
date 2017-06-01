@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+  <!--   <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left|center">
+       <TextView
+           android:id="@+id/textView0"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_gravity="left|center"
+           android:layout_marginLeft="20sp"
+           android:text="@string/dhcp" />
+        
+        <CheckBox
+            android:id="@+id/dhcpSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center|right"
+            android:layout_marginLeft="132sp"
+            android:checked="true"/>
+
+    </TableRow> -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="right" 
+        android:background="@color/qianhui">
+        
+        <RelativeLayout
+	        android:id="@+id/tableRow1"
+	        android:layout_width="fill_parent"
+	        android:layout_height="50dp" 
+	        android:layout_marginTop="2dp"
+	        android:background="@color/white">
+			<TextView
+                android:id="@+id/textViewDHCPSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:textSize="15sp"
+                android:textColor="@color/highhui"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/dhcp" />
+	        <com.my51c.see51.widget.NewSwitch
+	            android:id="@+id/dhcpSwitch"
+	            android:background="@drawable/phone_my_setting_switch_selected_new"
+        		android:textColor="@android:color/white"
+        		android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+        		android:gravity="center_vertical"
+        		android:textSize="14sp"
+       			android:paddingLeft="5dp"
+       			android:paddingRight="5dp"
+       			android:layout_width="58dp"
+       			android:layout_height="25dp"
+       			android:layout_marginLeft="10dp"
+       			android:layout_marginRight="10dp"
+	            />
+
+    	</RelativeLayout>
+    	
+        <LinearLayout 
+            android:id="@+id/detailLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            
+            <RelativeLayout
+            android:layout_marginTop="1dp"
+            android:id="@+id/tableRow2"
+            android:layout_width="fill_parent"
+	        android:layout_height="50dp" 
+	        android:background="@color/white">
+            <TextView
+                android:id="@+id/textViewIsSearching"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:textSize="15sp"
+                android:textColor="@color/highhui"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/ip_addr" />
+            <EditText
+                android:id="@+id/ipAddrEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:background="@drawable/edittext_shap"
+                android:gravity="center_vertical|right"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:paddingRight="20dp"
+                android:textSize="15sp"
+                android:ems="8"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:inputType="textFilter" >
+
+                <requestFocus />
+            </EditText>
+
+        </RelativeLayout>
+        
+
+        <RelativeLayout
+            android:layout_marginTop="1dp"
+            android:id="@+id/tableRow3"
+            android:layout_width="fill_parent"
+	        android:layout_height="50dp" 
+	        android:background="@color/white">
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:textSize="15sp"
+                android:textColor="@color/highhui"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/mask" />
+
+            <EditText
+                android:id="@+id/maskEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:background="@drawable/edittext_shap"
+                android:textSize="15sp"
+                android:paddingRight="20dp"
+                android:ems="8" 
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:gravity="center_vertical|right"/>
+
+        </RelativeLayout>
+        
+
+        <RelativeLayout
+            android:layout_marginTop="1dp"
+            android:id="@+id/tableRow4"
+            android:layout_width="fill_parent"
+	        android:layout_height="50dp" 
+	        android:background="@color/white">
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:textSize="15sp"
+                android:textColor="@color/highhui"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/gateWay" />
+
+            <EditText
+                android:id="@+id/gateWayEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:background="@drawable/edittext_shap"
+                android:textSize="15sp"
+                android:paddingRight="20dp"
+                android:ems="8" 
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:gravity="center_vertical|right"/>
+
+        </RelativeLayout>
+
+        
+        <RelativeLayout
+            android:layout_marginTop="1dp"
+            android:id="@+id/tableRow5"
+            android:layout_width="fill_parent"
+	        android:layout_height="50dp" 
+	        android:background="@color/white">
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:textSize="15sp"
+                android:textColor="@color/highhui"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/dns" />
+
+            <EditText
+                android:id="@+id/dnsEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:background="@drawable/edittext_shap"
+                android:textSize="15sp"
+                android:paddingRight="20dp"
+                android:ems="8" 
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:gravity="center_vertical|right"/>
+
+        </RelativeLayout>
+            
+        </LinearLayout>
+
+        
+    </LinearLayout>
+
+</LinearLayout>

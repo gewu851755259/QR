@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LayoutSetWifi"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/qianhui"
+    android:orientation="vertical" >
+    
+    <TextView
+       android:id="@+id/tiptitle"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_below="@id/divide_img"
+       android:text="@string/smart_select_wifi"
+       android:gravity="center_horizontal"
+       android:textColor="#fb7f37"
+       android:textSize="25sp" 
+       android:layout_marginTop="20dp" />
+
+    <LinearLayout
+        android:id="@+id/ll_essid"
+        android:layout_marginTop="18dp"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:background="@drawable/login_border"
+        android:orientation="horizontal" >
+        <LinearLayout
+            android:background="@color/white"
+            android:orientation="horizontal" 
+            android:layout_width="match_parent"
+        	android:layout_height="match_parent"
+        	android:gravity="center_vertical"
+       		android:paddingLeft="10dp"
+        	android:paddingRight="10dp">
+			 <ImageView
+		         android:id="@+id/imageViewWifi"
+		         android:layout_width="18dp"
+		         android:layout_height="18dp"
+		         android:src="@drawable/icon_add_wifi" />
+	      	  <EditText
+	          	 android:id="@+id/edtSSID"
+	        	 android:layout_height="match_parent"
+	             android:layout_width="0dp"
+	             android:layout_weight="1"
+	             android:background="@color/white"
+	       		 android:singleLine="true"
+	        	 android:textSize="18sp"
+	        	 android:hint="@string/plInputSSID"
+	        	 android:textColor="@color/qianhei"
+	        	 android:layout_marginLeft="10dp"
+	             />
+	      	  <ImageButton 
+	      	      android:id="@+id/btnSelectWifi"
+	      	      android:layout_width="18dp"
+		          android:layout_height="18dp"
+		          android:background="@drawable/icon_arrow_down"
+		         />
+		 </LinearLayout>
+    </LinearLayout>
+
+   <LinearLayout
+        android:id="@+id/ll_password"
+        android:layout_marginTop="18dp"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:background="@drawable/login_border"
+        android:orientation="horizontal" 
+        >
+      <LinearLayout
+            android:background="@color/white"
+            android:orientation="horizontal" 
+            android:layout_width="match_parent"
+        	android:layout_height="match_parent"
+        	android:gravity="center_vertical"
+       		android:paddingLeft="10dp"
+       		android:paddingRight="10dp"
+        	>
+			 <ImageView
+		         android:id="@+id/imageViewPassword"
+		         android:layout_width="18dp"
+		         android:layout_height="18dp"
+		         android:src="@drawable/icon_add_password" />
+	      	  <com.xqe.method.DelEditText
+	          	 android:id="@+id/edtSSIDPwd"
+	        	 android:layout_height="match_parent"
+	             android:layout_width="0dp"
+	             android:layout_weight="1"
+	             android:background="@color/white"
+	             android:drawableRight="@drawable/icon_clear"
+	       		 android:singleLine="true"
+	       		 android:hint="@string/plInputPassword"
+	        	 android:textSize="18sp"
+	        	 android:textColor="@color/qianhei"
+	        	 android:layout_marginLeft="10dp"
+	             />
+	      	  <CheckBox
+        		  android:id="@+id/checkpasswdshow"
+        		  android:layout_width="18dp"
+		          android:layout_height="25dp"
+		          android:checked="false"
+		          android:background="@drawable/cb_passwd_show"  
+           		  android:button="@null"  
+        		 />
+		 </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:textColor="@color/qianhei"
+            android:text="@string/inputWifiPromt" />
+    
+    <ProgressBar
+        android:id="@+id/progressBarWait"
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/btnSetWifiOK"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:textColor="@color/white"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button_shap"
+        android:text="@string/next" />
+
+</LinearLayout>
