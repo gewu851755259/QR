@@ -8,3 +8,4 @@ actionbarsherlocak/build
 gen/
 ripplelayout-master/build
 slidingmenu_library/build
+*.iml

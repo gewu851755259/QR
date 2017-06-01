@@ -18,7 +18,7 @@ public class PicGridviewAdapter extends BaseAdapter {
 		
 	    private Context mContext; 
 	    private ArrayList<Bitmap> bitmaplist = new ArrayList<Bitmap>();
-	    //½á¹û List
+	    //ç»“æœ List
 //	    private ArrayList<String> lstFile =Constant.setList();
 	    
 	    public PicGridviewAdapter(ArrayList<Bitmap> bitmaplist,Context context){ 
@@ -70,10 +70,10 @@ public class PicGridviewAdapter extends BaseAdapter {
 	    Bitmap bitmap = null;
 	    BitmapFactory.Options options = new BitmapFactory.Options();
 	    options.inJustDecodeBounds = true;
-	    // »ñÈ¡Õâ¸öÍ¼Æ¬µÄ¿íºÍ¸ß£¬×¢Òâ´Ë´¦µÄbitmapÎªnull
+	    // è·å–è¿™ä¸ªå›¾ç‰‡çš„å®½å’Œé«˜ï¼Œæ³¨æ„æ­¤å¤„çš„bitmapä¸ºnull
 	    bitmap = BitmapFactory.decodeFile(imagePath, options);
-	    options.inJustDecodeBounds = false; // ÉèÎª false
-	    // ¼ÆËãËõ·Å±È
+	    options.inJustDecodeBounds = false; // è®¾ä¸º false
+	    // è®¡ç®—ç¼©æ”¾æ¯”
 	    int h = options.outHeight;
 	    int w = options.outWidth;
 	    int beWidth = w / width;
@@ -92,9 +92,9 @@ public class PicGridviewAdapter extends BaseAdapter {
 	        be = 1;
 	    }
 	    options.inSampleSize = be;
-	    // ÖØĞÂ¶ÁÈëÍ¼Æ¬£¬¶ÁÈ¡Ëõ·ÅºóµÄbitmap£¬×¢ÒâÕâ´ÎÒª°Ñoptions.inJustDecodeBounds ÉèÎª false
+	    // é‡æ–°è¯»å…¥å›¾ç‰‡ï¼Œè¯»å–ç¼©æ”¾åçš„bitmapï¼Œæ³¨æ„è¿™æ¬¡è¦æŠŠoptions.inJustDecodeBounds è®¾ä¸º false
 	    bitmap = BitmapFactory.decodeFile(imagePath, options);
-	    // ÀûÓÃThumbnailUtilsÀ´´´½¨ËõÂÔÍ¼£¬ÕâÀïÒªÖ¸¶¨ÒªËõ·ÅÄÄ¸öBitmap¶ÔÏó
+	    // åˆ©ç”¨ThumbnailUtilsæ¥åˆ›å»ºç¼©ç•¥å›¾ï¼Œè¿™é‡Œè¦æŒ‡å®šè¦ç¼©æ”¾å“ªä¸ªBitmapå¯¹è±¡
 	    bitmap = ThumbnailUtils.extractThumbnail(bitmap, width, height,
 	        ThumbnailUtils.OPTIONS_RECYCLE_INPUT);
 	    return bitmap;

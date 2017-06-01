@@ -123,7 +123,7 @@ public class SetListAdapter extends BaseAdapter
 		{
 			////Log.d(TAG, "first true");
 			holder.mySwitch.setChecked(false);
-			editor.putBoolean(MainActivity.ALARM_NOTIFICATION, false); // ¹Ø±Õ±¨¾¯
+			editor.putBoolean(MainActivity.ALARM_NOTIFICATION, false); // å…³é—­æŠ¥è­¦
 			editor.commit();
 		}else if(settings.getBoolean(MainActivity.ALARM_NOTIFICATION, false))
 		{

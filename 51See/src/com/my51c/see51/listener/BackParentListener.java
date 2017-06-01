@@ -11,9 +11,9 @@
 package com.my51c.see51.listener;
 
 /** 
-* ���ظ�������ӿ� <br> 
-***** &nbsp;&nbsp��Ҫ�������ظ������¼��Ķ���ʵ�ָýӿڣ�<br>
-*��������ذ���ʱ������Ҫ������һ��ʱ�����ô˽ӿ�
+* 返回父层监听接口 <br> 
+***** &nbsp;&nbsp需要监听返回父层点击事件的对象实现该接口，<br>
+*当点击返回按键时并且需要返回上一层时，调用此接口
 */ 
 public interface BackParentListener
 {

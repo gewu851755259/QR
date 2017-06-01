@@ -14,7 +14,7 @@ public class ScrollLayout extends ViewGroup {
 
 	private static final String TAG = "ScrollLayout";
 	private Scroller mScroller;
-	/**»¬¶¯ËÙ¶È¸ú×ÙÀà*/
+	/**æ»‘åŠ¨é€Ÿåº¦è·Ÿè¸ªç±»*/
 	private VelocityTracker mVelocityTracker;
 
 	private int mCurScreen;
@@ -124,9 +124,9 @@ public class ScrollLayout extends ViewGroup {
 	}
 
 	@Override
-	public void computeScroll() {//µ±parent¸Ä±ächildµÄmScrollX»òmScrollYÊ±´¥·¢£¬µäĞÍµÄ´¥·¢·½Ê½£ºchildÍ¨¹ıscrollerÍê³É»¬¶¯¶¯»­
+	public void computeScroll() {//å½“parentæ”¹å˜childçš„mScrollXæˆ–mScrollYæ—¶è§¦å‘ï¼Œå…¸å‹çš„è§¦å‘æ–¹å¼ï¼šchildé€šè¿‡scrollerå®Œæˆæ»‘åŠ¨åŠ¨ç”»
 		// TODO Auto-generated method stub
-		if (mScroller.computeScrollOffset()) {//·µ»Øtrue±íÊ¾»¬¶¯¶¯»­»¹Î´Íê³É
+		if (mScroller.computeScrollOffset()) {//è¿”å›trueè¡¨ç¤ºæ»‘åŠ¨åŠ¨ç”»è¿˜æœªå®Œæˆ
 			scrollTo(mScroller.getCurrX(), mScroller.getCurrY());
 			postInvalidate();
 		}

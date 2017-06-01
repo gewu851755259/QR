@@ -98,7 +98,7 @@ public class SDRecordFolderFileListAdapter extends BaseAdapter {
 			SDFileInfo tmp = sdlist.get(position);
 			
 			if(tmp.getSzFileName().length() == 10){
-				Log.i("SDRecorderFileListAdapter", "--ÎÄ¼þ¼Ðitem");
+				Log.i("SDRecorderFileListAda", "--æ–‡ä»¶å¤¹item");
 				holder.tvfilename.setText(tmp.getSzFileName().toString());
 				holder.ivdownload.setImageResource(R.drawable.arrow);
 				
